@@ -1,0 +1,254 @@
+<html><head><title>FreeEMS Puma Spin 1 How-To</title>
+<style></style>
+<link rel="stylesheet" href="style.css"></head>
+<body><br id="links">
+
+
+
+
+<br id="intro">
+
+
+<h1>Introduction</h1>
+
+<p>This guide shows you how to choose the components, how to order the components and how to properly build and connect your Spin 1 board to a vehicle.</p>
+
+<p>Puma uses <a href="http://freeems.org/">FreeEMS</a> vanilla firmware, PC tuning software and Puma hardware to control fuel and ignition of large variety of engine configurations. Visit <a href="http://puma.freeems.org/">the Puma website</a> for a more detailed overview.</p>
+
+<p>This version of the manual includes instructions for the Spin 1 board, which is commonly provided as just a bare PCB board. You will need to purchase parts based on <a href="#configuring_bom">the BOM</a>, and then install those parts. You will also need to program the board via the BDM programming port to get the initial boot loader installed. After the initial build, the  board con be programmed with an USB connection to your computer. Supported platforms include Windows, Mac and Linux.</p>
+
+<br id="index">
+
+
+<h2>Index</h2>
+
+<ul>
+<li><a href="#pcb_overview">PCB Overview</a></li>
+<li><a href="#configuring_bom">Configuring the BOM</a></li>
+<li><a href="#sourcing_components">Sourcing the components</a></li>
+<li><a href="#assembly_overview">Assembling the board</a></li>
+</ul>
+
+
+<br id="pcb_overview">
+
+
+<h2>PCB overview</h2>
+
+<div class=imagebox style="min-height:359px">
+  <a class=pict href="img/spin1/pcb_top.png">
+    <img src="img/spin1/pcb_top.png" width=440 height=339 title="PCB top view" alt="PCB top view">
+    <div class=pict_title>PCB top view</div>
+  </a>
+  <div class=text>
+<p>This is the top side view of the PCB. The top-side traces are visible.</p>
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:359px">
+  <a class=pict href="img/spin1/pcb_bottom.png">
+    <img src="img/spin1/pcb_bottom.png" width=440 height=339 title="PCB bottom view" alt="PCB bottom view">
+    <div class=pict_title>PCB bottom view</div>
+  </a>
+  <div class=text>
+<p>This is the bottom side view of the PCB. The bottom-side traces are visible.</p>
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:359px">
+  <a class=pict href="img/spin1/pcb_components.png">
+    <img src="img/spin1/pcb_components.png" width=440 height=339 title="PCB component mounting locations" alt="PCB component mounting locations">
+    <div class=pict_title>PCB component mounting locations</div>
+  </a>
+  <div class=text>
+<p>This image outlines the component mounting locations. Click the image to view it larger.</p>
+  </div>
+</div>
+
+
+
+
+<br id="configuring_bom">
+
+
+<h2>Configuring the BOM</h2>
+
+<h3>Important notes</h3>
+
+<ul>
+<li>The EGT circuit doesn't work (it has a 500&deg;C limit).</li>
+<li>The USB connector is wrong (It's female A, which is reserved for host devices).
+
+<ul>
+<li>Don't buy the female A connector nor the male A-A cable.</li>
+<li>Hack a mini-usb or type B female connector instead and use an appropriate cable.</li>
+</ul>
+</li>
+<li>The shutdown circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.</li>
+</ul>
+
+
+<h3>Overview</h3>
+
+<p>Configuring the BOM is a tricky part. We don't yet have full documentation about what's actually needed. At this time, you may try to figure it out mostly on your own.</p>
+
+<p><a href="https://github.com/nitrousnrg/puma/blob/master/BOMs/order_BOM.xls?raw=true">Download the BOM here.</a></p>
+
+<p>The BOM is an Excel spreadsheet and it works imported into OpenOffice too.</p>
+
+<h3>Setting up the parameters</h3>
+
+<div class=imagebox style="min-height:249px">
+  <a class=pict href="img/spin1/bom_screenshot1.png">
+    <img src="img/spin1/bom_screenshot1.png" width=362 height=229 title="Screen shot of the configurable area of the BOM" alt="Screen shot of the configurable area of the BOM">
+    <div class=pict_title>Screen shot of the configurable area of the BOM</div>
+  </a>
+  <div class=text>
+<p>The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable outputs and sensors.</p>
+  </div>
+</div>
+
+
+<h4>Legend of acronyms</h4>
+
+<ul>
+<li><p><strong>INJ-H</strong>: Amount of High-Z injectors.</p>
+
+<ul>
+<li>If you have High-Z injectors, enter the a number equal to the amount of injectors in your engine.</li>
+<li>In this example, we have four High-Z injectors.</li>
+</ul>
+</li>
+<li><p><strong>INJ-L</strong>: Amount of Low-Z injectors.</p>
+
+<ul>
+<li>If you have Low-Z injectors, enter the a number equal to the amount of injectors in your engine.</li>
+<li>In this example, it's 0 because there are four High-Z injectors conifigured.</li>
+</ul>
+</li>
+<li><p><strong>IGN</strong>: Amount of Ignition drivers.</p>
+
+<ul>
+<li>For a 4-cylinder engine with wasted spark, 2 is fine.</li>
+<li>If you plan to use your distributor, 1 is fine.</li>
+<li>Enter 0, if you are not planning to drive your ignition with FreeEMS.</li>
+</ul>
+</li>
+<li><p><strong>RPM</strong>: Amount of RPM inputs.</p>
+
+<ul>
+<li>Enter 1, if you are going to use a single trigger wheel. Fine for bank and semi-sequential injection and wasted spark.</li>
+<li>Enter 1, if you are going to use just the hall signal from your distributor. Will not allow sequential anything nor ignition.</li>
+<li>Enter 2, if you are going to use both crank and cam signals; Required for sequential injection and sequential injection.</li>
+</ul>
+</li>
+<li><p><strong>MAPB</strong>: Boosted MAP sensor and its input circuit.</p>
+
+<ul>
+<li>You don't need this, unless you are going to read boost levels from a supercharger or turbo.</li>
+</ul>
+</li>
+<li><p><strong>MAPN</strong>: Regular vacuum MAP sensor and its input circuit.</p>
+
+<ul>
+<li>You'll want this to read the vacuum levels from your inlet manifold.</li>
+</ul>
+</li>
+<li><p><strong>AAP</strong>: Ambient air pressure sensor and its input circuit.</p>
+
+<ul>
+<li>You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure.</li>
+</ul>
+</li>
+<li><p><strong>MAF</strong>: Air mass flow sensor circuit?</p>
+
+<ul>
+<li>This is an alternative to the MAP sensor. It usually doesn't make sense to use both.</li>
+</ul>
+</li>
+<li><p><strong>GPO</strong>: General Purpose output circuits.</p>
+
+<ul>
+<li>You'll probably not need these.</li>
+</ul>
+</li>
+<li><p><strong>O2</strong>: Lambda sensor input circuits.</p>
+
+<ul>
+<li>Enter 1</li>
+<li>Only wide-band lambdas are supported at this time.</li>
+</ul>
+</li>
+<li><p><strong>EGT</strong>: Exhaust thermistor?</p>
+
+<ul>
+<li>You'll probably not need this.</li>
+</ul>
+</li>
+<li><p><strong>TCPL</strong>: Thermistors</p>
+
+<ul>
+<li>In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature.</li>
+</ul>
+</li>
+<li><p><strong>AN</strong>: Miscellaneous analog???</p>
+
+<ul>
+<li>????</li>
+</ul>
+</li>
+<li><p><strong>STP</strong>: Stepper driver</p>
+
+<ul>
+<li>Unsupported?</li>
+</ul>
+</li>
+<li><p><strong>ANP</strong>: Analog protection circuits?</p>
+
+<ul>
+<li>Max-out; cheap passive components?</li>
+</ul>
+</li>
+<li><p><strong>DGP</strong>: Digital protection circuits?</p>
+
+<ul>
+<li>Max-out; cheap passive components?</li>
+</ul>
+</li>
+</ul>
+
+
+<br id="sourcing_components">
+
+
+<h2>Sourcing the components</h2>
+
+<p>You might already have some of the components, omit those.</p>
+
+<h3>If you prefer Newark, Mouser or Farnell:</h3>
+
+<p>The second sheet (MFG BOM) of the spreadsheet has a table of components formatted for these distributors.</p>
+
+<h3>If you prefer Digikey:</h3>
+
+<p>The third sheet (DIGIKEY BOM) of the spreadsheet has a table of components formatted in the Digikey format.</p>
+
+<p>Next, just export the sheet of your choice into a Comma-Separated-Values (.csv) formated file and submit the CSV file into the web store of your favourite parts supplier.</p>
+
+<br id="assembly_overview">
+
+
+<h2>Assembling the board</h2>
+
+<br id="footer">
+
+
+<hr />
+
+<p>FreeEMS Documentation is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a> for more details.</p></body></html>

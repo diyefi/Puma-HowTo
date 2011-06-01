@@ -1,0 +1,11 @@
+
+title: FreeEMS Puma Spin 1 How-To
+order:
+ - links # link definitions
+ - intro # introductionary chapter
+ - index # index (not used yet)
+ - pcb_overview # overview of the board
+ - configuring_bom # BOM configuration chapter
+ - sourcing_components # chapter guiding how to order components
+ - assembly_overview # assebly introduction chapter 
+ - footer # footer, disclaimer, contacts etc.
