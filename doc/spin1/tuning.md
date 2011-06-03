@@ -1,5 +1,9 @@
 # Tuning your engine
 
-Look at the documentation of the Graphical User Interdaces designed to tune a FreeEMS system.
+To configure your FreeEMS system, read this thread and the threads that it links to:
 
-Right now, the supported application is Megatunix.
+http://forum.diyefi.org/viewtopic.php?f=54&t=1166
+
+Look at the documentation of the Graphical User Interfaces designed to tune a FreeEMS system.
+
+Right now, the application with the most complete support is MegaTunix.
