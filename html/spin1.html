@@ -329,14 +329,14 @@ harmful stuff.</li>
 
 <p>Follow the schematic to locate the component values</p>
 
-<div class=imagebox style="min-height:148px">
-  <a class=pict href="img/placeholder_image.png">
-    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
-    <div class=pict_title>Placement</div>
+<div class=imagebox style="min-height:167px">
+  <a class=pict href="img/spin1/soldered_mcu.jpg">
+    <img src="img/spin1/soldered_mcu.jpg" width=196 height=147 title="Core components soldered" alt="Core components soldered">
+    <div class=pict_title>Core components soldered</div>
   </a>
   <div class=text>
 <ul>
-<li>Install the MCU</li>
+<li>Install the MCU, its regulator, and the PLL and crystal circuits.</li>
 </ul>
 
   </div>
@@ -344,6 +344,9 @@ harmful stuff.</li>
 
 
 
+
+<!-- - Install the MCU
+--/
 
 <div class=imagebox style="min-height:148px">
   <a class=pict href="img/placeholder_image.png">
@@ -357,8 +360,6 @@ harmful stuff.</li>
 
   </div>
 </div>
-
-
 
 
 <div class=imagebox style="min-height:148px">
@@ -375,8 +376,6 @@ harmful stuff.</li>
 </div>
 
 
-
-
 <div class=imagebox style="min-height:148px">
   <a class=pict href="img/placeholder_image.png">
     <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
@@ -389,6 +388,8 @@ harmful stuff.</li>
 
   </div>
 </div>
+
+-->
 
 
 
@@ -508,6 +509,12 @@ harmful stuff.</li>
 
 <h2>Some instructions about how to bake the board in your oven.</h2>
 
+<ul>
+<li>First things first: Ensure your oven won't be used for cooking food. It will end with high levels of lead.</li>
+<li>You're going to use paste, so start with the passive components, and leave the MCU for the end. This ensures the paste will be (less viscous?) by the time you assemble the MCU.</li>
+</ul>
+
+
 <hr id="firmware_upload">
 
 
@@ -523,14 +530,11 @@ harmful stuff.</li>
   <div class=text>
 <ul>
 <li>Connect a serial adapter to the BDM pod on your Puma board</li>
-<li>Upload the <a href="https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19">serial monitor firmware</a></li>
-<li>Install <a href="https://github.com/seank/freeems-loader">SeanK’s loader</a></li>
-<li>????</li>
+<li>Install Codewarrior or other software able to program an S12 MCU via BDM.</li>
+<li>Download the <a href="https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19">serial monitor firmware</a></li>
+<li>Upload the serial monitor: in CodeWarrior, debug->File->Load.</li>
 <li>Profit!</li>
 </ul>
-
-
-<!-- And learn how to make comments -->
 
   </div>
 </div>
@@ -545,6 +549,7 @@ harmful stuff.</li>
   </a>
   <div class=text>
 <ol>
+<li>Install <a href="https://github.com/seank/freeems-loader">SeanK’s loader</a></li>
 <li>Connect an USB cable between your computer and Puma</li>
 <li>Turn Puma on (jumper the load/run header).</li>
 <li>Select the device <code>/dev/ttyUSB[n]</code> in Unix-like operating systems and <code>COM[n]</code> on Windows.</li>
