@@ -4,11 +4,14 @@ Each step assumes that you just completed the last one.
 
 ### Installing the serial monitor
 /-- 128x128 img/placeholder_image.png "Using BDM pod and installing the freeems-loader"
+<<<<<<< HEAD
  - Connect a BDM pod to the BDM header on your Puma board
  - Power up the Puma board
  - Upload the [serial monitor firmware](https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19) using the appropriate software for your BDM pod
+   - One option is to use CodeWarrior as "the appropriate software":
+     - Install CodeWarrior or other software able to program an S12 MCU via BDM.
+     - Upload the serial monitor: in CodeWarrior, debug->File->Load.
  - If possible, use the same program to verify that your load was succesful
-<!-- And learn how to make comments -->
 
 *The Serial Monitor should now be installed on your Puma board.*
 
@@ -29,13 +32,16 @@ Each step assumes that you just completed the last one.
 /-- 128x128 img/placeholder_image.png "Uploading the firmware"
 
 1. Install [SeanK’s loader](https://github.com/seank/freeems-loader)
-2. Select the device ``/dev/ttyUSB[n]`` in Unix-like operating systems and ``COM[n]`` on Windows.
-3. Press the "Connect" button
-4. Press the "Load" button
-5. Choose a recent s19 of the Bench Test firmware variant 
-6. Wait until the erasing and programming phases are done
-7. Remove the load/run jumper
-8. Press the "Close/reset" button
+2. Connect an USB cable between your computer and Puma
+3. Turn Puma on (jumper the load/run header).
+4. Select the device ``/dev/ttyUSB[n]`` in Unix-like operating systems and ``COM[n]`` on Windows.
+5. Press the "Connect" button
+6. Press the "Load" button
+7. Choose a recent s19 of the Bench Test firmware variant 
+8. Wait until the erasing and programming phases are done
+9. Close the communications.
+10. Remove the load/run jumper
+11. Press the "Close/reset" button
 
 *The FreeEMS Bench Test firmware should now be installed on your Puma board.*
 
