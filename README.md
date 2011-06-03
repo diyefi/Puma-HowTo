@@ -38,4 +38,5 @@ Doing that will build a HTML pages into the html directory.
 ## Contacting us
 
 IRC: #freeems-dev on the FreeNode network.
-Web: http://www.freeems.org/
+Web: http://freeems.org/
+Forum: http://forum.diyefi.org
