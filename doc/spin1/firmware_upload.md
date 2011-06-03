@@ -4,7 +4,6 @@ Each step assumes that you just completed the last one.
 
 ### Installing the serial monitor
 /-- 128x128 img/placeholder_image.png "Using BDM pod and installing the freeems-loader"
-<<<<<<< HEAD
  - Connect a BDM pod to the BDM header on your Puma board
  - Power up the Puma board
  - Upload the [serial monitor firmware](https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19) using the appropriate software for your BDM pod
