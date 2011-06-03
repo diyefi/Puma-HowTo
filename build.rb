@@ -112,7 +112,7 @@ class BuildDoc
     md_src = []
     md_order.each do |md_name|
       error("Missing reference: #{md_name}") unless @src.has_key?( md_name )
-      md_src.push( %{<br id="#{md_name}">})
+      md_src.push( %{<hr id="#{md_name}">})
       md_src.push( @src[md_name] )
     end
     @md_src = md_src.join("\n\n")
