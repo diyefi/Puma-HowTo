@@ -20,7 +20,7 @@
 
 <p>Puma uses <a href="http://freeems.org/">FreeEMS</a> vanilla firmware, PC tuning software and Puma hardware to control fuel and ignition of large variety of engine configurations. Visit <a href="http://puma.freeems.org/">the Puma website</a> for a more detailed overview.</p>
 
-<p>This version of the manual includes instructions for the Spin 1 board, which is commonly provided as just a bare PCB board. You will need to purchase parts based on <a href="#configuring_bom">the BOM</a>, and then install those parts. You will also need to program the board via the BDM programming port to get the initial boot loader installed. After the initial build, the  board con be programmed with an USB connection to your computer. Supported platforms include Windows, Mac and Linux.</p>
+<p>This version of the manual includes instructions for the Spin 1 board, which is commonly provided as just a bare PCB. You will need to purchase parts based on <a href="#configuring_bom">the BOM</a>, and then install those parts. You will also need to program the board via the BDM programming port to get the initial boot loader installed. After the initial build, the  board can be programmed with a USB connection to your computer. Supported platforms include Windows, Mac and Linux.</p>
 
 <hr id="index">
 
@@ -281,6 +281,7 @@ harmful stuff.</li>
 <ul>
 <li>Install <a href="http://git-scm.com/">GIT</a></li>
 <li><code>git clone https://github.com/nitrousnrg/puma.git</code></li>
+<li>Switch to the correct branch: Spin1_branch</li>
 </ul>
 </li>
 <li><a href="http://forum.diyefi.org/viewtopic.php?f=53&amp;t=1187">Fix the Puma project file references (temporary)</a></li>
@@ -295,6 +296,32 @@ harmful stuff.</li>
 <h2>Spin1-specific modifications</h2>
 
 <p>You'll need to perform these modifications to the PCB board.</p>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Jumpers and cuts, etc." alt="Jumpers and cuts, etc.">
+    <div class=pict_title>Jumpers and cuts, etc.</div>
+  </a>
+  <div class=text>
+<p>The FTDI chip is powered from the Puma supply and should be bus powered.</p>
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Transistor in place" alt="Transistor in place">
+    <div class=pict_title>Transistor in place</div>
+  </a>
+  <div class=text>
+<p>Only the Serial Monitor will run without the PNP modification to the serial line, firmware will not run without this.</p>
+  </div>
+</div>
+
+
+
 
 <div class=imagebox style="min-height:148px">
   <a class=pict href="img/placeholder_image.png">
@@ -520,6 +547,8 @@ harmful stuff.</li>
 
 <h2>Uploading the firmware</h2>
 
+<p>Each step assumes that you just completed the last one.</p>
+
 <h3>Installing the serial monitor</h3>
 
 <div class=imagebox style="min-height:148px">
@@ -528,14 +557,43 @@ harmful stuff.</li>
     <div class=pict_title>Using BDM pod and installing the freeems-loader</div>
   </a>
   <div class=text>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+ - Connect a BDM pod to the BDM header on your Puma board
+ - Power up the Puma board
+ - Upload the <a href="https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19">serial monitor firmware</a> using the appropriate software for your BDM pod
+   - One option is to use CodeWarrior as "the appropriate software":</p>
+
+<pre><code> - Install CodeWarrior or other software able to program an S12 MCU via BDM.
+ - Upload the serial monitor: in CodeWarrior, debug-&gt;File-&gt;Load.
+</code></pre>
+
 <ul>
-<li>Connect a serial adapter to the BDM pod on your Puma board</li>
-<li>Install Codewarrior or other software able to program an S12 MCU via BDM.</li>
-<li>Download the <a href="https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19">serial monitor firmware</a></li>
-<li>Upload the serial monitor: in CodeWarrior, debug->File->Load.</li>
-<li>Profit!</li>
+<li>If possible, use the same program to verify that your load was succesful</li>
 </ul>
 
+
+<p><em>The Serial Monitor should now be installed on your Puma board.</em></p>
+  </div>
+</div>
+
+
+<h3>Verifying correct operation of the Serial Monitor</h3>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Jumpering the load/run header for SM testing" alt="Jumpering the load/run header for SM testing">
+    <div class=pict_title>Jumpering the load/run header for SM testing</div>
+  </a>
+  <div class=text>
+<ul>
+<li>If the BDM is still connected, disconnect it now</li>
+<li>Jumper the load/run header and reset power to the board</li>
+<li>Connect a USB cable between your computer and the Puma</li>
+<li>Using cutecom, send various <a href="http://www.freescale.com/files/microcontrollers/doc/app_note/AN2548.pdf">Serial Monitor</a> packets and verify that it responds correctly</li>
+</ul>
+
+
+<p><em>You are now ready to load FreeEMS firmware onto your Puma board.</em></p>
   </div>
 </div>
 
@@ -553,15 +611,40 @@ harmful stuff.</li>
 <li>Connect an USB cable between your computer and Puma</li>
 <li>Turn Puma on (jumper the load/run header).</li>
 <li>Select the device <code>/dev/ttyUSB[n]</code> in Unix-like operating systems and <code>COM[n]</code> on Windows.</li>
-<li>Press the "Load" button.</li>
-<li>In the dialog, select the .s19 firmware file you want to use.</li>
-<li>Wait until the erasing and programming phases are done.</li>
+<li>Press the "Connect" button</li>
+<li>Press the "Load" button</li>
+<li>Choose a recent s19 of the Bench Test firmware variant</li>
+<li>Wait until the erasing and programming phases are done</li>
 <li>Close the communications.</li>
-<li>Remove the load/run jumper in the header and reset de board.</li>
+<li>Remove the load/run jumper</li>
+<li>Press the "Close/reset" button</li>
 </ol>
 
 
-<p><em>The FreeEMS firmware is now installed on your Puma board.</em></p>
+<p><em>The FreeEMS Bench Test firmware should now be installed on your Puma board.</em></p>
+  </div>
+</div>
+
+
+<h3>Verifying correct operation of the firmware</h3>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Cutecom streaming FreeEMS datalogs" alt="Cutecom streaming FreeEMS datalogs">
+    <div class=pict_title>Cutecom streaming FreeEMS datalogs</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Connect cutecom with the correct settings and hex mode on</li>
+<li>Verify that data is streaming past at a high rate</li>
+<li>Send the stop datalogging packet from the lib directory and ensure that the stream stops</li>
+<li>Clear the text area and turn off hex mode</li>
+<li>Send the get firmware, interface and decoder version packets from the lib directory</li>
+<li>Ensure that the strings returned match what you uploaded</li>
+</ul>
+
+
+<p><em>You are now ready to test your physical outputs using the Bench Test decoder.</em></p>
   </div>
 </div>
 
