@@ -1,27 +1,29 @@
 ## Uploading the firmware
 
-### Installing the bootloader
+### Installing the serial monitor
+/-- 128x128 img/placeholder_image.png "Using BDM pod and installing the freeems-loader"
+ - Connect a serial adapter to the BDM pod on your Puma board
+ - Upload the [serial monitor firmware](https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19)
+ - Install [SeanK’s loader](https://github.com/seank/freeems-loader)
+ - ????
+ - Profit!
+<!-- And learn how to make comments -->
+--/
 
- - Use A BDM pod to upload the binary file that you can download from here:
+### Uploading the firmware
+/-- 128x128 img/placeholder_image.png "Uploading the firmware"
 
-https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19
 
-### Using the USB bootloader
+1. Connect an USB cable between your computer and Puma
+2. Turn Puma on (jumper the load/run header).
+3. Select the device ``/dev/ttyUSB[n]`` in Unix-like operating systems and ``COM[n]`` on Windows.
+4. Press the "Load" button.
+5. In the dialog, select the .s19 firmware file you want to use.
+6. Wait until the erasing and programming phases are done.
+7. Close the communications.
+8. Remove the load/run jumper in the header and reset de board.
 
-Install SeanK’s loader from https://github.com/seank/freeems-loader
+*The FreeEMS firmware is now installed on your Puma board.*
 
-(*Have to put some screenshots here!*)
+--/
 
-(*And learn how to make comments*)
-
-Its an easy to use application. Just connect to the USB and power up Puma (jumpering
-the load/run header), select the device /dev/ttyUSB0 in *nixes (COMxx in windows), and
-push the load button.
-
-In the ﬁle dialog, select the .s19 ﬁrmware you want.
-
-Wait until it erases and program the device. Close the communications.
-
-Remove the load/run jumper in the header and reset de board.
-
-Congratulations! FreeEMS code is running in your board.

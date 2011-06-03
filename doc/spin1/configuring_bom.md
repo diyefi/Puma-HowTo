@@ -54,7 +54,8 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
   - You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.
 
 - **MAF**: Air mass flow sensor circuit?
-  - This is an alternative to the MAP sensor. It usually doesn't make sense to use both.
+  - This is an alternative to the MAP sensor.
+  - It usually doesn't make sense to use both.
 
 - **GPO**: General Purpose output circuits.
   - You'll probably not need these.
@@ -63,11 +64,16 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
   - Enter 1
   - Only wide-band lambdas are supported at this time.
 
-- **EGT**: Thermocouple driver
-  - You'll probably not need this.
+- **EGT**: Thermocouple driver IC
+  - In Spin1, this one is a bit crippled.
+    - It only supports up to 500°C temperatures as-it's currently configured.
+    - The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V
+  - You'll not use this, so enter 0
 
-- **TCPL**: Thermistors
-  - In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature. This includes the filtering circuitry, not the sensors.
+- **TCPL**: Thermistor filtering circuits
+  - In most cases, you'll use two:
+    - One for the inlet air temperature
+    - Another for the coolant temperature.
 
 - **AN**: General purpose analog inputs
   - Spin 1 doesn't need this.
@@ -80,5 +86,6 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
 harmful stuff.
 
 - **DGP**: Digital protection circuits
-  - Max-out; Protection zeners (5v1, SOD123 package). You'll probably not need this.
+  - Protection zeners (5v1, SOD123 package).
+  - These have known issues in the Spin1 hardware revision, so enter 0
 

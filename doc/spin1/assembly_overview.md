@@ -1,13 +1,11 @@
-## Assembling the board
+# Assembling the board
 
-IMPORTANT: If needed, modify the PCB as shown in “Spin 1 speciﬁc notes”
+## Use the [KiCad] documents as a guideline of the schematics (should be replaced with image-how-to's)
+ - Install [KiCad]
+   - [KiCad Mac OS X Instructions]
+ - Clone the Puma repository
+   - Install [GIT](http://git-scm.com/)
+   - ``git clone https://github.com/nitrousnrg/puma.git``
+ - [Fix the Puma project file references (temporary)](http://forum.diyefi.org/viewtopic.php?f=53&t=1187)
 
-These steps should be performed sequentially
-
- - Install MCU, regulators, PLL and crystal circuits.
-Follow the schematic to locate the component values, or install Kicad to be able to search in the schematic.
- - Test the MCU works by uploading the firmware.
- - Install rpm input circuit:choose hall input, or VR.
- - Install misc outputs like Fuel, ect.
- - Install injector circuits.
- - Install ignition circuits.
+# Follow these steps sequentially:
