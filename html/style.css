@@ -13,19 +13,20 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
+  padding-top: 16px;
   font-size: 32px;
 }
 h2 {
+  padding-top: 14px;
   font-size: 28px;
 }
 h3 {
+  padding-top: 12px;
   font-size: 24px;
 }
 h4 {
+  padding-top: 10px;
   font-size: 20px;
-}
-p {
-  padding-left: 16px;
 }
 .imagebox {
   width: 100%;
@@ -44,5 +45,5 @@ p {
   font-style: italic;
 }
 .imagebox > .text {
-  
+  margin-left: 460px;
 }
