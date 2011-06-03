@@ -7,5 +7,6 @@ order:
  - pcb_overview # overview of the board
  - configuring_bom # BOM configuration chapter
  - sourcing_components # chapter guiding how to order components
- - assembly_overview # assebly introduction chapter 
+ - assembly_overview # assebly introduction chapter
+ - firmware_upload # how to upload the FreeEMS firmware to the board
  - footer # footer, disclaimer, contacts etc.

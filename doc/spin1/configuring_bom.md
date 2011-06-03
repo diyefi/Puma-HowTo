@@ -45,13 +45,13 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
   - Enter 2, if you are going to use both crank and cam signals; Required for sequential injection and sequential injection.
 
 - **MAPB**: Boosted MAP sensor and its input circuit.
-  - You don't need this, unless you are going to read boost levels from a supercharger or turbo.
+  - You don't need this, unless you are going to read boost levels from a supercharger or turbo. It includes an MPX4250AP sensor.
 
 - **MAPN**: Regular vacuum MAP sensor and its input circuit.
-  - You'll want this to read the vacuum levels from your inlet manifold.
+  - You'll want this to read the vacuum levels from your inlet manifold. It includes an MPX4100AP sensor.
 
 - **AAP**: Ambient air pressure sensor and its input circuit.
-  - You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure.
+  - You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.
 
 - **MAF**: Air mass flow sensor circuit?
   - This is an alternative to the MAP sensor. It usually doesn't make sense to use both.
@@ -63,21 +63,22 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
   - Enter 1
   - Only wide-band lambdas are supported at this time.
 
-- **EGT**: Exhaust thermistor?
+- **EGT**: Thermocouple driver
   - You'll probably not need this.
 
 - **TCPL**: Thermistors
-  - In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature.
+  - In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature. This includes the filtering circuitry, not the sensors.
 
-- **AN**: Miscellaneous analog???
-  - ????
+- **AN**: General purpose analog inputs
+  - Spin 1 doesn't need this.
 
 - **STP**: Stepper driver
-  - Unsupported?
+  - Untested, and no firmware to drive it yet.
 
-- **ANP**: Analog protection circuits?
-  - Max-out; cheap passive components?
+- **ANP**: Analog protection circuits
+  - Max-out; Protection diodes (Schottky, SOD123 package). This way the board is protected against voltage spikes and other
+harmful stuff.
 
-- **DGP**: Digital protection circuits?
-  - Max-out; cheap passive components?
+- **DGP**: Digital protection circuits
+  - Max-out; Protection zeners (5v1, SOD123 package). You'll probably not need this.
 
