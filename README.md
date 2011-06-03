@@ -26,6 +26,7 @@ Doing that will build a HTML pages into the html directory.
 
 ## Contributing to the documentation
 
+* Read the Markdown reference manual: http://daringfireball.net/projects/markdown/syntax
 * Fork this project on github.
 * Edit contents of "spin1" directory or create another directory with
   similar structure.
