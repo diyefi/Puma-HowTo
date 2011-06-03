@@ -6,6 +6,7 @@
  - Clone the Puma repository
    - Install [GIT](http://git-scm.com/)
    - ``git clone https://github.com/nitrousnrg/puma.git``
+   - Switch to the correct branch: Spin1_branch
  - [Fix the Puma project file references (temporary)](http://forum.diyefi.org/viewtopic.php?f=53&t=1187)
 
 # Follow these steps sequentially:
