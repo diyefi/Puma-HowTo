@@ -151,19 +151,19 @@
 <li><p><strong>MAPB</strong>: Boosted MAP sensor and its input circuit.</p>
 
 <ul>
-<li>You don't need this, unless you are going to read boost levels from a supercharger or turbo.</li>
+<li>You don't need this, unless you are going to read boost levels from a supercharger or turbo. It includes an MPX4250AP sensor.</li>
 </ul>
 </li>
 <li><p><strong>MAPN</strong>: Regular vacuum MAP sensor and its input circuit.</p>
 
 <ul>
-<li>You'll want this to read the vacuum levels from your inlet manifold.</li>
+<li>You'll want this to read the vacuum levels from your inlet manifold. It includes an MPX4100AP sensor.</li>
 </ul>
 </li>
 <li><p><strong>AAP</strong>: Ambient air pressure sensor and its input circuit.</p>
 
 <ul>
-<li>You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure.</li>
+<li>You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.</li>
 </ul>
 </li>
 <li><p><strong>MAF</strong>: Air mass flow sensor circuit?</p>
@@ -185,7 +185,7 @@
 <li>Only wide-band lambdas are supported at this time.</li>
 </ul>
 </li>
-<li><p><strong>EGT</strong>: Exhaust thermistor?</p>
+<li><p><strong>EGT</strong>: Thermocouple driver</p>
 
 <ul>
 <li>You'll probably not need this.</li>
@@ -194,31 +194,32 @@
 <li><p><strong>TCPL</strong>: Thermistors</p>
 
 <ul>
-<li>In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature.</li>
+<li>In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature. This includes the filtering circuitry, not the sensors.</li>
 </ul>
 </li>
-<li><p><strong>AN</strong>: Miscellaneous analog???</p>
+<li><p><strong>AN</strong>: General purpose analog inputs</p>
 
 <ul>
-<li>????</li>
+<li>Spin 1 doesn't need this.</li>
 </ul>
 </li>
 <li><p><strong>STP</strong>: Stepper driver</p>
 
 <ul>
-<li>Unsupported?</li>
+<li>Untested, and no firmware to drive it yet.</li>
 </ul>
 </li>
-<li><p><strong>ANP</strong>: Analog protection circuits?</p>
+<li><p><strong>ANP</strong>: Analog protection circuits</p>
 
 <ul>
-<li>Max-out; cheap passive components?</li>
+<li>Max-out; Protection diodes (Schottky, SOD123 package). This way the board is protected against voltage spikes and other
+harmful stuff.</li>
 </ul>
 </li>
-<li><p><strong>DGP</strong>: Digital protection circuits?</p>
+<li><p><strong>DGP</strong>: Digital protection circuits</p>
 
 <ul>
-<li>Max-out; cheap passive components?</li>
+<li>Max-out; Protection zeners (5v1, SOD123 package). You'll probably not need this.</li>
 </ul>
 </li>
 </ul>
@@ -245,6 +246,53 @@
 
 
 <h2>Assembling the board</h2>
+
+<p>IMPORTANT: If needed, modify the PCB as shown in “Spin 1 speciﬁc notes”</p>
+
+<p>These steps should be performed sequentially</p>
+
+<ul>
+<li>Install MCU, regulators, PLL and crystal circuits.
+Follow the schematic to locate the component values, or install Kicad to be able to search in the schematic.</li>
+<li>Test the MCU works by uploading the firmware.</li>
+<li>Install rpm input circuit:choose hall input, or VR.</li>
+<li>Install misc outputs like Fuel, ect.</li>
+<li>Install injector circuits.</li>
+<li>Install ignition circuits.</li>
+</ul>
+
+
+<br id="firmware_upload">
+
+
+<h2>Uploading the firmware</h2>
+
+<h3>Installing the bootloader</h3>
+
+<ul>
+<li>Use A BDM pod to upload the binary file that you can download from here:</li>
+</ul>
+
+
+<p>https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19</p>
+
+<h3>Using the USB bootloader</h3>
+
+<p>Install SeanK’s loader from https://github.com/seank/freeems-loader</p>
+
+<p>(<em>Have to put some screenshots here!</em>)</p>
+
+<p>Its an easy to use application. Just connect to the USB and power up Puma (jumpering
+the load/run header), select the device /dev/ttyUSB0 in *nixes (COMxx in windows), and
+push the load button.</p>
+
+<p>In the ﬁle dialog, select the .s19 ﬁrmware you want.</p>
+
+<p>Wait until it erases and program the device. Close the communications.</p>
+
+<p>Remove the load/run jumper in the header and reset de board.</p>
+
+<p>Congratulations! FreeEMS code is running in your board.</p>
 
 <br id="footer">
 
