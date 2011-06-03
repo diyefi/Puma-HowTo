@@ -1,12 +1,17 @@
-<html><head><title>FreeEMS Puma Spin 1 How-To</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FreeEMS Puma Spin 1 How-To</title>
+<meta charset="utf-8">
 <style></style>
-<link rel="stylesheet" href="style.css"></head>
-<body><br id="links">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><hr id="links">
 
 
 
 
-<br id="intro">
+<hr id="intro">
 
 
 <h1>Introduction</h1>
@@ -17,7 +22,7 @@
 
 <p>This version of the manual includes instructions for the Spin 1 board, which is commonly provided as just a bare PCB board. You will need to purchase parts based on <a href="#configuring_bom">the BOM</a>, and then install those parts. You will also need to program the board via the BDM programming port to get the initial boot loader installed. After the initial build, the  board con be programmed with an USB connection to your computer. Supported platforms include Windows, Mac and Linux.</p>
 
-<br id="index">
+<hr id="index">
 
 
 <h2>Index</h2>
@@ -30,7 +35,7 @@
 </ul>
 
 
-<br id="pcb_overview">
+<hr id="pcb_overview">
 
 
 <h2>PCB overview</h2>
@@ -74,7 +79,7 @@
 
 
 
-<br id="configuring_bom">
+<hr id="configuring_bom">
 
 
 <h2>Configuring the BOM</h2>
@@ -169,7 +174,8 @@
 <li><p><strong>MAF</strong>: Air mass flow sensor circuit?</p>
 
 <ul>
-<li>This is an alternative to the MAP sensor. It usually doesn't make sense to use both.</li>
+<li>This is an alternative to the MAP sensor.</li>
+<li>It usually doesn't make sense to use both.</li>
 </ul>
 </li>
 <li><p><strong>GPO</strong>: General Purpose output circuits.</p>
@@ -185,16 +191,29 @@
 <li>Only wide-band lambdas are supported at this time.</li>
 </ul>
 </li>
-<li><p><strong>EGT</strong>: Thermocouple driver</p>
+<li><p><strong>EGT</strong>: Thermocouple driver IC</p>
 
 <ul>
-<li>You'll probably not need this.</li>
+<li>In Spin1, this one is a bit crippled.
+
+<ul>
+<li>It only supports up to 500°C temperatures as-it's currently configured.</li>
+<li>The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V</li>
 </ul>
 </li>
-<li><p><strong>TCPL</strong>: Thermistors</p>
+<li>You'll not use this, so enter 0</li>
+</ul>
+</li>
+<li><p><strong>TCPL</strong>: Thermistor filtering circuits</p>
 
 <ul>
-<li>In most cases, you'll use two: One for the inlet air temperature, another for the coolant temperature. This includes the filtering circuitry, not the sensors.</li>
+<li>In most cases, you'll use two:
+
+<ul>
+<li>One for the inlet air temperature</li>
+<li>Another for the coolant temperature.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><strong>AN</strong>: General purpose analog inputs</p>
@@ -219,84 +238,335 @@ harmful stuff.</li>
 <li><p><strong>DGP</strong>: Digital protection circuits</p>
 
 <ul>
-<li>Max-out; Protection zeners (5v1, SOD123 package). You'll probably not need this.</li>
+<li>Protection zeners (5v1, SOD123 package).</li>
+<li>These have known issues in the Spin1 hardware revision, so enter 0</li>
 </ul>
 </li>
 </ul>
 
 
-<br id="sourcing_components">
+<hr id="sourcing_components">
 
 
 <h2>Sourcing the components</h2>
 
 <p>You might already have some of the components, omit those.</p>
 
-<h3>If you prefer Newark, Mouser or Farnell:</h3>
+<h4>If you prefer Newark, Mouser or Farnell:</h4>
 
 <p>The second sheet (MFG BOM) of the spreadsheet has a table of components formatted for these distributors.</p>
 
-<h3>If you prefer Digikey:</h3>
+<h4>If you prefer Digikey:</h4>
 
 <p>The third sheet (DIGIKEY BOM) of the spreadsheet has a table of components formatted in the Digikey format.</p>
 
 <p>Next, just export the sheet of your choice into a Comma-Separated-Values (.csv) formated file and submit the CSV file into the web store of your favourite parts supplier.</p>
 
-<br id="assembly_overview">
+<hr id="assembly_overview">
 
 
-<h2>Assembling the board</h2>
+<h1>Assembling the board</h1>
 
-<p>IMPORTANT: If needed, modify the PCB as shown in “Spin 1 speciﬁc notes”</p>
-
-<p>These steps should be performed sequentially</p>
+<h2>Use the <a href="http://kicad.sourceforge.net/wiki/Main_Page">KiCad</a> documents as a guideline of the schematics (should be replaced with image-how-to's)</h2>
 
 <ul>
-<li>Install MCU, regulators, PLL and crystal circuits.
-Follow the schematic to locate the component values, or install Kicad to be able to search in the schematic.</li>
-<li>Test the MCU works by uploading the firmware.</li>
-<li>Install rpm input circuit:choose hall input, or VR.</li>
-<li>Install misc outputs like Fuel, ect.</li>
-<li>Install injector circuits.</li>
-<li>Install ignition circuits.</li>
+<li>Install <a href="http://kicad.sourceforge.net/wiki/Main_Page">KiCad</a>
+
+<ul>
+<li><a href="http://forum.diyefi.org/viewtopic.php?f=9&amp;t=1186">KiCad Mac OS X Instructions</a></li>
+</ul>
+</li>
+<li>Clone the Puma repository
+
+<ul>
+<li>Install <a href="http://git-scm.com/">GIT</a></li>
+<li><code>git clone https://github.com/nitrousnrg/puma.git</code></li>
+</ul>
+</li>
+<li><a href="http://forum.diyefi.org/viewtopic.php?f=53&amp;t=1187">Fix the Puma project file references (temporary)</a></li>
 </ul>
 
 
-<br id="firmware_upload">
+<h1>Follow these steps sequentially:</h1>
+
+<hr id="assembly_spin1_mods">
+
+
+<h2>Spin1-specific modifications</h2>
+
+<p>You'll need to perform these modifications to the PCB board.</p>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Close up view of cutting this trace" alt="Close up view of cutting this trace">
+    <div class=pict_title>Close up view of cutting this trace</div>
+  </a>
+  <div class=text>
+<p>Cutting this</p>
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Close-up view of jumpering that connection" alt="Close-up view of jumpering that connection">
+    <div class=pict_title>Close-up view of jumpering that connection</div>
+  </a>
+  <div class=text>
+<p>Jumpering that</p>
+  </div>
+</div>
+
+
+
+
+<hr id="assembly1">
+
+
+<h2>Step 1: MCU circuits</h2>
+
+<p>Follow the schematic to locate the component values</p>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install the MCU</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install the regulators</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install the PLL circuits</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install the crystal circuits.</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly2">
+
+
+<h2>Step 2: Verification using the firmware</h2>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Ensure the MCU works, by <a href="#firmware_upload">uploading the firmware</a>.</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly3">
+
+
+<h2>Step 3: RPM circuits</h2>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install RPM input circuit
+
+<ul>
+<li>Choose either hall or VR input.</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly4">
+
+
+<h2>Step 4: Miscellaneous circuits</h2>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install misc outputs like Fuel, etc.</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly5">
+
+
+<h2>Step 5: Injector circuits</h2>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install injector circuits.</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly6">
+
+
+<h2>Step 6: Ignition circuits</h2>
+
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Placement" alt="Placement">
+    <div class=pict_title>Placement</div>
+  </a>
+  <div class=text>
+<ul>
+<li>Install ignition circuits.</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+
+<hr id="assembly_baking">
+
+
+<h2>Some instructions about how to bake the board in your oven.</h2>
+
+<hr id="firmware_upload">
 
 
 <h2>Uploading the firmware</h2>
 
-<h3>Installing the bootloader</h3>
+<h3>Installing the serial monitor</h3>
 
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Using BDM pod and installing the freeems-loader" alt="Using BDM pod and installing the freeems-loader">
+    <div class=pict_title>Using BDM pod and installing the freeems-loader</div>
+  </a>
+  <div class=text>
 <ul>
-<li>Use A BDM pod to upload the binary file that you can download from here:</li>
+<li>Connect a serial adapter to the BDM pod on your Puma board</li>
+<li>Upload the <a href="https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19">serial monitor firmware</a></li>
+<li>Install <a href="https://github.com/seank/freeems-loader">SeanK’s loader</a></li>
+<li>????</li>
+<li>Profit!</li>
 </ul>
 
 
-<p>https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19</p>
+<!-- And learn how to make comments -->
 
-<h3>Using the USB bootloader</h3>
+  </div>
+</div>
 
-<p>Install SeanK’s loader from https://github.com/seank/freeems-loader</p>
 
-<p>(<em>Have to put some screenshots here!</em>)</p>
+<h3>Uploading the firmware</h3>
 
-<p>Its an easy to use application. Just connect to the USB and power up Puma (jumpering
-the load/run header), select the device /dev/ttyUSB0 in *nixes (COMxx in windows), and
-push the load button.</p>
+<div class=imagebox style="min-height:148px">
+  <a class=pict href="img/placeholder_image.png">
+    <img src="img/placeholder_image.png" width=128 height=128 title="Uploading the firmware" alt="Uploading the firmware">
+    <div class=pict_title>Uploading the firmware</div>
+  </a>
+  <div class=text>
+<ol>
+<li>Connect an USB cable between your computer and Puma</li>
+<li>Turn Puma on (jumper the load/run header).</li>
+<li>Select the device <code>/dev/ttyUSB[n]</code> in Unix-like operating systems and <code>COM[n]</code> on Windows.</li>
+<li>Press the "Load" button.</li>
+<li>In the dialog, select the .s19 firmware file you want to use.</li>
+<li>Wait until the erasing and programming phases are done.</li>
+<li>Close the communications.</li>
+<li>Remove the load/run jumper in the header and reset de board.</li>
+</ol>
 
-<p>In the ﬁle dialog, select the .s19 ﬁrmware you want.</p>
 
-<p>Wait until it erases and program the device. Close the communications.</p>
+<p><em>The FreeEMS firmware is now installed on your Puma board.</em></p>
+  </div>
+</div>
 
-<p>Remove the load/run jumper in the header and reset de board.</p>
 
-<p>Congratulations! FreeEMS code is running in your board.</p>
 
-<br id="footer">
+
+<hr id="footer">
 
 
 <hr />
 
-<p>FreeEMS Documentation is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a> for more details.</p></body></html>
+<p><em>FreeEMS Documentation is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a> for more details.</em></p></body>
+</html>
