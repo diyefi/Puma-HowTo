@@ -27,42 +27,41 @@ The first sheet in the spreadsheet (FreeEMS_setup) contains the configurable out
 #### Legend of acronyms
 
 - **INJ-H**: Amount of High-Z injectors.
-  - If you have High-Z injectors, enter the a number equal to the amount of injectors in your engine.
+  - If you have High-Z injectors, enter the a number equal to the amount of injectors that your engine has.
   - In this example, we have four High-Z injectors.
 
 - **INJ-L**: Amount of Low-Z injectors.
-  - If you have Low-Z injectors, enter the a number equal to the amount of injectors in your engine.
+  - If you have Low-Z injectors, enter the a number equal to the amount of injectors that your engine has.
   - In this example, it's 0 because there are four High-Z injectors conifigured.
 
 - **IGN**: Amount of Ignition drivers.
-  - For a 4-cylinder engine with wasted spark, 2 is fine.
-  - If you plan to use your distributor, 1 is fine.
+  - For coil per plug operation (COP/CNP) you need one of these per cylinder.
+  - For wasted spark you need one of these per two cylinders.
+  - If you plan to use your distributor, you only need one.
   - Enter 0, if you are not planning to drive your ignition with FreeEMS.
 
 - **RPM**: Amount of RPM inputs.
-  - Enter 1, if you are going to use a single trigger wheel. Fine for bank and semi-sequential injection and wasted spark.
-  - Enter 1, if you are going to use just the hall signal from your distributor. Will not allow sequential anything nor ignition.
-  - Enter 2, if you are going to use both crank and cam signals; Required for sequential injection and sequential injection.
+  - Most people should install 2 as most input configurations require 2, and installing only 1 will limit the use of the unit significantly.
+  - If you know what your RPM/Position sensor configuration is, know that it only uses 1 input, are 100% certain that that will not change, and want to save a little money, choose 1.
 
 - **MAPB**: Boosted MAP sensor and its input circuit.
-  - You don't need this, unless you are going to read boost levels from a supercharger or turbo. It includes an MPX4250AP sensor.
+  - This is the default and provides sufficient accuracy for all naturally aspirated vehicles and boosted vehicles upto 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate. It includes an MPX4250AP sensor.
 
 - **MAPN**: Regular vacuum MAP sensor and its input circuit.
-  - You'll want this to read the vacuum levels from your inlet manifold. It includes an MPX4100AP sensor.
+  - Don't choose this unless you're 100% certain that your Puma will never be connected to a boosted engine. The only advantage that this has over the default is slightly better accuracy. It includes an MPX4100AP sensor.
 
-- **AAP**: Ambient air pressure sensor and its input circuit.
-  - You'll want this in most cases. It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.
+- **AAP**: Atmospheric Absolute Pressure sensor and its input circuit.
+  - This is considered optional in most cases. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle. It's not needed for people who use their vehicles at one constant altitude (whatever that is). It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.
 
-- **MAF**: Air mass flow sensor circuit?
-  - This is an alternative to the MAP sensor.
-  - It usually doesn't make sense to use both.
+- **MAF**: Mass Air Flow sensor conditioning circuit
+  - This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used for any other analogue input too.
 
 - **GPO**: General Purpose output circuits.
   - You'll probably not need these.
 
 - **O2**: Lambda sensor input circuits.
   - Enter 1
-  - Only wide-band lambdas are supported at this time.
+  - Only linear wide-band lambda sensors are supported at this time.
 
 - **EGT**: Thermocouple driver IC
   - In Spin1, this one is a bit crippled.
