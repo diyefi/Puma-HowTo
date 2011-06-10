@@ -19,8 +19,22 @@
 #
 
 require 'rubygems'
-gem 'bluecloth', '~> 2.1.0'
-require 'bluecloth'
+begin
+  require 'peg_markdown'
+  MarkdownHandler = PEGMarkdown
+rescue LoadError
+  # warn "Unable to load rpeg-markdown, trying rdiscount instead.."
+  begin
+    require 'rdiscount'
+    MarkdownHandler = RDiscount
+  rescue LoadError
+    # warn "Unable to load rdiscount, trying bluecloth instead.."
+    gem 'bluecloth', '~> 2.1.0'
+    require 'bluecloth'
+    MarkdownHandler = BlueCloth
+  end
+end
+
 require 'yaml'
 
 class BuildDoc
@@ -64,7 +78,7 @@ class BuildDoc
     end
   end
   def build_img_box( width, height, src, title, md_src )
-    html = BlueCloth.new( md_src ).to_html
+    html = MarkdownHandler.new( md_src ).to_html
     f_width = 440
     if width > f_width
       f_height = ((height/width.to_f)*f_width).round
@@ -93,7 +107,7 @@ class BuildDoc
   end
   def process_template
     extra_md
-    html_body = BlueCloth.new( @md_src ).to_html
+    html_body = MarkdownHandler.new( @md_src ).to_html
     @html = html_tmpl.gsub(
       '__TITLE__', @title
     ).gsub(
