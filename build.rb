@@ -19,6 +19,7 @@
 #
 
 require 'rubygems'
+gem 'bluecloth', '~> 2.1.0'
 require 'bluecloth'
 require 'yaml'
 
