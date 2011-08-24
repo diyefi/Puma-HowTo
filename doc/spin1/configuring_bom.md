@@ -2,12 +2,33 @@
 
 ### Important notes
 
-- The EGT circuit doesn't work (it has a 500&deg;C limit).
+- This guide is incomplete, ordering is not recommended without checking each sub-circuit that you need and confirming that it looks sensible in conjunction with the changes listed in this document.
+- A large number of parts should be left unpopulated or replaced with a zero ohm link or solder bridge.
+- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider, these hacks are untested.
 - The USB connector is wrong (It's female A, which is reserved for host devices).
   - Don't buy the female A connector nor the male A-A cable.
   - Hack a mini-usb or type B female connector instead and use an appropriate cable.
 - The shutdown circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.
+- The USB circuit requires an additional component in the way of a to92 packaged PNP transistor UNLESS a modified SM is used (currently not available @ 24 August 2011)
+- The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12v signal at around 100mA, this will need to be prototyped.
+- The fuel injector drives have the wrong pin out for most driver transistors and FETs and as such require hacking to make work in either low or high z configuration.
 
+### Listing of parts to NOT install
+
+- D24 and D26 should be left unpopulated as they compromise the signal quality and are not required for protection on an internal circuit.
+- R40, R42, should be bridged as they are redundant with the above diodes removed.
+- R133, R135, R137, R148, R151, R157, R154, should be left unpopulated as they will impact the signal fidelity.
+- R212, R213, R215 and R216 should be 1/4w power handling. It is unreliable and difficult to fit TH 1/4w resistors in these locations. As such it could be a better idea to put them in the loom instead and bridge these locations. 
+- R50, R51, R52, R134, R163, R164, R165, R166, R171, R172, R173, R174, R187 should be bridged to present a suitably low impedance output to the ADC pins
+- No electrolytic caps should be installed. In their place 10uF TH tantalums can optionally be installed.
+- D1 and D3 should be bridged as the regulators have built in reverse protection.
+
+### Listing of parts with bad values
+
+- R106 should be 1k and R105 should be 3.9k for maximum ADC accuracy, though the supplied values that are 10x higher do seem to work OK.
+- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
+- R136, R138, R149 and R158 should be reduced to 1k or less for maximal accuracy of ADC readings.
+- R18, R22, R26 and R30 should be 100k not 10k to minimise the voltage divider that is formed.
 
 ### Overview
 
