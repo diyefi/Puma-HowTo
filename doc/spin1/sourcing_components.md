@@ -3,12 +3,16 @@
 You might already have some of the components, omit those.
 
 
-#### If you prefer Newark, Mouser or Farnell:
-The second sheet (MFG BOM) of the spreadsheet has a table of components formatted for these distributors.
+#### If you prefer Newark, Mouser or Element14:
+The BOM is aimed at getting most the components from one supplier to minimise freighting costs, with global distribuition.
+This BOM has all the component part numbers and links for [Element14] as an alternitive some [Mouser] options have also been included.
 
+Just copy and past the supplier part numbers for required sub-circuit to the relevant supplier shopping cart.
 
 #### If you prefer Digikey:
-The third sheet (DIGIKEY BOM) of the spreadsheet has a table of components formatted in the Digikey format.
+Unfortunatly a Digikey BOM equilivent has not yet been developed for Puma Spin1 when done it will be linked here, if you develop one that works let us know.
+
+[Index](#index)
 
 
-Next, just export the sheet of your choice into a Comma-Separated-Values (.csv) formated file and submit the CSV file into the web store of your favourite parts supplier.
+
