@@ -29,7 +29,7 @@ rescue LoadError
     MarkdownHandler = RDiscount
   rescue LoadError
     # warn "Unable to load rdiscount, trying bluecloth instead.."
-    gem 'bluecloth', '~> 2.1.0'
+    gem 'bluecloth', '> 2.1'
     require 'bluecloth'
     MarkdownHandler = BlueCloth
   end
