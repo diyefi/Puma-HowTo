@@ -1,0 +1,49 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f2efec;
+  color: #43413a;
+  font-size: 16px;
+  padding: 20px;
+}
+a {
+  color: #18658f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  padding-top: 16px;
+  font-size: 32px;
+}
+h2 {
+  padding-top: 14px;
+  font-size: 28px;
+}
+h3 {
+  padding-top: 12px;
+  font-size: 24px;
+}
+h4 {
+  padding-top: 10px;
+  font-size: 20px;
+}
+.imagebox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.imagebox > .pict {
+  border: 1px solid #999;
+  width: 440px;
+  float: left;
+  margin-right: 10px;
+}
+.imagebox > .pict > .pict_title {
+  font-size: 14px;
+  color: #43413a;
+  width: 440px;
+  font-style: italic;
+}
+.imagebox > .text {
+  margin-left: 460px;
+}

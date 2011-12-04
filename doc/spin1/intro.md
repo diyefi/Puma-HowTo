@@ -1,7 +1,7 @@
 
-<center>/-- 1728x545 img/under_construction.jpg "" --/</center>
+/-- 1728x545 img/under_construction.jpg "" --/
 
-<center><b>Please come back soon.</b></center>
+# (come back soon)
 
 # Introduction
 
