@@ -3,5 +3,10 @@
 [DIYEFI]: http://diyefi.org/
 [KiCad]: http://kicad.sourceforge.net/wiki/Main_Page
 [KiCad Mac OS X Instructions]: http://forum.diyefi.org/viewtopic.php?f=9&t=1186
-[Element14]:http://www.element14.com
-[Bom Here]:https://github.com/presto/Puma-Bom-Element14
+[Element14]: http://www.element14.com
+[Mouser]: http://www.mouser.com/
+[Bom Here]: https://github.com/presto/Puma-Bom-Element14
+[Bom]: https://github.com/presto/Puma-Bom-Element14
+[Schematics]: http://puma.freeems.org/docs/Puma_spin1_schematic.pdf
+[cloning Puma]: http://puma.freeems.org/docs/cloning_puma
+[CodeWarrior]: http://codewarrior_link

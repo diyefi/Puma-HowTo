@@ -1,7 +1,5 @@
-
-#### Step 12: Ignition circuits
-/-- 128x128 img/placeholder_image.png "Placement"
- - Install ignition circuits.
---/
+#### Ignition circuits ####
+**Step X :**
+/-- 128x128 img/placeholder_image.png "" Install ignition circuits. --/
 
 [Index](#index)

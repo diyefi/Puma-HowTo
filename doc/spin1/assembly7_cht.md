@@ -1,5 +1,3 @@
-
-#### Step 7: CHT circuit
-/-- 128x128 img/placeholder_image.png "Placement"
- - Install ignition circuits.
---/
+#### CHT circuit ####
+**Step X :**
+/-- 128x128 img/placeholder_image.png "" Install ignition circuits. --/

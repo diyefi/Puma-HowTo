@@ -1,12 +1,7 @@
-# Assembling the board
+# Assembling the board #
 
-## Use the [KiCad] documents as a guideline of the schematics (should be replaced with image-how-to's)
- - Install [KiCad]
-   - [KiCad Mac OS X Instructions]
- - Clone the Puma repository
-   - Install [GIT](http://git-scm.com/)
-   - ``git clone https://github.com/nitrousnrg/puma.git``
-   - Switch to the correct branch: Spin1_branch
- - [Fix the Puma project file references (temporary)](http://forum.diyefi.org/viewtopic.php?f=53&t=1187)
+**The [schematics] are a 'guideline' only and can be opened with any pfd viewer, all changes nessasary are contained in the [BOM]**
 
-# Follow these steps sequentially:
+Optionally the repo's with all development files can be cloned. Click on the link for details on [cloning Puma].
+
+## Follow these steps sequentially: ##

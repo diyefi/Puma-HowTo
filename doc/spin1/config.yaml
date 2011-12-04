@@ -27,4 +27,4 @@ order:
  - sm_install # how to load the serial monitor using BDM
  - firmware_upload # how to upload the FreeEMS firmware to the board
  - tuning # how to tune your new board
- - footer # footer, disclaimer, contacts etc.
+ - footer # footer, disclaimer, contacts etc
