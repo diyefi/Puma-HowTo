@@ -24,6 +24,7 @@ order:
  - assembly11_injection
  - assembly12_ignition
  - pcb_bake # instructions how to bake the board in an oven
+ - assembly13_after_reflow
  - sm_install # how to load the serial monitor using BDM
  - firmware_upload # how to upload the FreeEMS firmware to the board
  - tuning # how to tune your new board

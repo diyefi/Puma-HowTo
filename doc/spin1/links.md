@@ -10,3 +10,6 @@
 [Schematics]: http://puma.freeems.org/docs/Puma_spin1_schematic.pdf
 [cloning Puma]: http://puma.freeems.org/docs/cloning_puma
 [CodeWarrior]: http://codewarrior_link
+[cutecom]: http://cutecom.sourceforge.net/
+[serial monitor firmware]: https://github.com/fredcooke/freeems-vanilla/raw/master/lib/freeems.serial.monitor.s19
+[SeanK’s loader]: (https://github.com/seank/freeems-loader)

@@ -1,50 +1,248 @@
 ## Using the BOM
 
-The BOM is broken down into sub-circuits so you as the end user can pick and choose which circuits are  to your project, for each sub-circuit there is a matching assembly section.
-The primary components are compulsory to achieve functional 'FreeEMS brain'.
+The BOM is broken down into sub-circuits so you as the end user can pick and choose which circuits are best suited to your project, for each sub-circuit there is a matching assembly section.
+The primary components are compulsory to achieve functional 'FreeEMS brain', all other sections are optional however a combination of these will be nessasry for an engine to run.
 
-In the top right corner of each BOM page is the schematic page number that the components come from.
+In the right corner of each BOM coloured sub-circuit title is the page number which coresponds to the schematic that the components relate to.
 
-### Important notes
+### Overview with Important notes
 
 - A large number of parts will be unpopulated, replaced with a zero ohm jumper or solder bridge.
-- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider, these hacks are untested.
+- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider, these hacks are untested**.
 - The USB connector is wrong (It's female A, which is reserved for host devices) however it is functional. Cables are hard to come by, the options are:
 	- buy male A-A cable.
 	- Hack a mini-usb or type B female connector instead and use an appropriate cable.
 	- Build a A-A cable from two common USB cables. 
 - The shutdown circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.
-- The USB circuit requires an additional component in the way of a to92 packaged PNP transistor UNLESS a modified SM is used (currently not available @ 24 August 2011)
-- The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12v signal at around 100mA, this will need to be prototyped.
+- The USB circuit requires an additional component in the way of a to92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available @ 24 August 2011)
+- The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12v signal at around 100mA, this is yet to be prototyped**.
 
+** = work in progress
+
+#### Legend of acronyms ####
+
+- **INJ-H**: *(**Inj**ector **H**igh impedance)*
+  	- If you have high impedance injectors (``>6``&ohm;), these can be driven directly from Puma.
+  	
+- **INJ-L**: *(**Inj**ector **L**ow impedance)*
+  	- If you have low impedance injectors (``<6``&ohm;), there needs to be significant modifications made to use these.
+  	
+- **IGN**: *(**Ign**ition)*
+  	- For coil per plug operation (COP/CNP), you need one of circuit per cylinder.
+  	- For wasted spark setup, you need one of these per two cylinders.
+  	- If you require operation of a distributor, you only need one.
+  	- For fuel only system you require nill/zero.
+
+- **RPM**: *(**R**evilutions **P**er **M**inute)*
+  	- Most applications require 2 inputs for 2 sensors, and installing only 1 will limit the use of the unit significantly 2 is the default and recomended.
+ 
+- **MAP**: *(**M**anifold **A**bsolute **P**ressure)* 
+	- Boosted is the default/prefered sensor and provides sufficient accuracy for all naturally aspirated vehicles. Boosted applications upto 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate.
+
+- **AAP**: *(**A**tmospheric **A**bsloute **P**ressure)* 
+  	- Used for normalization of the MAP vs atmospheric pressure, this is considered optional. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle, or if you live in New Zealand home of **L``&``P**. It's not needed for people who use their vehicles at one constant altitude (whatever that is).
+- **MAF**: *(**M**ass **A**ir **F**low)* 
+	- This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used as a general purpose analogue input also.
+
+- **GPO**: *(**G**eneral **P**urpose **O**utput)*
+
+- **O2**: *(**O**xygen)*
+  	- Only linear wide-band lambda sensors are supported at this time.
+
+- **EGT**: *(**E**xhaust **G**as **T**emperture)* 
+  	- Thermocouple driver IC, in Spin1 this circutry is a crippled: 
+		- It only supports up to 500°C temperatures as-it's currently configured.
+		- The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V**. 
+
+- **TCPL**: *(fucked if i know)* Thermistor filtering circuits
+  	- In most cases, you'll use two:
+		- One for the inlet air temperature.
+		- Another for the coolant temperature.	
+    		
+- **GPAN**: *(**G**eneral **P**urpose **AN**alogue)* 
+  	- Spin 1 doesn't need this.
+
+- **STP**: *(**St**e**p**per)*
+  	- Stepper driver circuit is untested at this time, and no firmware to drive it yet.
 
 ### Listing of parts to NOT install
 
-- ToBe completed
-- D24 and D26 should be left unpopulated as they compromise the signal quality and are not required for protection on an internal circuit.
-- R40, R42, should be bridged as they are redundant with the above diodes removed.
-- R133, R135, R137, R148, R151, R157, R154, should be left unpopulated as they will impact the signal fidelity.
-- R212, R213, R215 and R216 should be 1/4w power handling. It is unreliable and difficult to fit TH 1/4w resistors in these locations. As such it could be a better idea to put them in the loom instead and bridge these locations. 
-- R50, R51, R52, R134, R163, R164, R165, R166, R171, R172, R173, R174, R187 should be bridged to present a suitably low impedance output to the ADC pins
-- No electrolytic caps should be installed. In their place 10uF TH tantalums can optionally be installed.
-- D1 and D3 should be bridged as the regulators have built in reverse protection.
+- R135, R137, R157, should be left unpopulated as they will (need to check these) .
+- R51, R134, R166, R171, R172, R173, R187 should be bridged to present a suitably low impedance output to the ADC pins  ``<------ check these, then remove ``
 
-### Listing of parts with bad values
 
-- ToBe completed
-- R106 should be 1k and R105 should be 3.9k for maximum ADC accuracy, though the supplied values that are 10x higher do seem to work OK.
-- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
-- R136, R138, R149 and R158 should be reduced to 1k or less for maximal accuracy of ADC readings.
-- R18, R22, R26 and R30 should be 100k not 10k to minimise the voltage divider that is formed.
+### Listing of components with bad values
 
-### Overview
+- *ToBe completed add links to different sections*
+- #### Components to be replaced with a wire jumper
+	- **D1**   ``-->`` wire jumper
+	- **R2**   ``-->`` wire jumper to **U4**
+	- **R7**   ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R9**   ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R11**  ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R13**  ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R40**  ``-->`` 0805 wire jumper *(bridged - component redundant with D24 diode removed)* (need to colour red in bom)
+	- **R42**  ``-->`` 0805 wire jumper *(bridged - component redundant with D26 diode removed)* (need to colour red in bom)
+	- **R47**  ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R48**  ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R50**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in bom)
+	- **R52**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in bom)
+	- **R159** ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R163** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in bom)
+	- **R165** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(missing component name)
+	- **R160** ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R164** ``-->`` *(bridged to present a suitably low impedance output to the ADC pins)*0805 wire jumper (need to colour red in bom)
+	- **R170** ``-->`` 0805 wire jumper (need to colour red in bom)
+	- **R174** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in bom)
+
+- #### Components that require pcb modifications or are of significant change
+	- **R251** ``-->`` 1k&ohm; pull-up mod
+	- **C105** ``-->`` mount over top mod, one cap will be mounted directly ontop of the other. *(need to id components for best arangement)*
+	- **R176** ``-->`` possible 1M&ohm; or 10M&ohm; mod *to be confirmed*
+	- **R158** ``-->`` 10nF 0805 package mod will fit on current resistor pads
+	- **C108** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.	
+	- **C110** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C112** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C114** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C116** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C118** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C120** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **C122** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be moded to ground as a pull-down.
+	- **RMODA** ``-->`` 100k&ohm; pull-down resistors MF12 package type, these resistors specificly will fit through the very small via's on puma and will make for easier and stronger soldering to via pads.
+	- **RMODB**  ``-->`` 200&ohm; **2 Watt** pull-up resistor.
+	- **USB-hack** ``-->`` Required to make USB operate at this time with current Serial Monitor firmware.
+	- **SM-UPhack** ``-->`` 10k&ohm; pull-up mod, required to make sure that the **SM** pin always has a known state (Held high until switched/jumpered low).
+
+- #### Components that will NOT be populated onto puma PCB.
+	- *Shutdown circuitry: This circuit design is flawed and useable the following components should be neglected. This circuit is bypassed with the **D1** jumper.*	
+		- **Q19**  ``-->`` do not use
+		- **Q18**  ``-->`` do not use				
+		- **R227** ``-->`` do not use				
+		- **R226** ``-->`` do not use				
+	- **D3**   ``-->`` Not used no connection *(reason to be added)*
+	- **R133** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
+	- *These components are not used when operating an on board MAP (non-OEM):*	
+		- **D31**  ``-->`` Not used no connection *(reason to be added)*
+		- **D32**  ``-->`` Not used no connection *(reason to be added)*
+		- **C29**  ``-->`` Not used no connection *(reason to be added)*
+	- **C19**  ``-->`` Not used no connection *(reason to be added)* 
+	- *These components are not used when operating an on board AAP (non-OEM):*	
+		- **D33**  ``-->`` Not used no connection *(reason to be added)*
+		- **D34**  ``-->`` Not used no connection *(reason to be added)*
+		- **C30**  ``-->`` Not used no connection *(reason to be added)*
+	- **D24**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
+	- **D26**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
+	- **R68**  ``-->`` Not used no connection *(reason to be added)*
+	- **C37**  ``-->`` Not used no connection *(reason to be added)* 
+	- **C73**  ``-->`` Not used no connection *(reason to be added)* 
+	- **C86**  ``-->`` Not used no connection *(reason to be added)* 
+	- **R148** ``-->`` Not used no connection *(negatively impact the signal fidelity)* 
+	- **C79**  ``-->`` Not used no connection *(reason to be added)*
+	- **R154** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
+	- **C92**  ``-->`` Not used no connection *(reason to be added)*
+	- **C76**  ``-->`` Not used no connection *(reason to be added)*
+	- **R151** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
+	- **C85**  ``-->`` Not used no connection *(reason to be added)*
+	
+	- *Injection circuitry diodes, not used to date (07 December 2011):*	
+		- **D84** ``-->`` do not use
+		- **D85** ``-->`` do not use
+		- **D86** ``-->`` do not use
+		- **D87** ``-->`` do not use
+		- **D88** ``-->`` do not use
+		- **D89** ``-->`` do not use
+		- **D90** ``-->`` do not use
+		- **D91** ``-->`` do not use
+		- **D92** ``-->`` do not use
+	
+	- *Ignition circuitry: all components listed are unused:*
+		- **D79** ``-->`` not required internal to mosfet
+		- **R7**  ``-->`` do not use
+		- **D10** ``-->`` do not use
+		- **D78** ``-->`` not required internal to mosfet
+		- **R9**  ``-->`` do not use
+		- **D12** ``-->`` do not use
+		- **R11** ``-->`` not required internal to mosfet 
+		- **D14** ``-->`` do not use
+		- **D77** ``-->`` do not use
+		- **R13** ``-->`` not required internal to mosfet 
+		- **D16** ``-->`` do not use
+		- **D76** ``-->`` do not use
+	
+- #### Straight component value changes (only new correct value shown)
+	- **R177** ``-->`` 10K&ohm;
+	- **R178** ``-->`` 10K&ohm;
+	- **R179** ``-->`` 10K&ohm;
+	- **R181** ``-->`` 10K&ohm;
+	- **R180** ``-->`` 10K&ohm;
+	- **C95**  ``-->`` 0.22uF
+	- **C94**  ``-->`` 680pF
+	- **C93**  ``-->`` 6.8nF
+	- **R175** ``-->`` 3.3K&ohm;
+	- **C96**  ``-->`` 22pF *or* 15pF *or* 33pF
+	- **C97**  ``-->`` 22pF *or* 15pF *or* 33pF
+	- **C98**  ``-->`` 0.22uF
+	- **C99**  ``-->`` 0.22uF
+	- **C100** ``-->`` 0.22uF
+	- **C101** ``-->`` 0.22uF
+	- **C102** ``-->`` 0.22uF
+	- **C11**  ``-->`` 10uF
+	- **R105** ``-->`` 3.9K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*.
+	- **R106** ``-->`` 1K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*. 
+	- *Only changed to these following values when using off board MAP (OEM):*	
+		- **D31**  ``-->`` Schotty diode
+		- **D32**  ``-->`` Schotty diode
+		- **C29**  ``-->`` 0.1uF
+	- *Only changed to these following values when using off board AAP (OEM):*	
+		- **D33** ``-->`` Schotty diode
+		- **D34** ``-->`` Schotty diode
+		- **C30** ``-->`` 0.1uF
+	- **R212** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R213** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R39**  ``-->`` 1K&ohm;
+	- **R215** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R216** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R41**  ``-->`` 1K&ohm;
+	- **D60**  ``-->`` Schottky diode
+	- **D61**  ``-->`` Schottky diode
+	- **R147** ``-->`` 2.4K&ohm;
+	- **D72**  ``-->`` Schottky diode
+	- **D73**  ``-->`` Schottky diode
+	- **R153** ``-->`` 2.4K&ohm;
+	- **D58**  ``-->`` Schottky diode
+	- **D59**  ``-->`` Schottky
+	- **R150** ``-->`` 2.4K&ohm;
+	- **D63**  ``-->`` Schottky diode
+	- **R252** ``-->`` 2.4K&ohm;	
+	- **R253** ``-->`` 2.4K&ohm;
+	- **R254** ``-->`` 2.4K&ohm;
+	- **R255** ``-->`` 2.4K&ohm;
+	- **R256** ``-->`` 2.4K&ohm;
+	- **R257** ``-->`` 2.4K&ohm;
+	- **R258** ``-->`` 2.4K&ohm;
+	- **R259** ``-->`` 2.4K&ohm;
+	- **R30**  ``-->`` 100K&ohm; *(this value has been increased to minimise voltage divider effects that have formed)*
+	- **R27**  ``-->`` 1K&ohm;
+	- **R26**  ``-->`` 100K&ohm; *(this value has been increased to minimise voltage divider effects that have formed)*
+	- **R23**  ``-->`` 1K&ohm;
+	- **R22**  ``-->`` 100K&ohm; *(this value has been increased to minimise voltage divider effects that have formed)*
+	- **R19**  ``-->`` 1K&ohm;
+	- **R18**  ``-->`` 100K&ohm; *(this value has been increased to minimise voltage divider effects that have formed)*
+	- **R15**  ``-->`` 1K&ohm;
+
+
+- #### Note: 
+	- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
+	- No electrolytic caps should be installed. In their place 10uF TH tantalums can optionally be installed.
+
+### BOM Configuration Overview
 
 Configuring the BOM has been the tricky part. A spread sheet has been created that is tabbed with the various different sub circuits contained on the Puma PCB. The spread sheet can also be viewed here
 TODO (link to new bom as web page?? )
 
 The BOM is presented in two forms an Excel spreadsheet that can be opened in OpenOffice too and a webpage located [here]
 
-Git users download the [BOM here].
+*Git users download the [BOM here].*
 
 ### Setting up the parameters
 
@@ -53,52 +251,4 @@ Git users download the [BOM here].
 Place details about how to use the BOM.
 
 --/
-### Legend of acronyms
 
-- **INJ-H**: Amount of High-Z injectors.
-  	- If you have High-Z injectors, enter the a number equal to the amount of injectors that your engine has.
-  	- In this example, we have four High-Z injectors.
-
-- **INJ-L**: Amount of Low-Z injectors.
-  	- If you have Low-Z injectors, enter the a number equal to the amount of injectors that your engine has.
-  	- In this example, it's 0 because there are four High-Z injectors conifigured.
-
-- **IGN**: Amount of Ignition drivers.
-  	- For coil per plug operation (COP/CNP) you need one of these per cylinder.
-  	- For wasted spark you need one of these per two cylinders.
-  	- If you plan to use your distributor, you only need one.
-  	- Enter 0, if you are not planning to drive your ignition with FreeEMS.
-
-- **RPM**: Amount of RPM inputs.
-  	- Most people should install 2 as most input configurations require 2, and installing only 1 will limit the use of the unit significantly.
-  	- If you know what your RPM/Position sensor configuration is, know that it only uses 1 input, are 100% certain that that will not change, and want to save a little money, choose 1.
-
-- **MAP**: Boosted capable MAP sensor and its input circuit.
-  	- This is the default and provides sufficient accuracy for all naturally aspirated vehicles and boosted vehicles upto 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate. It includes an MPX4250AP sensor.
-
-- **AAP**: Atmospheric Absolute Pressure sensor and its input circuit.
-  	- This is considered optional in most cases. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle. It's not needed for people who use their vehicles at one constant altitude (whatever that is). It's used for normalization of the MAP vs atmospheric pressure. It includes an MPX4100A sensor.
-
-- **MAF**: Mass Air Flow sensor conditioning circuit
-  	- This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used for any other analogue input too.
-
-- **GPO**: General Purpose output circuits.
-
-- **O2**: Lambda sensor input circuits.
-  	- Only linear wide-band lambda sensors are supported at this time.
-
-- **EGT**: Thermocouple driver IC
-  	- In Spin1, this one is a bit crippled:
-		- It only supports up to 500°C temperatures as-it's currently configured.
-		- The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V. 
-
-- **TCPL**: Thermistor filtering circuits
-  	- In most cases, you'll use two:
-		- One for the inlet air temperature.
-		- Another for the coolant temperature.	
-    		
-- **AN**: General purpose analog inputs
-  	- Spin 1 doesn't need this.
-
-- **STP**: Stepper driver
-  	- Untested, and no firmware to drive it yet.
