@@ -9,8 +9,8 @@ Using solder paste place beads on all of the following component pads C78, R152,
 - **C77**	*(0.1uF)* can be mounted in either direction (Non polarised).
 - **R159**	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.
 - **R163**	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.
-- **D58**	*(Schottky)*
-- **D59**	*(Schottky)*
+- **D58**	*(Schottky)* direction dependant, orentate the **K** lead to the BOTTOM of the PCB. 
+- **D59**	*(Schottky)* direction dependant, orentate the **K** lead to the TOP of the PCB.
 - **R150**	*(2.4K&ohm;)*
 - **C76**	*(Not used no connection)*
 - **R151**	*(Not used no connection)*

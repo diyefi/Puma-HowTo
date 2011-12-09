@@ -20,6 +20,7 @@ The process of assembly with a soldering iron is rated 8/10 :
 	- Solder wick
 	- Super glue
 	- Anti-static surface
+	- Multimeter or Ossciloscope, or any other approprate voltage and current testing device.
 
 #### Reflow oven method 2 ####
 
@@ -37,4 +38,4 @@ The reflow assembly process is rated 6/10 for difficualty to assembly :
 	- Solder wick
 	- Super glue
 	- Anti-static surface 
-     
+        - Multimeter or Ossciloscope, or any other approprate voltage and current testing device.
