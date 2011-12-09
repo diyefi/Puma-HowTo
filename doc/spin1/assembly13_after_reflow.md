@@ -34,30 +34,46 @@
 #### INJECTION #### 
 /-- 128x128 img/placeholder_image.png "show FET mounting" injection fet connection.
 
-injection 1
+**injection 1**
 - **Q15**  *(VNB10N07)*
 
-injection 2
+**injection 2**
 - **Q14**  *(VNB10N07)*
 
-injection 3
+**injection 3**
 - **Q13**  *(VNB10N07)*
 
-injection 4
+**injection 4**
 - **Q12**  *(VNB10N07)*
 
-injection 5
+**injection 5**
 - **Q11**  *(VNB10N07)*
 
-injection 6
+**injection 6**
 - **Q10**  *(VNB10N07)*
 
-injection 7
+**injection 7**
 - **Q16**  *(VNB10N07)*
 
-injection 8
+**injection 8**
 - **Q17**  *(VNB10N07)*
 
+--/
+
+#### IGNITION #### 
+/-- 128x128 img/placeholder_image.png "show FET mounting" ignition fet connection.
+
+**ignition 1**
+- **Q4**	*(VNB10N07)*
+
+**ignition 2**
+- **Q3**	*(VNB10N07)*
+
+**ignition 3**
+- **Q2**	*(VNB10N07)*
+
+**ignition 4**
+- **Q1**	*(VNB10N07)*
 --/
 
 [Index](#index)
