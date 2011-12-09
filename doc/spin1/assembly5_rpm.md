@@ -32,3 +32,5 @@ Using solder paste place beads on all of the following component pads U30, R217,
 	- **R42**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.	
 	- **D26**  *(Zener not used)* negatively impacts on the signal fidelity.	
 --/
+
+[index](#index)

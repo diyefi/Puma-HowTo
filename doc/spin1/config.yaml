@@ -9,17 +9,19 @@ structure:
   - index:
     - intro # introductionary chapter
     - index # index (not used yet)
-  - general:
     - pcb_overview # overview of the board
+  - materials:
     - using_bom # BOM configuration chapter
     - sourcing_components # chapter guiding how to order components
+  - general:  
     - surface_mount_information # tips and tricks for first times
     - assembly_tools 
-  - assembly1:
-    - assembly_spin1_mods # Spin1-specific modifications 
+  - assemblyA:
+    - assembly_essential_mods # Spin1-specific modifications 
+  - assemblyB: 
     - assembly_overview # assembly introduction chapter
     - assembly1_primary
-  - assembly2:
+  - assemblyC:
     - assembly2_brv
     - assembly3_map
     - assembly4_aap
@@ -29,11 +31,12 @@ structure:
     - assembly8_mat
     - assembly9_iat
     - assembly10_tps
+  - assemblyD:
     - assembly11_injection
     - assembly12_ignition
-  - pcb:
-    - pcb_bake # instructions how to bake the board in an oven
   - reflow:
+    - pcb_bake # instructions how to bake the board in an oven
+  - through hole assembly:
     - assembly13_after_reflow
   - serial_monitor:
     - sm_install # how to load the serial monitor using BDM

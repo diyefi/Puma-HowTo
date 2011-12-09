@@ -1,4 +1,4 @@
-## Spin1-specific modifications
+## Essential Modifications
 
 You'll need to perform these modifications to the PCB board in prepare it for assembly.
 

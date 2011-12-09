@@ -10,3 +10,5 @@ Using solder paste place beads on all of the following component pads R161, C87,
 - **D63**  *(Schottky)* direction dependant, orentate the **K** lead to the TOP of the PCB.This is hard to find on the PCB as the text is obscured by another component outline. located bottom left of U18.
 - **R165** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.
 --/
+
+[index](#index)

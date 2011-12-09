@@ -16,3 +16,5 @@ Using solder paste place beads on all of the following component pads C78, R152,
 - **R151**	*(Not used no connection)*
 - **C85**	*(Not used no connection)*
 --/
+
+[index](#index)

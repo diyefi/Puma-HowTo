@@ -27,3 +27,5 @@ Using solder paste place beads on all of the following component pads D33, D34, 
 - **D34** *(Schotty)* direction dependant, orentate the **K** lead to the BOTTOM of the PCB.
 - **C30** *(0.1uF)* an be mounted in either direction (Non polarised).
 --/
+
+[index](#index)

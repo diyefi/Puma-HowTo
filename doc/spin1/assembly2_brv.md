@@ -1,4 +1,4 @@
-#### BVR Circuit #### 
+#### BVR Circuit
 Components from the [bom] used in BRV assembly
 
 **Step 5 :** Install all resistors shown above.....
@@ -14,3 +14,6 @@ Using solder paste place beads on all of the following component pads R105, R106
 - R49	*(470R)*
 - R52	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.
 --/
+
+
+[index](#index)

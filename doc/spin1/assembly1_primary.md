@@ -84,9 +84,9 @@ Using solder paste place beads on all of the following component pads U2, C5, C6
 
 Using solder paste place beads on all of the following component pads C9, C10, C12.
 
- 1. **C9**  *(0.1uF)* can be mounted in either direction (Non polarised).
- 2. **C10** *(22uF)* Polarized Tantilum capacitor; Make sure that it is orentated so that the positive lead is closest to word C10 on silkscreen.
- 3. **C12** *(0.1uF)* can be mounted in either direction (Non polarised).
+ 1. **C9**  *(0.1uF)*
+ 2. **C10** *(22uF)* **Polarized Tantilum capacitor**; Make sure that it is orentated so that the positive lead is closest to word C10 on silkscreen.
+ 3. **C12** *(0.1uF)*
 --/
 
 **Step 6 :**

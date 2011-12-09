@@ -34,6 +34,3 @@ Using solder paste place beads on all of the following component pads D31, D32, 
 --/	
 	
 [index](#index)	
-
-
-
