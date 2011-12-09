@@ -99,15 +99,30 @@ class BuildDoc
 </div>
 }
   end
+  def build_prev_link( link_title )
+    return %{<span class="prev_page_link">#{link_title}</span>} if @prev_page.nil?
+    return %{<a class="prev_page_link" href="#{@prev_page}.html">#{link_title}</a>}
+  end
+  def build_next_link( link_title )
+    return %{<span class="next_page_link">#{link_title}</span>} if @next_page.nil?
+    return %{<a class="prev_page_link" href="#{@next_page}.html">#{link_title}</a>}
+  end
   def init_re
     @img_box_re = /\/-- ([0-9]+)x([0-9]+) (.*?) \"(.*?)\"(.*?)--\//m
+    @prev_re = /\[(.*?)\]\(PREV_PAGE\)/
+    @next_re = /\[(.*?)\]\(NEXT_PAGE\)/
   end
-  def extra_md
+  def extra_md_pre
+    @md_src.gsub!(@prev_re) { build_prev_link( $1 ) }
+    @md_src.gsub!(@next_re) { build_next_link( $1 ) }
     @md_src.gsub!(@img_box_re) { build_img_box( $1.to_i, $2.to_i, $3, $4, $5 ) }
   end
+  def extra_md_post
+  end
   def process_template
-    extra_md
+    extra_md_pre
     html_body = MarkdownHandler.new( @md_src ).to_html
+    extra_md_post
     @html = html_tmpl.gsub(
       '__TITLE__', @title
     ).gsub(
@@ -123,9 +138,10 @@ class BuildDoc
       @title = @proj_name.capitalize
     end
   end
-  def generate_html
+  def generate_html( md_list=nil )
     md_src = []
-    md_order.each do |md_name|
+    md_list = md_order if md_list.nil?
+    md_list.each do |md_name|
       error("Missing reference: #{md_name}") unless @src.has_key?( md_name )
       md_src.push( %{<hr id="#{md_name}">})
       md_src.push( @src[md_name] )
@@ -136,6 +152,35 @@ class BuildDoc
     process_template
     write_html
   end
+  def build_structured( dst_path )
+    if @config.has_key?('header')
+      header = @config['header']
+    else
+      header = []
+    end
+    if @config.has_key?('header')
+      footer = @config['header']
+    else
+      footer = []
+    end
+    structures = @config['structure']
+    structures.each_with_index do |structure_item,i|
+      if i == 0
+        @prev_page = nil
+      else
+        @prev_page = structures[i-1].keys.first
+      end
+      if i == structures.length - 1
+        @next_page = nil
+      else
+        @next_page = structures[i+1].keys.first
+      end
+      page_name = structure_item.keys.first
+      md_list = header + structure_item.values.first + footer
+      @dst_path = File.expand_path( "#{page_name}.html", dst_path )
+      generate_html( md_list )
+    end
+  end
   def initialize( src_path, dst_path )
     init_re
     error("Missing source path: #{src_path}") unless File.exist?( src_path )
@@ -144,11 +189,17 @@ class BuildDoc
     end
     @src_path = src_path
     @proj_name = File.split( src_path )[1]
-    @dst_path = File.expand_path( 'index.html', dst_path )
     read_config
     @src  = {}
     read_markdown
-    generate_html
+    if @config.has_key?('order')
+      @dst_path = File.expand_path( 'index.html', dst_path )
+      generate_html
+    elsif @config.has_key?('structure')
+      build_structured( dst_path )
+    else
+      warn "config has no order and no structure; unable to build"
+    end
   end
 end
 class BuildDocs

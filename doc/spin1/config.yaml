@@ -1,31 +1,43 @@
-
 title: FreeEMS Puma Spin 1 How-To
-order:
- - links # link definitions
- - intro # introductionary chapter
- - index # index (not used yet)
- - pcb_overview # overview of the board
- - using_bom # BOM configuration chapter
- - sourcing_components # chapter guiding how to order components
- - surface_mount_information # tips and tricks for first times
- - assembly_tools 
- - assembly_spin1_mods # Spin1-specific modifications 
- - assembly_overview # assembly introduction chapter
- - assembly1_primary
- - assembly2_brv
- - assembly3_map
- - assembly4_aap
- - assembly5_rpm
- - assembly6_fuel
- - assembly7_cht
- - assembly8_mat
- - assembly9_iat
- - assembly10_tps
- - assembly11_injection
- - assembly12_ignition
- - pcb_bake # instructions how to bake the board in an oven
- - assembly13_after_reflow
- - sm_install # how to load the serial monitor using BDM
- - firmware_upload # how to upload the FreeEMS firmware to the board
- - tuning # how to tune your new board
- - footer # footer, disclaimer, contacts etc
+header:
+  - links
+  - prev_next
+footer:
+  - prev_next
+  - footer
+structure:
+  - index:
+    - intro # introductionary chapter
+    - index # index (not used yet)
+  - general:
+    - pcb_overview # overview of the board
+    - using_bom # BOM configuration chapter
+    - sourcing_components # chapter guiding how to order components
+    - surface_mount_information # tips and tricks for first times
+    - assembly_tools 
+  - assembly1:
+    - assembly_spin1_mods # Spin1-specific modifications 
+    - assembly_overview # assembly introduction chapter
+    - assembly1_primary
+  - assembly2:
+    - assembly2_brv
+    - assembly3_map
+    - assembly4_aap
+    - assembly5_rpm
+    - assembly6_fuel
+    - assembly7_cht
+    - assembly8_mat
+    - assembly9_iat
+    - assembly10_tps
+    - assembly11_injection
+    - assembly12_ignition
+  - pcb:
+    - pcb_bake # instructions how to bake the board in an oven
+  - reflow:
+    - assembly13_after_reflow
+  - serial_monitor:
+    - sm_install # how to load the serial monitor using BDM
+  - firmware:
+    - firmware_upload # how to upload the FreeEMS firmware to the board
+  - tuning:
+    - tuning # how to tune your new board
