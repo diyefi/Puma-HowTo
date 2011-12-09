@@ -105,7 +105,7 @@ class BuildDoc
   end
   def build_next_link( link_title )
     return %{<span class="next_page_link">#{link_title}</span>} if @next_page.nil?
-    return %{<a class="prev_page_link" href="#{@next_page}.html">#{link_title}</a>}
+    return %{<a class="next_page_link" href="#{@next_page}.html">#{link_title}</a>}
   end
   def build_magic_link( link_title, a_name )
     unless @header.include?( a_name ) or @footer.include?( a_name )
