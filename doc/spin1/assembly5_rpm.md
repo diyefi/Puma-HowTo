@@ -7,12 +7,12 @@ Using solder paste place beads on all of the following component pads U26, R214,
 - **RPM - VR Input 1**
 	- **U29**  *(MAX9924)* Due to the very fine foot print care will need to be taken with laying solder paste that **NO** bridges are formed.
 	- **R214** *(10K&ohm;)*	
-	- **C126** *(0.1uF)* can be mounted in either direction (Non polarised).	
+	- **C126** *(0.1µF)* can be mounted in either direction (Non polarised).	
 	- **C125** *(1nF)* can be mounted in either direction (Non polarised).	
 	- **R212** *(10K&ohm; 1/4watt)*
 	- **R213** *(10K&ohm; 1/4watt)*
 	- **R39**  *(1K&ohm;)*	
-	- **R40**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.
+	- **R40**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 	- **D24**  *(Zener not used)* negatively impacts on the signal fidelity.
 --/
 
@@ -24,12 +24,12 @@ Using solder paste place beads on all of the following component pads U30, R217,
 - **RPM - VR Input 2**
 	- **U30**  *(MAX9924)* Due to the very fine foot print care will need to be taken with laying solder paste that **NO** bridges are formed.	
 	- **R217** *(10K&ohm;)*	
-	- **C128** *(0.1uF)* can be mounted in either direction (Non polarised).	
+	- **C128** *(0.1µF)* can be mounted in either direction (Non polarised).	
 	- **C127** *(1nF)* can be mounted in either direction (Non polarised).	
 	- **R215** *(10K&ohm; 1/4watt)*
 	- **R216** *(10K&ohm; 1/4watt)*
 	- **R41**  *(1K&ohm;)*	
-	- **R42**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modifation is made to maintain optimal input resistance to MCU.	
+	- **R42**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.	
 	- **D26**  *(Zener not used)* negatively impacts on the signal fidelity.	
 --/
 
