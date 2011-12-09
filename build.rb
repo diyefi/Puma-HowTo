@@ -107,15 +107,31 @@ class BuildDoc
     return %{<span class="next_page_link">#{link_title}</span>} if @next_page.nil?
     return %{<a class="prev_page_link" href="#{@next_page}.html">#{link_title}</a>}
   end
+  def build_magic_link( link_title, a_name )
+    unless @header.include?( a_name ) or @footer.include?( a_name )
+      @config['structure'].each do |page_item|
+        page_name = page_item.keys.first
+        documents = page_item.values.first
+        if documents.include?( a_name )
+          return "[#{link_title}](#{page_name}.html\##{a_name})"
+        end
+      end
+    end
+    return "[#{link_title}](\##{a_name})" # link not found
+  end
   def init_re
     @img_box_re = /\/-- ([0-9]+)x([0-9]+) (.*?) \"(.*?)\"(.*?)--\//m
     @prev_re = /\[(.*?)\]\(PREV_PAGE\)/
     @next_re = /\[(.*?)\]\(NEXT_PAGE\)/
+    @anchor_re = /\[(.*?)\]\(\#(.*?)\)/
   end
   def extra_md_pre
     @md_src.gsub!(@prev_re) { build_prev_link( $1 ) }
     @md_src.gsub!(@next_re) { build_next_link( $1 ) }
     @md_src.gsub!(@img_box_re) { build_img_box( $1.to_i, $2.to_i, $3, $4, $5 ) }
+    unless @header.nil? or @footer.nil?
+      @md_src.gsub!(@anchor_re) { build_magic_link( $1, $2 ) }
+    end
   end
   def extra_md_post
   end
@@ -154,14 +170,14 @@ class BuildDoc
   end
   def build_structured( dst_path )
     if @config.has_key?('header')
-      header = @config['header']
+      @header = @config['header']
     else
-      header = []
+      @header = []
     end
     if @config.has_key?('header')
-      footer = @config['header']
+      @footer = @config['header']
     else
-      footer = []
+      @footer = []
     end
     structures = @config['structure']
     structures.each_with_index do |structure_item,i|
@@ -176,7 +192,7 @@ class BuildDoc
         @next_page = structures[i+1].keys.first
       end
       page_name = structure_item.keys.first
-      md_list = header + structure_item.values.first + footer
+      md_list = @header + structure_item.values.first + @footer
       @dst_path = File.expand_path( "#{page_name}.html", dst_path )
       generate_html( md_list )
     end
@@ -193,6 +209,8 @@ class BuildDoc
     @src  = {}
     read_markdown
     if @config.has_key?('order')
+      @header = nil
+      @footer = nil
       @dst_path = File.expand_path( 'index.html', dst_path )
       generate_html
     elsif @config.has_key?('structure')
