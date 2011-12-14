@@ -4,9 +4,9 @@ Using solder paste place beads on all of the following component pads C81, R155,
 
 /-- 128x128 img/placeholder_image.png "" Install MAT circuits. 
 
-- **C81**  *(0.1µF)* can be mounted in either direction (Non polarised).
+- **C81**  *(0.1µF)* 
 - **R155** *(470R)*
-- **C74**  *(0.1µF)* can be mounted in either direction (Non polarised).
+- **C74**  *(0.1µF)* 
 - **R170** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 - **R174** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 - **D72**  *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.
@@ -17,4 +17,3 @@ Using solder paste place beads on all of the following component pads C81, R155,
 - **C92**  *(Not used no connection)*
 --/
 
-[index](#index)

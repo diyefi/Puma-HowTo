@@ -9,4 +9,6 @@ All through hole components will be populated after the reflow process has been 
 
 #### Important: A anti-static surface must be present during assembly, an anti-static wrist strap should also be worn at all times.
 
+For future reference if a component direction is not specified this means that it is **Non polarised** and  can be mounted in either direction.
+
 ## Follow these steps sequentially: ##

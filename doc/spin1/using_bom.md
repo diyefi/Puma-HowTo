@@ -252,6 +252,4 @@ Place details about how to use the BOM.
 
 --/
 
-[CONTINUE](#assembly_overview) 
-
-[Index](#index)
+[CONTINUE](#assembly_overview)

@@ -1,5 +1,3 @@
-## Phase TWO Post Reflow Assembly (through hole)
-
 #### MCU power supply
 /-- 128x128 img/placeholder_image.png "soldering through hole"
 

@@ -8,7 +8,7 @@ Using solder paste place beads on all of the following component pads
 - **R233** *(1K&ohm;)*
 - **R228** *(10K&ohm;)*
 - **R229** *(10K&ohm;)*
-- **C124** *(0.1µF)* can be mounted in either direction (Non polarised).
+- **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
 
 - **Resistor Mod 100k pulldown**	

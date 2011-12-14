@@ -77,4 +77,3 @@ Using solder paste place beads on all of the following component pads R209, R259
 - **D91**  *(Not used no connection YET)*
 - **C122** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u19 when not using "Peak and Hold" Circuit --> May not be needed
 
-[Index](#index)

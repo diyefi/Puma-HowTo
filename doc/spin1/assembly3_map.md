@@ -32,5 +32,4 @@ Using solder paste place beads on all of the following component pads D31, D32, 
 - **D32** *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.	
 - **C29** *(0.1µF)* can be mounted in either direction (Non polarised).
 --/	
-	
-[index](#index)	
+

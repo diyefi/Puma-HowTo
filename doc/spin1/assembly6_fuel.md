@@ -13,4 +13,3 @@ Using solder paste place beads on all of the following component pads Q8, D46, R
 - **C37** *(Not used no connection)* Snub circuit not needed.
 --/
 
-[index](#index)

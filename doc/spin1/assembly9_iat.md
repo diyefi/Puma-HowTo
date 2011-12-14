@@ -4,9 +4,9 @@ Using solder paste place beads on all of the following component pads C78, R152,
 
 /-- 128x128 img/placeholder_image.png "" Install IAT circuits. 
 
-- **C78**	*(0.1µF)* can be mounted in either direction (Non polarised).
+- **C78**	*(0.1µF)*
 - **R152**	*(470R)*
-- **C77**	*(0.1µF)* can be mounted in either direction (Non polarised).
+- **C77**	*(0.1µF)*
 - **R159**	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 - **R163**	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 - **D58**	*(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB. 
@@ -17,4 +17,3 @@ Using solder paste place beads on all of the following component pads C78, R152,
 - **C85**	*(Not used no connection)*
 --/
 
-[index](#index)
