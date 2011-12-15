@@ -11,4 +11,6 @@
   * [Post Reflow Assembly](#assembly13_after_reflow)
   * [Installing the Serial Monitor](#sm_install)
   * [Loading Firmware](#firmware_upload)
-  * [Tuning](#tuning)
+  * [Testing Inputs](#testing_inputs)
+  * [Testing Outputs](#testing_outputs)
+  * [Installation](#installation)

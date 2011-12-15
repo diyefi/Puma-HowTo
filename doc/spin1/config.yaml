@@ -43,5 +43,9 @@ structure:
     - sm_install # how to load the serial monitor using BDM
   - firmware:
     - firmware_upload # how to upload the FreeEMS firmware to the board
-  - tuning:
-    - tuning # how to tune your new board
+  - testing_inputs:
+    - testing_inputs
+  - testing_outputs:
+    - testing_outputs
+  - installation:
+    - installation # how to install your Puma Spin 1 board
