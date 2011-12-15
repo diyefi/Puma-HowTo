@@ -36,4 +36,4 @@ The reflow assembly process is rated 6/10 for difficulty to assembly :
 	- Solder wick
 	- Super glue
 	- Anti-static surface 
-        - Multimeter or Oscilloscope, or any other appropriate voltage and current testing device.
+	- Multimeter or Oscilloscope, or any other appropriate voltage and current testing device.

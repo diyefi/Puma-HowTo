@@ -44,8 +44,6 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 - **MAF**: *(**M**ass **A**ir **F**low)* 
 	- This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used as a general purpose analogue input also.
 
-- **GPO**: *(**G**eneral **P**urpose **O**utput)*
-
 - **O2**: *(**O**xygen)*
   	- Only linear wide-band lambda sensors are supported at this time.
 
@@ -53,17 +51,6 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
   	- Thermocouple driver IC, in Spin1 this circuitry is a crippled: 
 		- It only supports up to 500°C temperatures as-it's currently configured.
 		- The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V**. 
-
-- **TCPL**: *(fucked if i know)* Thermistor filtering circuits
-  	- In most cases, you'll use two:
-		- One for the inlet air temperature.
-		- Another for the coolant temperature.	
-    		
-- **GPAN**: *(**G**eneral **P**urpose **AN**alogue)* 
-  	- Spin 1 doesn't need this.
-
-- **STP**: *(**St**e**p**per)*
-  	- Stepper driver circuit is untested at this time, and no firmware to drive it yet.
 
 ### Listing of parts to NOT install
 

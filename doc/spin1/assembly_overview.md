@@ -1,6 +1,6 @@
 # Assembling the board #
 
-**The [schematics] are a 'guideline' only and can be opened with any PDF viewer, all changes necessary are contained in the [BOM] and explained [here](#using_bom)**
+**The [schematics] are a 'guideline' only and can be opened with any PDF viewer, all changes necessary are contained in the [BOM] and explained [here](#using_bom). Note, the schematics contain errors and the original design is not usable as is in many cases.**
 
 Optionally the repo's with all development files can be cloned. Click on [cloning Puma] for further details.
 

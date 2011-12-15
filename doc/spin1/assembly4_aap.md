@@ -23,8 +23,8 @@ Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan
 
 Using solder paste place beads on all of the following component pads D33, D34, C30.
 
-- **D33** *(Schottky)* direction dependant, orientate the **K** lead to the TOP of the PCB.
-- **D34** *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.
+- **D33** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
+- **D34** *(Schottky)* direction dependant, orient the **K** lead to the BOTTOM of the PCB.
 - **C30** *(0.1µF)* 
 --/
 

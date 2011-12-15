@@ -1,6 +1,8 @@
-#### MAP circuits ####
+#### MAP circuit ####
 **Step X :**
 Using solder paste place beads on all of the following component pads C23, C24, C66, R134, R50, R47.
+
+**Note:** It is only possible to use either the on-board sensor **or** the off-board sensor, not both.
 
 /-- 337x260 img/placeholder_image.png "MAP circuitry" Install MAP circuitry
 
@@ -13,13 +15,6 @@ Using solder paste place beads on all of the following component pads C23, C24, 
 - **R133** *(Not used no connection)*
 --/
 
-**ON-Board MAP**
-
-- Requires no additional components for the reflow process
-	- **D31** *Not used no connection.*
-	- **D32** *Not used no connection.*
-	- **C29** *Not used no connection.*	
-	
 
 **OFF-Board (OEM) MAP**
 /-- 337x260 img/placeholder_image.png "example of off-board (OEM) MAP" Install off-board MAP sensor
@@ -28,8 +23,17 @@ Off Board Manifold Air Pressure (Add these components if you plan on having off 
 
 Using solder paste place beads on all of the following component pads D31, D32, C29.
 
-- **D31** *(Schottky)* direction dependant, orientate the **K** lead to the TOP of the PCB.	
-- **D32** *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.	
+- **D31** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
+- **D32** *(Schottky)* direction dependant, orient the **K** lead to the BOTTOM of the PCB.
 - **C29** *(0.1µF)*
---/	
+--/
+
+**ON-Board MAP**
+/-- 337x260 img/placeholder_image.png "Photo of MPX series MAP sensor" This is installed later
+
+- Requires no additional components for the reflow process
+	- **D31** *Not used no connection.*
+	- **D32** *Not used no connection.*
+	- **C29** *Not used no connection.*	
+--/
 

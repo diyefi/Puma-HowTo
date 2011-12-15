@@ -9,8 +9,8 @@ Using solder paste place beads on all of the following component pads C81, R155,
 - **C74**  *(0.1µF)* 
 - **R170** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 - **R174** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
-- **D72**  *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.
-- **D73**  *(Schottky)* direction dependant, orientate the **K** lead to the TOP of the PCB.
+- **D72**  *(Schottky)* direction dependant, orient the **K** lead to the BOTTOM of the PCB.
+- **D73**  *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
 - **R153** *(2.4K&ohm;)*
 - **C79**  *(Not used no connection)*
 - **R154** *(Not used no connection)*

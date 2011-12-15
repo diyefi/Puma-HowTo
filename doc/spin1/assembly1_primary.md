@@ -69,9 +69,9 @@ Using solder paste place beads on all of the following component pads C99, R251,
 Using solder paste place beads on all of the following component pads U2, C5, C6, D92, C3, D1.
 
  1. **U2** *(MIC2954)* A generous coating of solder paste on the regulator tab so that the entire tab will be covered with solder, this assists with transfer heat out of the component.
- 2. **C5** *(22µF)* Polarised Tantalum capacitor; Make sure that it is orientated so that the negative lead is closest to the MCU.
+ 2. **C5** *(22µF)* Polarised Tantalum capacitor; Make sure that it is oriented so that the negative lead is closest to the MCU.
  3. **C6** *(0.1µF)* 
- 4. **D92** *(Schottky)* Direction dependant, orientate the **K** lead to the right. This is indicated by the white line and the end it is closest to. 
+ 4. **D92** *(Schottky)* Direction dependant, orient the **K** lead to the right. This is indicated by the white line and the end it is closest to. 
  5. **C3** *(0.1µF)* 
 --/ 
 /-- 337x260 img/placeholder_image.png " image of mod made with component D1"
@@ -84,7 +84,7 @@ Using solder paste place beads on all of the following component pads U2, C5, C6
 Using solder paste place beads on all of the following component pads C9, C10, C12.
 
  1. **C9**  *(0.1µF)*
- 2. **C10** *(22µF)* **Polarised Tantalum capacitor**; Make sure that it is orientated so that the positive lead is closest to word C10 on silkscreen.
+ 2. **C10** *(22µF)* **Polarised Tantalum capacitor**; Make sure that it is oriented so that the positive lead is closest to word C10 on silkscreen.
  3. **C12** *(0.1µF)*
 --/
 

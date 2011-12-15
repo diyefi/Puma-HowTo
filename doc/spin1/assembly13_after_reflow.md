@@ -2,7 +2,7 @@
 #### MCU power supply
 /-- 337x260 img/placeholder_image.png "soldering through hole"
 
-**C2** *(10µF)* Polarised tantalum capacitor; Make sure that it is orientated correctly as per the silkscreen, positive lead closest to the MCU.
+**C2** *(10µF)* Polarised tantalum capacitor; Make sure that it is oriented correctly as per the silkscreen, positive lead closest to the MCU.
 --/
 
 #### Main power supply ####
