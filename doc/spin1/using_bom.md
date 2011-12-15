@@ -1,9 +1,9 @@
-# Using the BOM
+# Bill of Materials
 
 The BOM is broken down into sub-circuits so you as the end user can pick and choose which circuits are best suited to your project, for each sub-circuit there is a matching assembly section.
 The primary components are compulsory to achieve functional 'FreeEMS brain', all other sections are optional however a combination of these will be necessary for an engine to run.
 
-In the right corner of each BOM coloured sub-circuit title is the page number which corresponds to the schematic that the components relate to.
+In the right corner of each BOM coloured sub-circuit title is the page number which corresponds to the [schematic and circuitry] that those components relate to.
 
 ### Overview with Important notes
 
@@ -54,8 +54,8 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 
 ### Listing of parts to NOT install
 
-- R135, R137, R157, should be left unpopulated as they will (need to check these) .
-- R51, R134, R166, R171, R172, R173, R187 should be bridged to present a suitably low impedance output to the ADC pins  ``<------ check these, then remove ``
+*- R135, R137, R157, should be left unpopulated as they will (need to check these) .
+- R51, R134, R166, R171, R172, R173, R187 should be bridged to present a suitably low impedance output to the ADC pins  ``<------ check these, then remove ``*
 
 
 ### Listing of components with bad values
@@ -224,16 +224,13 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 
 ### BOM Configuration Overview
 
-Configuring the BOM has been the tricky part. A spread sheet has been created that is tabbed with the various different sub circuits contained on the Puma PCB. The spread sheet can also be viewed here
-TODO (link to new BOM as web page?? )
-
-The BOM is presented in two forms an Excel spreadsheet that can be opened in OpenOffice too and a webpage located [here]
+Configuring the BOM has been the tricky part. A spread sheet has been created that is tabbed with the various different sub circuits contained on the Puma PCB. The spread sheet can also be viewed as a [web  BOM]. Alternatively the BOM can be [downloaded](http://puma.freeems.org/preston.bom/PumaBom-WithMods-Element14.xlsx) as an Excel spreadsheet that can be opened also in OpenOffice.
 
 *Git users download the [BOM here].*
 
-### Setting up the parameters
+#### Setting up the parameters
 
-/-- 128x128 img/placeholder_image.png "Screen shot of the configurable area of the BOM"
+/-- 337x260 img/placeholder_image.png "Screen shot of the configurable area of the BOM"
 
 Place details about how to use the BOM.
 

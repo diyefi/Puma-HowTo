@@ -1,5 +1,5 @@
 # Assembly Tools
-#### What you will need to assemble your SPIN1 PCB ####
+#### What you will need to assemble your SPIN 1 PCB ####
 
 There is two methods for assembly one is with a soldering iron, the other requires a reflow oven. A Reflow Oven can be easily made from cheap bench top mini grills. **NEVER EVER** use a oven that is used for cooking food! toxic fumes are given off during the reflow process. 
 
