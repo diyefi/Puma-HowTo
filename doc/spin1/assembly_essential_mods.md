@@ -7,11 +7,6 @@ You'll need to perform these modifications to the PCB board in prepare it for as
 - Cutting the traces under the CPU to prevent it burning on first power up.
 --/
 
-#### BRV supply cut
-/-- 337x260 img/BRV_hack.png "Close up view of cutting this trace"
-- Jumpering the power across the unused power enable circuit.
---/
-
 #### FTDI (USB) power correction
 /-- 337x260 img/USB_power_hack.png "Jumpers and cuts, etc."
 - The FTDI chip is powered from the Puma supply and should be bus powered.
