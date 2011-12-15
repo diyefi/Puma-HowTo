@@ -18,7 +18,7 @@ Using solder paste place beads on all of the following component pads
 #### Ignition 1 ####
 Using solder paste place beads on all of the following component pads R29, D20, R7, R30, R27, D10 
 
-/-- 128x128 img/placeholder_image.png "" Install ignition 1 circuit. 
+/-- 337x260 img/placeholder_image.png "" Install ignition 1 circuit. 
 
 - **R29** *(2K&ohm;)*
 - **D20** *(LED Orange)* direction dependant, orientate the **K** lead to the RIGHT of the PCB.
@@ -71,5 +71,3 @@ Using solder paste place beads on all of the following component pads
 - **D16** *(Not used)*
 - **D76** *(Not used internal in Mosfet)*
 
-
-[Index](#index)

@@ -2,7 +2,7 @@
 **Step X :**
 Using solder paste place beads on all of the following component pads U26, R214,C126, C125, R212, R213, R39, R40.
 
-/-- 128x128 img/placeholder_image.png "" Install RPM 1 circuit.
+/-- 337x260 img/placeholder_image.png "" Install RPM 1 circuit.
 
 - **RPM - VR Input 1**
 	- **U29**  *(MAX9924)* Due to the very fine foot print care will need to be taken with laying solder paste that **NO** bridges are formed.
@@ -19,7 +19,7 @@ Using solder paste place beads on all of the following component pads U26, R214,
 **Step X :**
 Using solder paste place beads on all of the following component pads U30, R217, C128, C127, R215, R216, R41, R42.
 
-/-- 128x128 img/placeholder_image.png "" Install RPM 2 circuit.
+/-- 337x260 img/placeholder_image.png "" Install RPM 2 circuit.
 
 - **RPM - VR Input 2**
 	- **U30**  *(MAX9924)* Due to the very fine foot print care will need to be taken with laying solder paste that **NO** bridges are formed.	
@@ -32,4 +32,3 @@ Using solder paste place beads on all of the following component pads U30, R217,
 	- **R42**  *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.	
 	- **D26**  *(Zener not used)* negatively impacts on the signal fidelity.	
 --/
-

@@ -1,4 +1,4 @@
-## Using the BOM
+# Using the BOM
 
 The BOM is broken down into sub-circuits so you as the end user can pick and choose which circuits are best suited to your project, for each sub-circuit there is a matching assembly section.
 The primary components are compulsory to achieve functional 'FreeEMS brain', all other sections are optional however a combination of these will be necessary for an engine to run.

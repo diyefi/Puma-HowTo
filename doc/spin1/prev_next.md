@@ -1,1 +1,1 @@
-[<< Previous](PREV_PAGE) || [Next >>](NEXT_PAGE)
+[<< Previous](PREV_PAGE) || [Index](#index) || [Next >>](NEXT_PAGE) 

@@ -2,11 +2,11 @@
 **Step X :**
 Using solder paste place beads on all of the following component pads C23, C24, C66, R134, R50, R47.
 
-/-- 128x128 img/placeholder_image.png "MAP circuitry" Install MAP circuitry
+/-- 337x260 img/placeholder_image.png "MAP circuitry" Install MAP circuitry
 
-- **C23** *(0.1µF)* can be mounted in either direction (Non polarised).	
-- **C24** *(47pF)* can be mounted in either direction (Non polarised).	
-- **C66** *(0.22µF)* can be mounted in either direction (Non polarised).	
+- **C23** *(0.1µF)*	
+- **C24** *(47pF)*	
+- **C66** *(0.22µF)*	
 - **R134** *(470R)* optimal ADC input resistance when used in conjunction with the two following modifications.	
 - **R50** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.	
 - **R47** *(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.	
@@ -22,7 +22,7 @@ Using solder paste place beads on all of the following component pads C23, C24, 
 	
 
 **OFF-Board (OEM) MAP**
-/-- 128x128 img/placeholder_image.png "example of off-board (OEM) MAP" Install off-board MAP sensor
+/-- 337x260 img/placeholder_image.png "example of off-board (OEM) MAP" Install off-board MAP sensor
 
 Off Board Manifold Air Pressure (Add these components if you plan on having off board MAP sensor : i.e. OEM MAP)
 
@@ -30,6 +30,6 @@ Using solder paste place beads on all of the following component pads D31, D32, 
 
 - **D31** *(Schottky)* direction dependant, orientate the **K** lead to the TOP of the PCB.	
 - **D32** *(Schottky)* direction dependant, orientate the **K** lead to the BOTTOM of the PCB.	
-- **C29** *(0.1µF)* can be mounted in either direction (Non polarised).
+- **C29** *(0.1µF)*
 --/	
 

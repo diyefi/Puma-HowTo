@@ -1,11 +1,12 @@
+## Assembly (through hole)
 #### MCU power supply
-/-- 128x128 img/placeholder_image.png "soldering through hole"
+/-- 337x260 img/placeholder_image.png "soldering through hole"
 
 **C2** *(10µF)* Polarised tantalum capacitor; Make sure that it is orientated correctly as per the silkscreen, positive lead closest to the MCU.
 --/
 
 #### Main power supply ####
-/-- 128x128 img/placeholder_image.png "soldering through hole"
+/-- 337x260 img/placeholder_image.png "soldering through hole"
 
  1. **U4**  *(LM2937)* square pad = pin #1
  2. **D4**  *(1N4007)* 
@@ -14,23 +15,23 @@
 --/
 
 **Circuit verification and testing Step XX :** 
-/-- 128x128 img/placeholder_image.png "show test procedures, results" Testing correct function and install of MCU power supply.
+/-- 337x260 img/placeholder_image.png "show test procedures, results" Testing correct function and install of MCU power supply.
 --/
 
 #### MAP On-board setup ####
-/-- 128x128 img/placeholder_image.png "show on-board mounting MAP" on-board MAP connection.
+/-- 337x260 img/placeholder_image.png "show on-board mounting MAP" on-board MAP connection.
 
 - **U6** *(MPX4250A)*
 --/
 
 #### AAP ####
-/-- 128x128 img/placeholder_image.png "show on-board mounting AAP" on-board AAP connection.
+/-- 337x260 img/placeholder_image.png "show on-board mounting AAP" on-board AAP connection.
 
 - **U5** *(MPX4100A)*
 --/
 
 #### INJECTION #### 
-/-- 128x128 img/placeholder_image.png "show FET mounting" injection FET connection.
+/-- 337x260 img/placeholder_image.png "show FET mounting" injection FET connection.
 
 **injection 1**
 - **Q15**  *(VNB10N07)*
@@ -59,7 +60,7 @@
 --/
 
 #### IGNITION #### 
-/-- 128x128 img/placeholder_image.png "show FET mounting" ignition FET connection.
+/-- 337x260 img/placeholder_image.png "show FET mounting" ignition FET connection.
 
 **ignition 1**
 - **Q4**	*(VNB10N07)*
@@ -74,4 +75,3 @@
 - **Q1**	*(VNB10N07)*
 --/
 
-[Index](#index)

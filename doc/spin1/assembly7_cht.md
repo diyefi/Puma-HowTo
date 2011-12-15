@@ -2,7 +2,7 @@
 **Step X :**
 Using solder paste place beads on all of the following component pads C75, R149, C74, R160, R164, D60, D61, R147.
 
-/-- 128x128 img/placeholder_image.png "" Install CHT circuit.
+/-- 337x260 img/placeholder_image.png "" Install CHT circuit.
 
 - **C75**  *(0.1µF)* 
 - **R149** *(470R)*

@@ -17,7 +17,7 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 	- **C30** *(Not used no connection)*	
 
 **OFF-Board (OEM) AAP**
-/-- 128x128 img/placeholder_image.png "" Off Board Atmospheric Absolute Pressure.
+/-- 337x260 img/placeholder_image.png "" Off Board Atmospheric Absolute Pressure.
 
 Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM MAP)
 
@@ -28,4 +28,3 @@ Using solder paste place beads on all of the following component pads D33, D34, 
 - **C30** *(0.1µF)* 
 --/
 
-[index](#index)

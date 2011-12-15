@@ -2,7 +2,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #f2efec;
   color: #43413a;
-  font-size: 16px;
+  font-size: 14px;
   padding: 20px;
 }
 a {
@@ -15,18 +15,22 @@ a:hover {
 h1 {
   padding-top: 16px;
   font-size: 32px;
+  text-decoration: underline;
 }
 h2 {
   padding-top: 14px;
   font-size: 28px;
+  margin-left: 5px;
 }
 h3 {
   padding-top: 12px;
   font-size: 24px;
+  margin-left: 10px;
 }
 h4 {
   padding-top: 10px;
   font-size: 20px;
+  margin-left: 15px;
 }
 .imagebox {
   width: 100%;
@@ -34,14 +38,14 @@ h4 {
 }
 .imagebox > .pict {
   border: 1px solid #999;
-  width: 440px;
+  width: 337px;
   float: left;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 .imagebox > .pict > .pict_title {
-  font-size: 14px;
+  font-size: 13px;
   color: #43413a;
-  width: 440px;
+  width: 330px;
   font-style: italic;
 }
 .imagebox > .text {

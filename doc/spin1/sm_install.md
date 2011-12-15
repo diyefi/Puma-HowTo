@@ -3,7 +3,7 @@
 *In the following sections it is assumed that you just completed the last task.*
 
 ## Installing the serial monitor
-/-- 600x400 img/usbdm.jpg "Using BDM pod and installing the FreeEMS loader" 
+/-- 337x260 img/usbdm.jpg "Using BDM pod and installing the FreeEMS loader" 
  - Connect a BDM pod to the BDM header on your Puma board
  - Power up the Puma board
  - Upload the [serial monitor firmware] using the appropriate software for your BDM pod
@@ -16,7 +16,7 @@
 
 
 ## Verifying correct operation of the Serial Monitor
-/-- 128x128 img/placeholder_image.png "Jumpering the load/run header for SM testing" --/
+/-- 337x260 img/placeholder_image.png "Jumpering the load/run header for SM testing" --/
  - If the BDM is still connected, disconnect it now
  - Jumper the load/run header and reset power to the board
  - Connect a USB cable between your computer and the Puma
@@ -24,5 +24,3 @@
  send various [Serial Monitor](http://www.freescale.com/files/microcontrollers/doc/app_note/AN2548.pdf) packets and verify that it responds correctly
 
 *You are now ready to load FreeEMS firmware onto your Puma board.*
-
-[Index](#index)

@@ -1,4 +1,4 @@
-## Spin1 Specific PCB Modifications
+# Spin1 Specific PCB Modifications
 
 You'll need to perform these modifications to the PCB board in prepare it for assembly.
 
@@ -22,5 +22,3 @@ You'll need to perform these modifications to the PCB board in prepare it for as
 - Only the Serial Monitor will run without the PNP modification to the serial line, firmware will not run without this.
 --/
 
-
-[Index](#index)

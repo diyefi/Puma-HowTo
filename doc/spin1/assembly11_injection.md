@@ -4,7 +4,7 @@
 Using solder paste place beads on all of the following component pads R203, R257, D110, C118.
 
 #### Injection 1 ####
-/-- 128x128 img/placeholder_image.png "" Install injection circuits. 
+/-- 337x260 img/placeholder_image.png "" Install injection circuits. 
 
 - **R203** *(1K&ohm;)* located between/below U22 ``&`` U23.
 - **R257** *(2.4K&ohm;)*

@@ -2,7 +2,7 @@
 Components from the [BOM] used in BRV assembly
 
 **Step 5 :** Install all resistors shown above.....
-/-- 128x128 img/placeholder_image.png "" Install BRV circuit.
+/-- 337x260 img/placeholder_image.png "" Install BRV circuit.
 
 Using solder paste place beads on all of the following component pads R105, R106, C31, D35, D36, R49, R52.
 

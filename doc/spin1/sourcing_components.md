@@ -12,4 +12,3 @@ Just copy and past the supplier part numbers for required sub-circuit to the rel
 #### If you prefer Newark or Digi-Key:
 Unfortunately a Newark/Digi-Key BOM equivalent has not yet been developed for Puma Spin1 when done it will be linked here, if you develop one that works let us know.
 
-[Index](#index)

@@ -11,4 +11,4 @@ All through hole components will be populated after the reflow process has been 
 
 For future reference if a component direction is not specified this means that it is **Non polarised** and  can be mounted in either direction.
 
-## Follow these steps sequentially: ##
+**Follow these steps sequentially:**

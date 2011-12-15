@@ -1,6 +1,6 @@
-## Baking the Assembled PCB ##
+# Baking the Assembled PCB #
 
-BAKING DETAILS COMING SOON...
+*BAKING DETAILS COMING SOON...*
 
 #### AFTER BAKING INSPECTION ####
 
@@ -25,6 +25,4 @@ BAKING DETAILS COMING SOON...
 - Power on the supply (12V) the volt meter should show **5V** +- 0.20V. 
 	- If it is **NOT** 5V promptly switch off and disconnect from supply you have made an error during assembly. Recheck all [steps](#assembly1_primary)! 
 	- If you read 5V, you're good! continue on to [through hole assembly](#assembly13_after_reflow).
-	
 
-[Index](#index)
