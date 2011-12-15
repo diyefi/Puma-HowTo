@@ -121,14 +121,14 @@ class BuildDoc
   end
   def init_re
     @img_box_re = /\/-- ([0-9]+)x([0-9]+) (.*?) \"(.*?)\"(.*?)--\//m
-    @prev_re = /\[(.*?)\]\(PREV_PAGE\)/
-    @next_re = /\[(.*?)\]\(NEXT_PAGE\)/
-    @anchor_re = /\[(.*?)\]\(\#(.*?)\)/
+    @prev_re = /\[([^\]]+?)\]\(PREV_PAGE\)/
+    @next_re = /\[([^\]]+?)\]\(NEXT_PAGE\)/
+    @anchor_re = /\[([^\]]+?)\]\(\#([^\)]+?)\)/
   end
   def extra_md_pre
+    @md_src.gsub!(@img_box_re) { build_img_box( $1.to_i, $2.to_i, $3, $4, $5 ) }
     @md_src.gsub!(@prev_re) { build_prev_link( $1 ) }
     @md_src.gsub!(@next_re) { build_next_link( $1 ) }
-    @md_src.gsub!(@img_box_re) { build_img_box( $1.to_i, $2.to_i, $3, $4, $5 ) }
     unless @header.nil? or @footer.nil?
       @md_src.gsub!(@anchor_re) { build_magic_link( $1, $2 ) }
     end
