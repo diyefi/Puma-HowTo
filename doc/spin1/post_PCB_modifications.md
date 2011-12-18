@@ -2,7 +2,7 @@
 ### Spin1 Specific Modifications
 
 #### Mod.A
-/-- 337x260 img/placeholder_image.png "Close up view of cutting this trace"
+/-- 337x260 img/placeholder_image.png "Injector mod"
 - Cutting the traces around the injector drivers to allow wrong pin out drivers to be used.
 --/
 

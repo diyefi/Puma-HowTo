@@ -73,7 +73,7 @@ Using solder paste place beads on all of the following component pads C99, R251,
 
 Using solder paste place beads on all of the following component pads U2, C5, C6, D92, C3, D1.
 
- 1. **U2** *(MIC2954)* A generous coating of solder paste on the regulator tab so that the entire tab will be covered with solder, this assists with transfer heat out of the component.
+ 1. **U2** *(MIC2954)* A generous coating of solder paste on the regulator tab so that the entire tab will be covered with solder, this assists with transfer heat out of the component. As an optional extra heat paste (white) has been added to the center of the regulator this will help transfer excess heat down and out the thermal vias.
  2. **C5** *(22µF)* Polarised Tantalum capacitor; Make sure that it is oriented so that the negative lead is closest to the MCU.
  3. **C6** *(0.1µF)* 
  4. **D92** *(Schottky)* Direction dependant, orient the **K** lead to the right. This is indicated by the white line and the end it is closest to. 

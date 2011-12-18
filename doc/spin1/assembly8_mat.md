@@ -17,4 +17,4 @@ Using solder paste place beads on all of the following component pads C81, R155,
 - **C92**  *(Not used no connection)*
 --/
 
-/-- 337x260 img/reflow/IMG_0000.JPG "to do --> find image" Installed MAT circuit. --/
+/-- 337x260 img/placeholder_image.png "to do --> find image" Installed MAT circuit. --/

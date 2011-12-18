@@ -4,8 +4,13 @@
 /-- 337x260 img/reflow/IMG_0380.JPG "" Before bake --/
 /-- 337x260 img/reflow/IMG_0382.JPG "" Weeee into the oven weeeee go! --/
 /-- 337x260 img/reflow/IMG_0383.JPG "" Man it's hot in here 181&deg; the reflow process has begun --/
-/-- 337x260 img/reflow/IMG_0389.JPG "" Time to cool down. --/
+/-- 337x260 img/reflow/IMG_0389.JPG "" Time to cool down. **note** the three PCB have been assembled differently.
+ 
+- Left : Partial shipped PCB with On-board sensors and USB connector removed for mini USB mod.
+- Center : Blank PCB (I forgot to bring the MCU and FTDI chip along with me, so those are missing, will be put on next).
+- Right : Partial shipped PCB with setup for off-board (OEM) sensors.
 
+ --/
 #### AFTER BAKING INSPECTION ####
 
 - Check the entire PCB for Solder bridges, especially on MCU, U20, U29, U30

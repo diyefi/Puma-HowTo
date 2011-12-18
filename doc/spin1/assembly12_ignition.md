@@ -10,9 +10,8 @@ Using solder paste place beads on all of the following component pads
 - **R229** *(10K&ohm;)*
 - **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
-
-- **Resistor Mod 100k pulldown**	
-- **Resistor Mod 200Ω pull-up**	
+	- **Resistor Mod 100k pulldown**	
+	- **Resistor Mod 200Ω pull-up**	
 
  
 #### Ignition 1 ####

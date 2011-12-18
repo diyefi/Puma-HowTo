@@ -130,7 +130,6 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 	- **C76**  ``-->`` Not used no connection *(reason to be added)*
 	- **R151** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
 	- **C85**  ``-->`` Not used no connection *(reason to be added)*
-	
 	- *Injection circuitry diodes, not used to date (07 December 2011):*	
 		- **D84** ``-->`` do not use
 		- **D85** ``-->`` do not use
@@ -141,7 +140,6 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 		- **D90** ``-->`` do not use
 		- **D91** ``-->`` do not use
 		- **D92** ``-->`` do not use
-	
 	- *Ignition circuitry: all components listed are unused:*
 		- **D79** ``-->`` not required internal to mosfet
 		- **R7**  ``-->`` do not use
