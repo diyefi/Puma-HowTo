@@ -67,6 +67,9 @@
 #### IGNITION #### 
 /-- 337x260 img/placeholder_image.png "show FET mounting" ignition FET connection.
 
+- **Resistor Mod 100k pulldown** todo	
+- **Resistor Mod 200Ω pull-up**	 todo
+
 **ignition 1**
 - **Q4**	*(VNB10N07)*
 

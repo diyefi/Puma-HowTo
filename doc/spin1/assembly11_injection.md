@@ -14,12 +14,12 @@ Using solder paste place beads on all of the following component pads R203, R257
 
 /-- 337x260 img/reflow/IMG_0362.JPG "" Installed injection LED in new location.
  
-See [through hole](#assembly13_after_reflow) assembly injection section for the remainder of the injection modification.
-
 - LED is direction dependant, orient the **K** lead to the Right of the PCB. This is shown by the green tip.
 --/
+
 /-- 337x260 img/reflow/IMG_0364.JPG "" In the lower section of this screen the 1k&ohm; resistors can be seen, dont forget to install one for each circuit.
  --/
+See [through-hole](#assembly13_after_reflow) assembly injection section for the remainder of the injection modification.
 
 #### Injection 2 ####
 Using solder paste place beads on all of the following component pads R200, R256, D109, C116.
