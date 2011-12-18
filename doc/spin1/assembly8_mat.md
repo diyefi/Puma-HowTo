@@ -1,8 +1,8 @@
-#### MAT circuit ####
-**Step X :**
+#### Step 14 : MAT circuit ####
+
 Using solder paste place beads on all of the following component pads C81, R155, C74, R170, R174, D72, D73, R153.
 
-/-- 128x128 img/placeholder_image.png "" Install MAT circuits. 
+/-- 337x260 img/reflow/IMG_0318.JPG "" MAT circuit assembly. 
 
 - **C81**  *(0.1µF)* 
 - **R155** *(470R)*
@@ -17,3 +17,4 @@ Using solder paste place beads on all of the following component pads C81, R155,
 - **C92**  *(Not used no connection)*
 --/
 
+/-- 337x260 img/reflow/IMG_0000.JPG "to do --> find image" Installed MAT circuit. --/

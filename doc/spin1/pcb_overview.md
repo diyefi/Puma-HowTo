@@ -11,3 +11,10 @@ If you are new to surface mount PCB assembly please refer to [this page](#http:/
 /-- 337x260 img/pcb_components.png "" This image is the silk screen layered overtop the top side of the PCB (image two above), the outlines are component mounting locations. Click on all images to view them larger.
 --/
 
+## PCB layout
+
+/-- 337x260 img/place_holder.png "" The PCB layout sections drawn on.
+--/
+/-- 337x260 img/Spin1_front.png "" The PCB connection markings bla bla bla.
+--/
+

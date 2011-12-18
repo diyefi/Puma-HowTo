@@ -1,5 +1,6 @@
-#### AAP circuit ####
-**Step X :**
+#### Step 9 : AAP circuit ####
+
+/-- 337x260 img/reflow/IMG_0246.JPG "" On-Board Atmospheric Absolute Pressure sensor components.
 Using solder paste place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
 
 - **C21** *(0.1µF)* 
@@ -8,16 +9,18 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 - **C29** *(0.22µF)* 
 - **R51** *(470R)* optimal ADC input resistance when used in conjunction with the following modification.	
 - **R48** *(**MOD** 0805 jumper)* se a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
+--/
 
 **ON-Board AAP**
-
+/-- 337x260 img/reflow/IMG_0252.JPG "" On-Board Atmospheric Absolute Pressure sensor setup
 - Requires no additional components for the reflow process
 	- **D33** *(Not used no connection)*	
 	- **D34** *(Not used no connection)*	
-	- **C30** *(Not used no connection)*	
+	- **C30** *(Not used no connection)*
+--/	
 
 **OFF-Board (OEM) AAP**
-/-- 337x260 img/placeholder_image.png "" Off Board Atmospheric Absolute Pressure.
+/-- 337x260 img/reflow/IMG_0250.JPG "" Off Board Atmospheric Absolute Pressure.
 
 Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM MAP)
 

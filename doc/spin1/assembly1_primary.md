@@ -1,7 +1,7 @@
-## Phase ONE : Pre Reflow ##
+## Method ONE : Pre Reflow ##
 #### MCU circuitry ####
 
-Follow the [BOM] and locate the component values XXXXXXXXXX, topology of then circuit can be seen in the schematics.
+Follow the [BOM] and locate the component values XX, topology of the circuit being assembled can be seen in the schematics.
 
 The PCB to component directions will always be referenced in the following manner:
 
@@ -9,17 +9,19 @@ The PCB to component directions will always be referenced in the following manne
 	- "**Spin 1**" and Puma eyes will always be in the lower right hand corner.
 
 - PCB BOTTOM side orientation:
-	- **MAP** and **AAP** are located on the left edge, with "Puma" and eyes mid to upper right side. 
+	- "**MAP**" and "**AAP**" are located on the left edge, with "**Puma**" and eyes mid to upper right side. 
 
 
-If you have received a BLANK PCB start here, if you received a PARTIAL PCB skip to *step 3.xxx* 
+If you have received a BLANK PCB start here, if you received a PARTIAL PCB skip to [Step 7](#assembly2_brv) 
 
 
-/-- 337x260 img/soldered_mcu.jpg "" Install the MCU, its regulator, the PLL and crystal circuits. This is what it should look like once completed.
+/-- 337x260 img/soldered_mcu.jpg "MCU install" Install the MCU, its regulator, the PLL and crystal circuits. This is what it should look like once completed.
 Note: Some partial boards were shipped with minimal components required to load code, they require the installation of the following components XXXXXXXXXX. --/
 
 **Step 1 :** 
-/-- 337x260 img/placeholder_image.png "image to show MCU with glue and thermal paste, second with solder paste and third with MCU orientation" Install the MCU, this will be one of the most difficult components for you to place. It will require a steady hand and patience. The MCU is placed first as it is the most fiddly and requires the most work, this will ensure no other components are bumped during the process:
+/-- 337x260 img/placeholder_image.png "image to show MCU with glue and thermal paste, second with solder paste and third with MCU orientation" 
+
+Install the MCU, this will be one of the most difficult components for you to place. It will require a steady hand and patience. The MCU is placed first as it is the most fiddly and requires the most work, this will ensure no other components are bumped during the process:
 
  1. Take the syringe of solder paste and apply a bead to each of the copper pads for the MCU pins this will be XX pads in total. Make sure that you **do not** bridge between pads, care here will save you hours further down the track.
  2. Place a small drop of glue at the underside of the MCU centre, this will lightly 'tack it' to ensure it doesn’t move during assembly and reflow process.
@@ -32,7 +34,7 @@ Note: Some partial boards were shipped with minimal components required to load 
 --/
 	
 **Step 2 :** 
-/-- 337x260 img/placeholder_image.png "" Install the PLL circuits.
+/-- 337x260 img/reflow/IMG_0176.JPG "" Install the PLL circuits.
 
 Using solder paste place beads on all of the following component pads R181, R178, R177, C98, R179, C93, C95, R175, C94, R176, X3, C96, C97.
 
@@ -43,11 +45,14 @@ Place these components in this order:
  3. **C95**  *(0.22µF)*
  4. **R175** *(3.3K&ohm;)*
 
+--/
+/-- 337x260 img/reflow/IMG_0188.JPG "" Install the PLL circuits.
 *PLL circuit assembly is now complete*
 --/
+
 	
 **Step 3 :** 
-/-- 337x260 img/placeholder_image.png "" Install the crystal, resistors and capacitors.
+/-- 337x260 img/reflow/IMG_0204.JPG "" Install the crystal, resistors and capacitors.
 
 Using solder paste place beads on all of the following component pads C99, R251, C100, C101, C102.
 
@@ -64,7 +69,7 @@ Using solder paste place beads on all of the following component pads C99, R251,
 --/
 
 **Step 4 :** 
-/-- 337x260 img/placeholder_image.png "show image of reg install, " Install MCU power regulator.
+/-- 337x260 img/reflow/IMG_0195.JPG "" Install MCU power regulator.
 
 Using solder paste place beads on all of the following component pads U2, C5, C6, D92, C3, D1.
 
@@ -74,12 +79,12 @@ Using solder paste place beads on all of the following component pads U2, C5, C6
  4. **D92** *(Schottky)* Direction dependant, orient the **K** lead to the right. This is indicated by the white line and the end it is closest to. 
  5. **C3** *(0.1µF)* 
 --/ 
-/-- 337x260 img/placeholder_image.png " image of mod made with component D1"
+/-- 337x260 img/reflow/IMG_0188.JPG "" tba
  6. **D1** *(**MOD** 0805 jumper)* This simple modification entails the use of a 0805 package 0&ohm; link soldered in the diodes place.
 --/
 
 **Step 5 :** 
-/-- 337x260 img/placeholder_image.png "show image of reg install" Install main power regulator.
+/-- 337x260 img/reflow/IMG_0199.JPG "" Install main power regulator.
 
 Using solder paste place beads on all of the following component pads C9, C10, C12.
 

@@ -1,6 +1,10 @@
 # Baking the Assembled PCB #
 
 *BAKING DETAILS COMING SOON...*
+/-- 337x260 img/reflow/IMG_0380.JPG "" Before bake --/
+/-- 337x260 img/reflow/IMG_0382.JPG "" Weeee into the oven weeeee go! --/
+/-- 337x260 img/reflow/IMG_0383.JPG "" Man it's hot in here 181&deg; the reflow process has begun --/
+/-- 337x260 img/reflow/IMG_0389.JPG "" Time to cool down. --/
 
 #### AFTER BAKING INSPECTION ####
 

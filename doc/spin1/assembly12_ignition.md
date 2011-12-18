@@ -1,5 +1,5 @@
-## Ignition circuits ####
-**Step X :**
+## Step 18 : Ignition circuits ####
+
 Using solder paste place beads on all of the following component pads
 
 - **R230** *(1K&ohm;)*
@@ -18,7 +18,7 @@ Using solder paste place beads on all of the following component pads
 #### Ignition 1 ####
 Using solder paste place beads on all of the following component pads R29, D20, R7, R30, R27, D10 
 
-/-- 337x260 img/placeholder_image.png "" Install ignition 1 circuit. 
+/-- 337x260 img/reflow/IMG_0376.JPG "" Install ignition 1 circuit. 
 
 - **R29** *(2K&ohm;)*
 - **D20** *(LED Orange)* direction dependant, orient the **K** lead to the RIGHT of the PCB.

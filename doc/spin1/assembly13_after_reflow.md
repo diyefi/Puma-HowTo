@@ -30,6 +30,11 @@
 - **U5** *(MPX4100A)*
 --/
 
+#### Fuel ####
+/-- 337x260 img/placeholder_image.png "Show fuel fet installed" Fuel Fet connection.
+- **Q8**  *(Mosfet_N Channel)* Square pad is pin 1(Gate) pin 2(Drain) pin 3(Source) left to right, check with your FET data sheet for specifics. How you choose to mount it will depend on the casing it will reside in. 
+--/
+
 #### INJECTION #### 
 /-- 337x260 img/placeholder_image.png "show FET mounting" injection FET connection.
 

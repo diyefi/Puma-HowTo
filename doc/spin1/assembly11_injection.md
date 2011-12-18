@@ -1,18 +1,20 @@
-## Injection circuits ##
-**Step X :**
+## Step 17 : Injection circuits ##
 
 Using solder paste place beads on all of the following component pads R203, R257, D110, C118.
 
 #### Injection 1 ####
-/-- 337x260 img/placeholder_image.png "" Install injection circuits. 
+/-- 337x260 img/reflow/IMG_0355.JPG "" Install injection circuits. 
 
 - **R203** *(1K&ohm;)* located between/below U22 ``&`` U23.
 - **R257** *(2.4K&ohm;)*
 - **D110** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB. 
 - **D89**  *(Not used no connection YET)*
 - **C118** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u26 when not using "Peak and Hold" Circuit --> May not be needed
-
 --/
+
+/-- 337x260 img/reflow/IMG_0362.JPG "" Installed injection LED in new location. --/
+/-- 337x260 img/reflow/IMG_0364.JPG "" In the lower section of this screen the 1k&ohm; resistors can be seen, dont forget to install one for each circuit.
+ --/
 
 #### Injection 2 ####
 Using solder paste place beads on all of the following component pads R200, R256, D109, C116.
