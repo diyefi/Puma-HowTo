@@ -1,18 +1,18 @@
 ## Step 17 : Injection circuits ##
 
-Using solder paste place beads on all of the following component pads R203, R257, D110, C118.
+Using solder paste place beads on all of the following component pads R203, C118.
 
 #### Injection 1 ####
 /-- 337x260 img/reflow/IMG_0355.JPG "" Install injection circuits. 
 
 - **R203** *(1K&ohm;)* located between/below U22 ``&`` U23.
-- **R257** *(2.4K&ohm;)*
-- **D110** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB. 
-- **D89**  *(Not used no connection YET)*
-- **C118** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u26 when not using "Peak and Hold" Circuit --> May not be needed
+- **R257** *(Not used no connection)*
+- **D110** *(Not used no connection)*
+- **D89**  *(Not used no connection)*
+- **C118** *(**MOD** Green Injection LED)*
 --/
 
-/-- 337x260 img/reflow/IMG_0362.JPG "" Installed injection LED in new location.
+/-- 337x260 img/reflow/IMG_0362.JPG "" Installed injection 1 LED in new location.
  
 - LED is direction dependant, orient the **K** lead to the Right of the PCB. This is shown by the green tip.
 --/
@@ -22,65 +22,65 @@ Using solder paste place beads on all of the following component pads R203, R257
 See [through-hole](#assembly13_after_reflow) assembly injection section for the remainder of the injection modification.
 
 #### Injection 2 ####
-Using solder paste place beads on all of the following component pads R200, R256, D109, C116.
+Using solder paste place beads on all of the following component pads R200, C116.
 
-- **R200** *(1K&ohm;)*
-- **R256** *(2.4K&ohm;)*
-- **D109** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D88**  *(Not used no connection YET)*
-- **C116** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u25 when not using "Peak and Hold" Circuit --> May not be needed
+- **R200** *(1K&ohm;)* located between/below U22 ``&`` U23.
+- **R256** *(Not used no connection)*
+- **D109** *(Not used no connection)*
+- **D88**  *(Not used no connection)*
+- **C116** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 3 ####
-Using solder paste place beads on all of the following component pads R197, R255, D108, C114.
+Using solder paste place beads on all of the following component pads R197, C114.
 
-- **R197** *(1K&ohm;)*
-- **R255** *(2.4K&ohm;)*
-- **D108** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D87**  *(Not used no connection YET)*
-- **C114** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u24 when not using "Peak and Hold" Circuit --> May not be needed
+- **R197** *(1K&ohm;)* located between/below U22 ``&`` U23.
+- **R255** *(Not used no connection)*
+- **D108** *(Not used no connection)*
+- **D87**  *(Not used no connection)*
+- **C114** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 4 ####
-Using solder paste place beads on all of the following component pads R194, R254, D107, C112.
+Using solder paste place beads on all of the following component pads R194, C112.
 
-- **R194** *(1K&ohm;)*
-- **R254** *(2.4K&ohm;)*
-- **D107** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D86**  *(Not used no connection YET)*
-- **C112** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u23 when not using "Peak and Hold" Circuit --> May not be needed
+- **R194** *(1K&ohm;)* located between/below U22 ``&`` U23.
+- **R254** *(Not used no connection)*
+- **D107** *(Not used no connection)*
+- **D86**  *(Not used no connection)*
+- **C112** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 5 ####
-Using solder paste place beads on all of the following component pads R191, R253, D106, C110.
+Using solder paste place beads on all of the following component pads R191, C110.
 
-- **R191** *(1K&ohm;)*
-- **R253** *(2.4K&ohm;)*
-- **D106** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D85**  *(Not used no connection YET)*
-- **C110** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u22 when not using "Peak and Hold" Circuit --> May not be needed
+- **R191** *(1K&ohm;)* located between/below U21 ``&`` U22.
+- **R253** *(Not used no connection)*
+- **D106** *(Not used no connection)*
+- **D85**  *(Not used no connection)*
+- **C110** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 6 ####
-Using solder paste place beads on all of the following component pads R188, R252, D105, C108.
+Using solder paste place beads on all of the following component pads R188, C108.
 
-- **R188** *(1K&ohm;)*
-- **R252** *(2.4K&ohm;)*
-- **D105** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D84**  *(Not used no connection YET)*
-- **C108** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u21 when not using "Peak and Hold" Circuit --> May not be needed
+- **R188** *(1K&ohm;)* located between/below U21 ``&`` U22. 
+- **R252** *(Not used no connection)*
+- **D105** *(Not used no connection)*
+- **D84**  *(Not used no connection)*
+- **C108** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 7 ####
-Using solder paste place beads on all of the following component pads R206, R258, D111, C120.
+Using solder paste place beads on all of the following component pads R206, C120.
 
-- **R206** *(1K&ohm;)*
-- **R258** *(2.4K&ohm;)*
-- **D111** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D90**  *(Not used no connection YET)*
-- **C120** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u20 when not using "Peak and Hold" Circuit --> May not be needed
+- **R206** *(1K&ohm;)* located between/below U21 ``&`` U27.
+- **R258** *(Not used no connection)*
+- **D111** *(Not used no connection)*
+- **D90**  *(Not used no connection)*
+- **C120** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 
 #### Injection 8 ####
-Using solder paste place beads on all of the following component pads R209, R259, D112, C122.
+Using solder paste place beads on all of the following component pads R209, C122.
 
-- **R209** *(1K&ohm;)*
-- **R259** *(2.4K&ohm;)*
-- **D112** *(LED Green)* direction dependant, orient the **K** lead to the LEFT of the PCB.
-- **D91**  *(Not used no connection YET)*
-- **C122** *(**MOD** R100)* Change to R=100K and mod to ground on pin 3 of u19 when not using "Peak and Hold" Circuit --> May not be needed
+- **R209** *(1K&ohm;)* located between/below U21 ``&`` U27.
+- **R259** *(Not used no connection)*
+- **D112** *(Not used no connection)*
+- **D91**  *(Not used no connection)*
+- **C122** *(**MOD** Green Injection LED)* Direction dependant, orient the **K** lead to the RIGHT of the PCB.
 

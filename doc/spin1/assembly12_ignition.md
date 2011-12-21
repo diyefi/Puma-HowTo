@@ -1,6 +1,7 @@
 ## Step 18 : Ignition circuits ####
 
 Using solder paste place beads on all of the following component pads
+/-- 337x260 img/reflow/IMG_0366.JPG "" Install ignition XOR circuitry. 
 
 - **R230** *(1K&ohm;)*
 - **R231** *(1K&ohm;)*
@@ -10,6 +11,7 @@ Using solder paste place beads on all of the following component pads
 - **R229** *(10K&ohm;)*
 - **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
+--/
  
 #### Ignition 1 ####
 Using solder paste place beads on all of the following component pads R29, D20, R7, R30, R27, D10 
@@ -22,10 +24,9 @@ Using solder paste place beads on all of the following component pads R29, D20, 
 - **R30** *(100K&ohm;)*
 - **R27** *(1K&ohm;)*
 - **D10** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
+- **R7**  *(Not used)*
+- **D10** *(Not used)*
 - **D79** *(Not used internal in Mosfet)*
-- **R7**  *(Not used)
-- **D10** *(Not used)
-
 --/
 
 #### Ignition 2 ####
@@ -37,9 +38,9 @@ Using solder paste place beads on all of the following component pads
 - **R26** *(100K&ohm;)*
 - **R23** *(1K&ohm;)*
 - **D12** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
-- **D78** *(Not used internal in Mosfet)*
 - **R9**  *(Not used)*
 - **D12** *(Not used)*
+- **D78** *(Not used internal in Mosfet)*
 
 #### Ignition 3 ####
 Using solder paste place beads on all of the following component pads
