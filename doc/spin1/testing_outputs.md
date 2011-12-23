@@ -3,7 +3,7 @@
 It's important that you verify the correct operation of your output driver circuits before attempting to use the device on a vehicle.
 
 ## Testing all low side drivers
-/-- 337x260 img/placeholder_image.png "Low side test setup"
+/-- 337x260 img/operation/driver_test_circuit.png "Low side test setup"
 
 Test Equipment:
 

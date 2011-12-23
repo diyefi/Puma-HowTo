@@ -3,7 +3,7 @@
 It's important that you verify the correct operation of your input conditioning circuits before attempting to use the device on a vehicle.
 
 ## Analogue circuit tester
-/-- 337x260 img/placeholder_image.png "Schematic" 
+/-- 337x260 img/operation/analogue_test_circuit.png "Analogue test circuit schematic" 
 Required parts;
 
  - 2K&ohm; through hole resistor.
