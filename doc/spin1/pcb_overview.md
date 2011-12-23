@@ -13,8 +13,8 @@ If you are new to surface mount PCB assembly please refer to [this page](#http:/
 
 ## PCB layout
 
-/-- 337x260 img/placeholder_image.png "" The PCB layout sections drawn on.
+/-- 337x260 img/Spin1_clean_front.png "" Scaned front side Spin 1 PCB.
 --/
-/-- 337x260 img/Spin1_front.png "" The PCB connection markings bla bla bla.
+/-- 337x260 img/Spin1_clean_back.png "" Scaned back side Spin 1 PCB.
 --/
 

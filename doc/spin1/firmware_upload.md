@@ -1,6 +1,6 @@
 ## Uploading the firmware ##
 
-/-- 128x128 img/placeholder_image.png "Uploading the firmware"
+/-- 337x260 img/operation/FreeEMS_loader_settings.png "FreeEMS Loader Application"
 
 1. Install [SeanK’s loader].
 2. Connect a USB cable between your computer and Puma.
@@ -17,18 +17,22 @@
 12. Power cycle Puma.
 
 *The FreeEMS Bench Test firmware should now be installed on your Puma board.*
-
 --/
+
+/-- 337x260 img/operation/FreeEMS_loader_advanced.png "Communication settings" --/
 
 ### Verifying correct operation of the firmware ###
 
-/-- 128x128 img/placeholder_image.png "CuteCom streaming FreeEMS data logs"
+/-- 337x260 img/placeholder_image.png "CuteCom streaming FreeEMS data logs"
  - Connect CuteCom with the correct settings and hex mode on
  - Verify that data is streaming past at a high rate
- 	- Send the stop data logging packet from the lib directory and ensure that the stream stops
+ 	- Send the stop data logging (update.block.with.datalog.stream.type.0x00-OFF.bin) packet from the Freeems-vanilla firmware lib directory and ensure that the stream stops.
  - Clear the text area and turn off hex mode
- - Send the get firmware, interface and decoder version packets from the lib directory
- 	- Ensure that the strings returned match what you uploaded
+ - Send the following test packets and record the returned strings;
+	- Get firmware version; (request.firmware.version.bin)
+	- Get interface version; (request.interface.version.bin)
+	- Get decoder version; (request.decoder.name.bin) 
+- Ensure that the strings returned match what you uploaded.
 
 *You are now ready to test your physical outputs using the Bench Test decoder.*
 
