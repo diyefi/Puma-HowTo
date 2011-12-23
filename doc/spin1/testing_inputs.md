@@ -38,20 +38,20 @@ Test the test circut for correct operation, monitor the voltage between **Vtest*
  - *Load appropriate code for that signal type.*
 
 ### Logic Analyser (LA) RPM check ###
-/-- 337x260 img/placeholder_image.png "Logic analyser log trace" 
+/-- 337x260 img/operation/ovl_rpm_la.png "Logic analyser log trace review" 
  
 Test procedure:
 
  - Take a LA type log maintaining a RPM below 2k.
- - Review that .LA log with OLV and confirm that the reported RPM is smooth and matches your expectations (should look similar to the RPM LA LOG left).
+ - Review the .LA log with OLV and confirm that **T0** it is clean, with no randomness (should look similar to the RPM LA LOG left).
 --/
 
 ### Full RPM range check ###
-/-- 337x260 img/placeholder_image.png "Logic analyser log trace"
+/-- 337x260 img/operation/olv_rpm_fullbin.png "Review of RPM logging"
 
 Test procedure:
 
  - Take a standard binary (.bin) log while varying the rate of your signal
- - Review that .bin log with OLV and confirm that the reported RPM is smooth and matches your expectations
+ - Review the .bin log with OLV and confirm that the reported **RPM** variable is smooth and matches your expectations. (Shown left)
 --/
 
