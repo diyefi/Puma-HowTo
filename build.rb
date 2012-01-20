@@ -18,6 +18,11 @@
 # FreeEMS Documentation. If not, see http://www.gnu.org/licenses/.
 #
 
+Signal.trap 'INT' do
+  puts "Killer reflexes!"
+  exit
+end
+
 require 'rubygems'
 begin
   require 'peg_markdown'
