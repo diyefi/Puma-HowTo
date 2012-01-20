@@ -4,7 +4,7 @@ You might already have some of the components, omit those.
 
 
 #### If you prefer Mouser or Element14:
-The BOM is aimed at getting most the components from one supplier to minimise freighting costs, with global distribution.
+The BOM is aimed at getting most of the components from one supplier to minimise freighting costs, with global distribution.
 This BOM has all the component part numbers and links for [Element14] as an alternative some [Mouser] options have also been included.
 
 Just copy and past the supplier part numbers for required sub-circuit to the relevant suppliers shopping cart.

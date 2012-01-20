@@ -34,7 +34,7 @@ Test the test circut for correct operation, monitor the voltage between **Vtest*
 
 ## Testing RPM inputs ##
 
- - *Attach an RPM signal source (To be added new Fred and John's new testing app)*
+ - *Attach an RPM signal source*
  - *Load appropriate code for that signal type.*
 
 ### Logic Analyser (LA) RPM check ###
