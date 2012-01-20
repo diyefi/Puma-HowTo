@@ -226,12 +226,5 @@ Configuring the BOM has been the tricky part. A spread sheet has been created th
 
 *Git users download the [BOM here].*
 
-#### Setting up the parameters
-
-/-- 337x260 img/placeholder_image.png "Screen shot of the configurable area of the BOM"
-
-Place details about how to use the BOM.
-
---/
 
 [CONTINUE](#assembly_overview)

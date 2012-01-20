@@ -11,14 +11,6 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 - **R48** *(**MOD** 0805 jumper)* se a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 --/
 
-**ON-Board AAP**
-/-- 337x260 img/reflow/IMG_0252.JPG "" On-Board Atmospheric Absolute Pressure sensor setup
-- Requires no additional components for the reflow process
-	- **D33** *(Not used no connection)*	
-	- **D34** *(Not used no connection)*	
-	- **C30** *(Not used no connection)*
---/	
-
 **OFF-Board (OEM) AAP**
 /-- 337x260 img/reflow/IMG_0250.JPG "" Off Board Atmospheric Absolute Pressure.
 
@@ -30,4 +22,14 @@ Using solder paste place beads on all of the following component pads D33, D34, 
 - **D34** *(Schottky)* direction dependant, orient the **K** lead to the BOTTOM of the PCB.
 - **C30** *(0.1µF)* 
 --/
+
+**ON-Board AAP**
+/-- 337x260 img/reflow/IMG_0252.JPG "" On-Board Atmospheric Absolute Pressure sensor setup
+- Requires no additional components for the reflow process
+	- **D33** *(Not used no connection)*	
+	- **D34** *(Not used no connection)*	
+	- **C30** *(Not used no connection)*
+--/	
+
+
 

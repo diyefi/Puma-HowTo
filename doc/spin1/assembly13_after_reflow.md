@@ -1,14 +1,15 @@
 ## Assembly (through-hole)
 
-From this point on all components will be soldered by hand with a soldering iron.
+From this point on, all components will be soldered by hand with a soldering iron.
 
 #### MCU power supply
 /-- 337x260 img/throughhole/DSCF9175.JPG ""
 
 - **C2** *(10µF)* Polarised tantalum capacitor;
  
-Make sure that it is oriented correctly as per the silkscreen, positive lead closest to the MCU. Note, the longest lead is positive, if no markings are visible. 
+Make sure that it is oriented correctly as per the silkscreen, positive lead closest to the MCU. 
 
+Note; the longest lead is positive, if no markings are visible. 
 --/
 /-- 337x260 img/throughhole/DSCF9179.JPG "" **C2** tantalum capacitor installed.
 --/
@@ -56,7 +57,7 @@ Both outputs are clean and interference free, as seen on oscilloscope.
 #### AAP On-board setup ####
 /-- 337x260 img/reflow/IMG_0250.JPG "" on-board AAP connection.
 
-- **U5** *(MPX4100A)*
+- **U5** *(MPX4100A)* Pin 1 is identified via the square pad.
 --/
 /-- 337x260 img/throughhole/DSCF9221.JPG "" on-board AAP installed.
 
@@ -66,7 +67,9 @@ Both outputs are clean and interference free, as seen on oscilloscope.
 #### Fuel ####
 /-- 337x260 img/reflow/IMG_0277.JPG "" Fuel Fet connection.
 
-- **Q8**  *(Mosfet_N Channel)* Square pad is pin 1(Gate) pin 2(Drain) pin 3(Source) left to right, check with your FET data sheet for specifics. How you choose to mount it will depend on the casing it will reside in. 
+- **Q8**  *(Mosfet_N Channel)* Square pad is pin 1(Gate) pin 2(Drain) pin 3(Source) left to right, check with your FET data sheet for specifics. 
+
+How you choose to mount it will depend on the casing it will reside in. 
 --/
 /-- 337x260 img/throughhole/DSCF9193.JPG "" Installed fuel driver.
 --/
@@ -81,6 +84,7 @@ Holding the FET with leads down and writing facing the front.
 - Center lead = Drain (pin 2)
 - right lead = Source (pin 3)
 
+Repeat the process with as many FET's as you require upto a maximum of 8.
 --/
 /-- 337x260 img/throughhole/DSCF9199.JPG "" 
 

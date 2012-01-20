@@ -1,7 +1,7 @@
 ## Method ONE : Pre Reflow ##
 #### MCU circuitry ####
 
-Follow the [BOM] and locate the component values XX, topology of the circuit being assembled can be seen in the schematics.
+Following the [BOM], select the corresponding tab with the sub circuit that you are assembling in this case **Primary Parts** tab. Here you will find the correct component values and the topology of the circuit being assembled can be seen in the schematics.
 
 The PCB to component directions will always be referenced in the following manner:
 
@@ -15,7 +15,9 @@ The PCB to component directions will always be referenced in the following manne
 If you have received a BLANK PCB start here, if you received a PARTIAL PCB skip to [Step 7](#assembly2_brv) 
 
 
-/-- 337x260 img/soldered_mcu.jpg "MCU install" Install the MCU, its regulator, the PLL and crystal circuits. This is what it should look like once completed.
+/-- 337x260 img/soldered_mcu.jpg "MCU install" Install the MCU, its regulator, the PLL and crystal circuits. 
+
+This is what it should look like once completed.
 Note: Some partial boards were shipped with minimal components required to load code, they require the installation of the following components XXXXXXXXXX. --/
 
 **Step 1 :** 

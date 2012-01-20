@@ -3,6 +3,7 @@
 Using solder paste place beads on all of the following component pads U26, R214,C126, C125, R212, R213, R39, R40.
 
 This is the smallest foot print that Spin 1 has, it will be difficult in most case to get a constant solder pasted and non bridged pads, a stanley knife can be used to create the seperation between pads and any excess paste cleaned up with sharpened cotton buds.
+
 **note:** the solder paste will pull back to the pads and component pins during the reflow process, minor solder paste off pads will be **NO** problem.
 
 /-- 337x260 img/reflow/IMG_0254.JPG "" Install RPM-1 circuit.
