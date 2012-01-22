@@ -65,7 +65,7 @@ Both outputs are clean and interference free, as seen on oscilloscope.
 --/
 
 #### Fuel ####
-/-- 337x260 img/reflow/IMG_0277.JPG "" Fuel Fet connection.
+/-- 337x260 img/reflow/IMG_0277.JPG "" Fuel FET connection.
 
 - **Q8**  *(Mosfet_N Channel)* Square pad is pin 1(Gate) pin 2(Drain) pin 3(Source) left to right, check with your FET data sheet for specifics. 
 
@@ -84,7 +84,8 @@ Holding the FET with leads down and writing facing the front.
 - Center lead = Drain (pin 2)
 - right lead = Source (pin 3)
 
-Repeat the process with as many FET's as you require upto a maximum of 8.
+**MOD** These will be installed reverse mounted, as seen in the image left. **Pin 3** mounts to the square pad.
+Repeat the process with as many FET's as you require up to a maximum of 8.
 --/
 /-- 337x260 img/throughhole/DSCF9199.JPG "" 
 
@@ -113,7 +114,21 @@ Repeat the process with as many FET's as you require upto a maximum of 8.
 - **Q17**  *(VNB10N07)*
 
 --/
-/-- 337x260 img/throughhole/DSCF9203.JPG "" Installed injection FET's.
+#### INJECTION Hack ####
+Preform this 3 step process for each injection FET that is installed. The hack should only be applied to the following part numbers U28, U27, U21, U22, U23, U24, U25, U26.
+
+The following description is specifically for the Q17 FET install.
+/-- 337x260 img/throughhole/DSCF9284.JPG "" Ground jumper : 
+
+Placed a wire jumper between pins 4 and 5 on U28. 
+--/
+/-- 337x260 img/throughhole/DSCF9286.JPG "" LED mod :
+ 
+Place a 3k&ohm; resistor between **BAT PWR** and pin 3 on U28.
+--/
+/-- 337x260 img/throughhole/DSCF9290.JPG "" Gate signal jumper : 
+
+Place a wire jumper between pin 1 of U28 and the K end D91 (Jumper installed shown in yellow). 
 --/
 
 #### IGNITION #### 
@@ -134,7 +149,7 @@ Repeat the process with as many FET's as you require upto a maximum of 8.
 **ignition 4**
 - **Q1**	*(VNB10N07)*
 --/
-/-- 337x260 img/placeholder_image.png "show installed ign FET's" Installed ignition FET's.
+/-- 337x260 img/throughhole/DSCF9274.JPG ""
 --/
-/-- 337x260 img/placeholder_image.png "Show ign jumpers and 2.4k TH mod" ignition jumpers.
+/-- 337x260 img/throughhole/DSCF9276.JPG ""
 --/
