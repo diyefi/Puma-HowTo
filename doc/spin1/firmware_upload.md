@@ -23,7 +23,7 @@
 
 ### Verifying correct operation of the firmware ###
 
-/-- 337x260 img/placeholder_image.png "CuteCom streaming FreeEMS data logs"
+/-- 337x260 img/operation/CuteComDataStreaming.png "CuteCom streaming FreeEMS data logs"
  - Connect CuteCom with the correct settings and hex mode on
  - Verify that data is streaming past at a high rate
  	- Send the stop data logging (update.block.with.datalog.stream.type.0x00-OFF.bin) packet from the Freeems-vanilla firmware lib directory and ensure that the stream stops.

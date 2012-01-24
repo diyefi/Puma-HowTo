@@ -77,50 +77,57 @@ How you choose to mount it will depend on the casing it will reside in.
 --/
 
 #### INJECTION #### 
-/-- 337x260 img/reflow/IMG_0362.JPG "" Injection FET connection.
-Holding the FET with leads down and writing facing the front.
+
+Holding the VNP10N07 with leads down and writing facing the front. (if you are not using these FET's please refer to your component data sheet)
 
 - Left lead = Gate (pin 1)
 - Center lead = Drain (pin 2)
 - right lead = Source (pin 3)
 
-**MOD** These will be installed reverse mounted, as seen in the image left. **Pin 3** mounts to the square pad.
+/-- 337x260 img/reflow/IMG_0362.JPG "" Injection FET connection.
+
+**MOD** These will be installed reverse mounted, as seen in the image left. This is being done so that the following injection mod can be made cleanly with current PCB tracing. 
+
+**Pin 3** mounts to the square pad.
 Repeat the process with as many FET's as you require up to a maximum of 8.
+
+Note: Although it is recommended it is in no way compulsory, if you choose to mount the FET's any other way you will need to devise your own version of the injector mod.
+
 --/
 /-- 337x260 img/throughhole/DSCF9199.JPG "" 
 
 **injection 1**
-- **Q15**  *(VNB10N07)*
+- **Q15**  *(VNP10N07)*
 
 **injection 2**
-- **Q14**  *(VNB10N07)*
+- **Q14**  *(VNP10N07)*
 
 **injection 3**
-- **Q13**  *(VNB10N07)*
+- **Q13**  *(VNP10N07)*
 
 **injection 4**
-- **Q12**  *(VNB10N07)*
+- **Q12**  *(VNP10N07)*
 
 **injection 5**
-- **Q11**  *(VNB10N07)*
+- **Q11**  *(VNP10N07)*
 
 **injection 6**
-- **Q10**  *(VNB10N07)*
+- **Q10**  *(VNP10N07)*
 
 **injection 7**
-- **Q16**  *(VNB10N07)*
+- **Q16**  *(VNP10N07)*
 
 **injection 8**
-- **Q17**  *(VNB10N07)*
+- **Q17**  *(VNP10N07)*
 
 --/
-#### INJECTION Hack ####
-Preform this 3 step process for each injection FET that is installed. The hack should only be applied to the following part numbers U28, U27, U21, U22, U23, U24, U25, U26.
+#### INJECTION Mod ####
+Preform this 3 step process for each injector that will be used. The Mod should only be applied to the following part numbers U28, U27, U21, U22, U23, U24, U25, U26.
 
-The following description is specifically for the Q17 FET install.
+This following description is specifically for the Q17 FET install (U28 injection mod).
 /-- 337x260 img/throughhole/DSCF9284.JPG "" Ground jumper : 
 
-Placed a wire jumper between pins 4 and 5 on U28. 
+Placed a wire jumper between pins 4 and 5 on U28, this is a ground wire so I have opted to have non insulated. Snipped off though hole component leads work a treat, for this. 
 --/
 /-- 337x260 img/throughhole/DSCF9286.JPG "" LED mod :
  
