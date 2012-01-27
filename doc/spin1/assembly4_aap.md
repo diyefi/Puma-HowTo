@@ -26,9 +26,10 @@ Using solder paste place beads on all of the following component pads D33, D34, 
 **ON-Board AAP**
 /-- 337x260 img/reflow/IMG_0252.JPG "" On-Board Atmospheric Absolute Pressure sensor setup
 - Requires no additional components for the reflow process
-	- **D33** *(Not used no connection)*	
-	- **D34** *(Not used no connection)*	
-	- **C30** *(Not used no connection)*
+
+- **D33** *(Not used no connection)*	
+- **D34** *(Not used no connection)*	
+- **C30** *(Not used no connection)*
 --/	
 
 

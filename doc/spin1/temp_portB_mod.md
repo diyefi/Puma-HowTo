@@ -123,9 +123,6 @@ Note: Although it is recommended it is in no way compulsory, if you choose to mo
 
 --/
 #### INJECTION Mod ####
-
-#### Important!  :  before this mod is made check for PORT.XXXX functionality within the FreeEMS firmware. If this is not yet supported please preform the PORT B MOD before the injection mod.
-
 Preform this 3 step process for each injector that will be used. The Mod should only be applied to the following part numbers U28, U27, U21, U22, U23, U24, U25, U26.
 
 This following description is specifically for the Q17 FET install (U28 injection mod).
@@ -141,9 +138,9 @@ Place a 3k&ohm; resistor between **BAT PWR** and pin 3 on U28.
 
 Place a wire jumper between pin 1 of U28 and the K end D91 (Jumper installed shown in yellow). 
 --/
-/-- 337x260 img/throughhole/DSCF9309.JPG "" Bottom side PCB : Installed injection circuits without the temporary PORT B mod. 
+/-- 337x260 img/throughhole/DSCF9309.JPG ""
 --/
-/-- 337x260 img/throughhole/DSCF9304.JPG "" Top side PCB : Installed injection circuits without the temporary PORT B mod. 
+/-- 337x260 img/throughhole/DSCF9304.JPG ""
 --/
 
 #### IGNITION #### 
@@ -164,5 +161,7 @@ Place a wire jumper between pin 1 of U28 and the K end D91 (Jumper installed sho
 **ignition 4**
 - **Q1**	*(VNB10N07)*
 --/
-/-- 337x260 img/throughhole/DSCF9276.JPG "" Installed injection circuits.
+/-- 337x260 img/throughhole/DSCF9274.JPG ""
+--/
+/-- 337x260 img/throughhole/DSCF9276.JPG ""
 --/

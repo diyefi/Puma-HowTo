@@ -1,46 +1,51 @@
 # Bill of Materials
 
-The BOM is broken down into sub-circuits so you as the end user can pick and choose which circuits are best suited to your project, for each sub-circuit there is a matching assembly section.
-The primary components are compulsory to achieve functional 'FreeEMS brain', all other sections are optional however a combination of these will be necessary for an engine to run.
+The BOM is broken down into sub-circuits so you, as the end user, can pick and choose which circuits are best suited to your project. For each sub-circuit there is a matching assembly section.
+The primary components are compulsory to achieve a functional 'FreeEMS brain'. All other sections are optional, however a combination of these will be necessary for an engine to run.
 
-In the right corner of each BOM coloured sub-circuit title is the page number which corresponds to the [schematic and circuitry] that those components relate to.
+Open the BOM. The right hand side of each blue sub-circuit title is the page number, which corresponds to the [schematic and circuitry] that those components relate to.
 
 ### Overview with Important notes
 
-- A large number of parts will be unpopulated, replaced with a zero ohm jumper or solder bridge.
-- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider, these hacks are untested **.
-- The USB connector is wrong (It's female A, which is reserved for host devices) however it is functional. Cables are hard to come by, the options are:
-	- buy male A-A cable.
-	- Hack a mini-USB or type B female connector instead and use an appropriate cable.
-	- Build a A-A cable from two common USB cables. 
+- A large number of parts will be unpopulated, replaced with a zero ohm jumper, or solder bridge.
+- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider. No instructions will be proved within this howto.
+- The stepper driver circuit is defunked, don't go there.
 - The shut-down circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.
-- The USB circuit requires an additional component in the way of a TO92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available @ 24 August 2011)
-- The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12V signal at around 100mA, this is yet to be prototyped**.
+- The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12V signal at around 100mA.
+- The Injection driver circuits are incorrectly layout, and require a modification which is covered in this howto to function the bom only includes parts for High-Z injectors.
+- The USB circuit requires an additional component in the way of a TO92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available untill 30 Feburary 2012)
+- The USB connector is wrong (It's female A, which is reserved for host devices) however it is functional. Cables are hard to come by, the options are:
+	- Hack a mini-USB or type B female connector instead and use an appropriate cable.
+	- Build a A-A cable from two common USB cables.
+	- buy male A-A cable.
 
 ** = work in progress
 
 #### Legend of acronyms ####
+Some or all of these acronyms are used in the original schematic documentation.
 
 - **INJ-H**: *(**Inj**ector **H**igh impedance)*
-  	- If you have high impedance injectors (``>6``&ohm;), these can be driven directly from Puma.
+  	- If you have high impedance injectors (``>6``&ohm;), these can be driven directly from Puma with the correct mods.
   	
 - **INJ-L**: *(**Inj**ector **L**ow impedance)*
-  	- If you have low impedance injectors (``<6``&ohm;), there needs to be significant modifications made to use these.
+  	- If you have low impedance injectors (``<6``&ohm;), there needs to be significant modifications made to use these. No covered in this howto documention, sorry you're on own!
   	
 - **IGN**: *(**Ign**ition)*
   	- For coil per plug operation (COP/CNP), you need one of circuit per cylinder.
   	- For wasted spark set-up, you need one of these per two cylinders.
   	- If you require operation of a distributor, you only need one.
-  	- For fuel only system you require null/zero.
+  	- For a fuel only system you do not require any of this circuits.
+	- It does **NOT** drive coils directly, don't even try.
+	- For driving of external ignitors, modifications are required.
 
 - **RPM**: *(**R**evolutions **P**er **M**inute)*
   	- Most applications require 2 inputs for 2 sensors, and installing only 1 will limit the use of the unit significantly 2 is the default and recommended.
  
 - **MAP**: *(**M**anifold **A**bsolute **P**ressure)* 
-	- Boosted is the default / preferred sensor and provides sufficient accuracy for all naturally aspirated vehicles. Boosted applications up to 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate.
+	- In the BOM boosted is the default / preferred sensor and provides sufficient accuracy for all naturally aspirated vehicles, and sufficent range to cover boosted applications up to 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate.
 
 - **AAP**: *(**A**tmospheric **A**bsloute **P**ressure)* 
-  	- Used for normalisation of the MAP vs atmospheric pressure, this is considered optional. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle, or if you live in New Zealand home of **L``&``P**. It's not needed for people who use their vehicles at one constant altitude (whatever that is).
+  	- Used for normalisation of the MAP vs atmospheric pressure, this is considered optional. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle, or if you live in New Zealand home of [**L``&``P**]. It's not needed for people who use their vehicles at one constant altitude (whatever that is).
 - **MAF**: *(**M**ass **A**ir **F**low)* 
 	- This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used as a general purpose analogue input also.
 
@@ -48,20 +53,13 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
   	- Only linear wide-band lambda sensors are supported at this time.
 
 - **EGT**: *(**E**xhaust **G**as **T**emperature)* 
-  	- Thermocouple driver IC, in Spin1 this circuitry is a crippled: 
-		- It only supports up to 500°C temperatures as-it's currently configured.
-		- The EGT would support up to 1200°C, if it would be supplied with 12V instead of 5V**. 
-
-### Listing of parts to NOT install
-
-*- R135, R137, R157, should be left unpopulated as they will (need to check these) .
-- R51, R134, R166, R171, R172, R173, R187 should be bridged to present a suitably low impedance output to the ADC pins  ``<------ check these, then remove ``*
-
+  	- Thermocouple driver IC, in Spin1 this circuitry is a crippled. 
+	- It only supports up to 500°C temperatures as-it's currently configured.
+	
 
 ### Listing of components with bad values
 
-- *ToBe completed add links to different sections*
-- #### Components to be replaced with a wire jumper
+### Components to be replaced with a wire jumper
 	- **D1**   ``-->`` wire jumper
 	- **R2**   ``-->`` wire jumper to **U4**
 	- **R7**   ``-->`` 0805 wire jumper (need to colour red in BOM)
@@ -82,7 +80,7 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 	- **R170** ``-->`` 0805 wire jumper (need to colour red in BOM)
 	- **R174** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
 
-- #### Components that require PCB modifications or are of significant change
+### Components that require PCB modifications or are of significant change
 	- **R251** ``-->`` 1k&ohm; pull-up mod
 	- **C105** ``-->`` mount over top mod, one cap will be mounted directly on top of the other. *(need to id components for best arrangement)*
 	- **R176** ``-->`` possible 1M&ohm; or 10M&ohm; mod *to be confirmed*
@@ -100,7 +98,7 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 	- **USB-hack** ``-->`` Required to make USB operate at this time with current Serial Monitor firmware.
 	- **SM-UPhack** ``-->`` 10k&ohm; pull-up mod, required to make sure that the **SM** pin always has a known state (Held high until switched/jumpered low).
 
-- #### Components that will NOT be populated onto puma PCB.
+### Components that will NOT be populated onto puma PCB.
 	- *Shutdown circuitry: This circuit design is flawed and useable the following components should be neglected. This circuit is bypassed with the **D1** jumper.*	
 		- **Q19**  ``-->`` do not use
 		- **Q18**  ``-->`` do not use				
@@ -154,7 +152,7 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 		- **D16** ``-->`` do not use
 		- **D76** ``-->`` do not use
 	
-- #### Straight component value changes (only new correct value shown)
+### Straight component value changes (only new correct value shown)
 	- **R177** ``-->`` 10K&ohm;
 	- **R178** ``-->`` 10K&ohm;
 	- **R179** ``-->`` 10K&ohm;
@@ -216,7 +214,7 @@ In the right corner of each BOM coloured sub-circuit title is the page number wh
 	- **R15**  ``-->`` 1K&ohm;
 
 
-- #### Note: 
+#### Note: 
 	- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
 	- No electrolytic caps should be installed. In their place 10µF TH tantalums can optionally be installed.
 

@@ -37,8 +37,8 @@ structure:
   - reflow:
     - pcb_bake # instructions how to bake the board in an oven
   - assembly_through_hole:
-    - post_PCB_modifications
     - assembly13_after_reflow
+    - temp_portB_mod
   - serial_monitor:
     - sm_install # how to load the serial monitor using BDM
   - firmware:

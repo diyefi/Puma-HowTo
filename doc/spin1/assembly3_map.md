@@ -31,8 +31,9 @@ Using solder paste place beads on all of the following component pads D31, D32, 
 /-- 337x260 img/reflow/IMG_0227.JPG "Photo of MPX series MAP sensor" This is installed later
 
 - Requires no additional components for the reflow process
-	- **D31** *Not used no connection.*
-	- **D32** *Not used no connection.*
-	- **C29** *Not used no connection.*	
+
+- **D31** *Not used no connection.*
+- **D32** *Not used no connection.*
+- **C29** *Not used no connection.*	
 --/
 
