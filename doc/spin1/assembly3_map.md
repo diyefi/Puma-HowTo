@@ -16,9 +16,7 @@ Using solder paste place beads on all of the following component pads C23, C24, 
 --/
 
 **OFF-Board (OEM) MAP**
-/-- 337x260 img/reflow/IMG_0231.JPG "example of off-board (OEM) MAP" Install off-board MAP sensor
-
-Off Board Manifold Air Pressure (Add these components if you plan on having off board MAP sensor : i.e. OEM MAP)
+/-- 337x260 img/reflow/IMG_0231.JPG "example of off-board (OEM) MAP"Off Board Manifold Air Pressure (Add these components if you plan on having off board MAP sensor : i.e. OEM MAP)
 
 Using solder paste place beads on all of the following component pads D31, D32, C29.
 
@@ -28,9 +26,9 @@ Using solder paste place beads on all of the following component pads D31, D32, 
 --/
 
 **ON-Board MAP**
-/-- 337x260 img/reflow/IMG_0227.JPG "Photo of MPX series MAP sensor" This is installed later
+/-- 337x260 img/reflow/IMG_0227.JPG "Photo of MPX series MAP sensor" The MAP sensor is installed later in the through hole section.
 
-- Requires no additional components for the reflow process
+On-board MAP requires no additional components for the reflow process
 
 - **D31** *Not used no connection.*
 - **D32** *Not used no connection.*

@@ -12,9 +12,7 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 --/
 
 **OFF-Board (OEM) AAP**
-/-- 337x260 img/reflow/IMG_0250.JPG "" Off Board Atmospheric Absolute Pressure.
-
-Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM MAP)
+/-- 337x260 img/reflow/IMG_0250.JPG "" Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM MAP)
 
 Using solder paste place beads on all of the following component pads D33, D34, C30.
 
@@ -25,7 +23,8 @@ Using solder paste place beads on all of the following component pads D33, D34, 
 
 **ON-Board AAP**
 /-- 337x260 img/reflow/IMG_0252.JPG "" On-Board Atmospheric Absolute Pressure sensor setup
-- Requires no additional components for the reflow process
+
+Requires no additional components for the reflow process
 
 - **D33** *(Not used no connection)*	
 - **D34** *(Not used no connection)*	
