@@ -1,24 +1,12 @@
 ## Method ONE : Pre Reflow ##
 #### MCU circuitry ####
 
-Following the [BOM], select the corresponding tab with the sub circuit that you are assembling in this case **Primary Parts** tab. Here you will find the correct component values and the topology of the circuit being assembled can be seen in the schematics.
-
-The PCB to component directions will always be referenced in the following manner:
-
-- PCB TOP side orientation: 
-	- "**Spin 1**" and Puma eyes will always be in the lower right hand corner.
-
-- PCB BOTTOM side orientation:
-	- "**MAP**" and "**AAP**" are located on the left edge, with "**Puma**" and eyes mid to upper right side. 
-
+Follow the [BOM], select the corresponding tab with the sub circuit that you are assembling, in this case **Primary Parts** tab. Here you will find the correct component values. The topology of the circuit being assembled can be seen in the schematics.
 
 If you have received a BLANK PCB start here, if you received a PARTIAL PCB skip to [Step 7](#assembly2_brv) 
 
-
-/-- 337x260 img/soldered_mcu.jpg "MCU install" Install the MCU, its regulator, the PLL and crystal circuits. 
-
-This is what it should look like once completed.
-Note: Some partial boards were shipped with minimal components required to load code, they require the installation of the following components XXXXXXXXXX. --/
+/-- 337x260 img/soldered_mcu.jpg "Partial assembled PCB" Installed is the MCU, its regulator, the PLL and crystal circuits. Shown is the shipped partially assembled PCB.
+--/
 
 **Step 1 :** 
 /-- 337x260 img/placeholder_image.png "image to show MCU with glue and thermal paste, second with solder paste and third with MCU orientation" 
@@ -46,22 +34,24 @@ Place these components in this order:
  2. **C93**  *(6.8nF)*
  3. **C95**  *(0.22µF)*
  4. **R175** *(3.3K&ohm;)*
-
 --/
-/-- 337x260 img/reflow/IMG_0188.JPG "" Install the PLL circuits.
+
+/-- 337x260 img/reflow/IMG_0188.JPG ""
 *PLL circuit assembly is now complete*
 --/
-
 	
 **Step 3 :** 
-/-- 337x260 img/reflow/IMG_0204.JPG "" Install the crystal, resistors and capacitors.
+
+Install the crystal, resistors and capacitors.
 
 Using solder paste place beads on all of the following component pads C99, R251, C100, C101, C102.
+
+/-- 337x260 img/reflow/IMG_0204.JPG "" 
 
  1. **C96**  *(22pF* or *15pF* or *33pF)* only use one value three are presented for tuning options, TBA on optimum value.
  2. **C97**  *(22pF* or *15pF* or *33pF)* only use one value three are presented for tuning options, TBA on optimum value.
  3. **R176** *(10M* or *1M)* only use one value three are presented for tuning options, TBA on optimum value.
- 4. **X3**   *(16MHz)* tba.......
+ 4. **X3**   *(16MHz)* the crystal can be mounted in either direction. 
  5. **C98**  *(0.22µF)*
  6. **C99**  *(0.22µF)*
  7. **R251** *(1K&ohm;)*
@@ -81,8 +71,8 @@ Using solder paste place beads on all of the following component pads U2, C5, C6
  4. **D92** *(Schottky)* Direction dependant, orient the **K** lead to the right. This is indicated by the white line and the end it is closest to. 
  5. **C3** *(0.1µF)* 
 --/ 
-/-- 337x260 img/reflow/IMG_0188.JPG "" tba
- 6. **D1** *(**MOD** 0805 jumper)* This simple modification entails the use of a 0805 package 0&ohm; link soldered in the diodes place.
+/-- 337x260 img/reflow/IMG_0188.JPG ""
+ 6. **D1** *(**MOD** 0805 jumper)* This simple modification entails the use of a 0805 package 0&ohm; jumper, or wire link soldered in the diodes place.
 --/
 
 **Step 5 :** 
@@ -98,7 +88,7 @@ Using solder paste place beads on all of the following component pads C9, C10, C
 **Step 6 :**
 /-- 337x260 img/placeholder_image.png "show USB mod assembly" 
 
-to be competed
+*to be competed*
 
 --/
 

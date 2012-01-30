@@ -12,4 +12,4 @@ Using solder paste place beads on all of the following component pads R105, R106
 - R49	*(470R)*
 - R52	*(**MOD** 0805 jumper)* use a 0805 package 0&ohm; jumper, this modification is made to maintain optimal input resistance to MCU.
 --/
-/-- 337x260 img/reflow/IMG_0215.JPG "" Assembled BRV circuit. --/
+/-- 337x260 img/reflow/IMG_0215.JPG "" *Assembled BRV circuit.* --/

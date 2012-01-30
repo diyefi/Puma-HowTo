@@ -3,18 +3,21 @@
 *BAKING DETAILS COMING SOON...*
 /-- 337x260 img/reflow/IMG_0380.JPG "" Before bake --/
 /-- 337x260 img/reflow/IMG_0382.JPG "" Weeee into the oven weeeee go! --/
-/-- 337x260 img/reflow/IMG_0383.JPG "" Man it's hot in here 181&deg; the reflow process has begun --/
-/-- 337x260 img/reflow/IMG_0389.JPG "" Time to cool down. **note** the three PCB have been assembled differently.
+/-- 337x260 img/reflow/IMG_0383.JPG "" Man it's HOT HOT HOT in here! 181&deg; the reflow process has begun --/
+/-- 337x260 img/reflow/IMG_0389.JPG "" Time to cool down. 
+
+**note :** the three PCB have been assembled differently.
  
 - Left : Partial shipped PCB with On-board sensors and USB connector removed for mini USB mod.
 - Center : Blank PCB (I forgot to bring the MCU and FTDI chip along with me, so those are missing, will be put on next).
 - Right : Partial shipped PCB with setup for off-board (OEM) sensors.
+--/
 
- --/
 #### AFTER BAKING INSPECTION ####
 
 - Check the entire PCB for Solder bridges, especially on MCU, U20, U29, U30
 - Examine the new solder joints for dryness, this is normally depicted by dull looking solder, it all should be rather shinny.
+- Clear any solder beads that may have formed on the PCB, this can easily be performed by using a tooth brush and giving the PCB a quick and careful scrub.
 
 #### AFTER BAKING TESTING ####
 
@@ -28,7 +31,7 @@
 	- Black probe to **GND**
 	- Red probe to **5V** on **BDM** header
 
-- Set the Multi-meter to a low voltage DC scale (some where around 20V will be ok)
+- Set the Multi-meter to a low voltage DC scale (some where around 20V will be OK)
 - Set the power supply to 12V
 	- If you can current limit your power supply then do so 100mA will work, alternatively you can current limit by placing a 120&ohm; - 1Watt resistor in series with the +12v power lead. 
 - Power on the supply (12V) the volt meter should show **5V** +- 0.20V. 

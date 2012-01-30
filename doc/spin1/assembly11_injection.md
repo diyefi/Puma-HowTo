@@ -21,6 +21,8 @@ Using solder paste place beads on all of the following component pads R203, C118
  --/
 See [through-hole](#assembly13_after_reflow) assembly injection section for the remainder of the injection modification.
 
+Repeat the above process for each of the following Injection circuits.
+
 #### Injection 2 ####
 Using solder paste place beads on all of the following component pads R200, C116.
 

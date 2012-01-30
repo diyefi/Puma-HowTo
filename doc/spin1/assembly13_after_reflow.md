@@ -93,8 +93,8 @@ Holding the VNP10N07 with leads down and writing facing the front. (if you are n
 Repeat the process with as many FET's as you require up to a maximum of 8.
 
 Note: Although it is recommended it is in no way compulsory, if you choose to mount the FET's any other way you will need to devise your own version of the injector mod.
-
 --/
+
 /-- 337x260 img/throughhole/DSCF9300.JPG "" 
 
 **injection 1**
@@ -120,8 +120,8 @@ Note: Although it is recommended it is in no way compulsory, if you choose to mo
 
 **injection 8**
 - **Q17**  *(VNP10N07)*
-
 --/
+
 #### INJECTION Mod ####
 
 #### Important!  :  before this mod is made check for PORT.XXXX functionality within the FreeEMS firmware. If this is not yet supported please preform the PORT B MOD before the injection mod.

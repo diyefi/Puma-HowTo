@@ -16,4 +16,4 @@ Using solder paste place beads on all of the following component pads C75, R149,
 - **C86**  *(Not used no connection)*
 - **R148** *(Not used no connection)*
 --/
-/-- 337x260 img/reflow/IMG_0305.JPG "" Assembled CHT circuit.--/
+/-- 337x260 img/reflow/IMG_0305.JPG "" *Assembled CHT circuit.*--/

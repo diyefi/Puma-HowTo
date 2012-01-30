@@ -12,4 +12,4 @@ Using solder paste place beads on all of the following component pads Q8, D46, R
 - **C37** *(Not used no connection)* Snub circuit not needed.
 --/
 
-/-- 337x260 img/reflow/IMG_0277.JPG "" Completed fuel circuit --/
+/-- 337x260 img/reflow/IMG_0277.JPG "" *Completed fuel circuit.* --/

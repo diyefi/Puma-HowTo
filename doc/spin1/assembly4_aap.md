@@ -1,7 +1,8 @@
 #### Step 9 : AAP circuit ####
 
-/-- 337x260 img/reflow/IMG_0246.JPG "" On-Board Atmospheric Absolute Pressure sensor components.
 Using solder paste place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
+
+/-- 337x260 img/reflow/IMG_0246.JPG "" Install MAP circuitry
 
 - **C21** *(0.1µF)* 
 - **C19** *(Not used no connection)*

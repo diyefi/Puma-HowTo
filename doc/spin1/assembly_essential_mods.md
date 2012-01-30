@@ -1,6 +1,6 @@
 # Spin1 Specific PCB Modifications
 
-You'll need to perform these modifications to the PCB board in prepare it for assembly.
+You'll need to perform these modifications to the PCB board to prepare it for assembly.
 
 #### Sub MCU track cut 
 /-- 337x260 img/mods/MCU_VDD_traces.png "Close up view of cutting this trace"
@@ -26,6 +26,7 @@ You'll need to perform these modifications to the PCB board in prepare it for as
 - The USB mod is broken down into three parts *top side USB mod*, *bottom side USB mod A* and *bottom side USB mod B*.
 --/
 /-- 337x260 img/mods/IMG_0157.JPG "Top side USB mod"
+**Top side USB mod**
 
 - Center punch the track in the green location on the right of **U20** shown in USB repower mod above.
 - Take the 1.5 mm drill bit and carefully ream out the track.
@@ -34,7 +35,7 @@ You'll need to perform these modifications to the PCB board in prepare it for as
 - Use the super glue to fill the newly made cut, this seal and insulate any exposed copper. 
 --/
 /-- 337x260 img/mods/IMG_0148.JPG "Bottom side before"
-- Bottom side of PCB below USB port with **J1** facing to the right.
+- A view of the PCB bottom side beneath the USB port and **J1** facing to the right.
 --/
 /-- 337x260 img/mods/IMG_0154.JPG "Bottom side USB mod A" 
 **Bottom side USB mod A**

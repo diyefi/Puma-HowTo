@@ -59,62 +59,65 @@ Some or all of these acronyms are used in the original schematic documentation.
 
 ### Listing of components with bad values
 
-### Components to be replaced with a wire jumper
-	- **D1**   ``-->`` wire jumper
-	- **R2**   ``-->`` wire jumper to **U4**
-	- **R7**   ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R9**   ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R11**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R13**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R40**  ``-->`` 0805 wire jumper *(bridged - component redundant with D24 diode removed)* (need to colour red in BOM)
-	- **R42**  ``-->`` 0805 wire jumper *(bridged - component redundant with D26 diode removed)* (need to colour red in BOM)
-	- **R47**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R48**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R50**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
-	- **R52**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
-	- **R159** ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R163** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
-	- **R165** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(missing component name)
-	- **R160** ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R164** ``-->`` *(bridged to present a suitably low impedance output to the ADC pins)*0805 wire jumper (need to colour red in BOM)
-	- **R170** ``-->`` 0805 wire jumper (need to colour red in BOM)
-	- **R174** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
+#### Components to be replaced with a wire jumper.
 
-### Components that require PCB modifications or are of significant change
-	- **R251** ``-->`` 1k&ohm; pull-up mod
-	- **C105** ``-->`` mount over top mod, one cap will be mounted directly on top of the other. *(need to id components for best arrangement)*
-	- **R176** ``-->`` possible 1M&ohm; or 10M&ohm; mod *to be confirmed*
-	- **R158** ``-->`` 10nF 0805 package mod will fit on current resistor pads
-	- **C108** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.	
-	- **C110** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C112** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C114** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C116** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C118** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C120** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **C122** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
-	- **RMODA** ``-->`` 100k&ohm; pull-down resistors MF12 package type, these resistors specifically will fit through the very small via's on puma and will make for easier and stronger soldering to via pads.
-	- **RMODB**  ``-->`` 200&ohm; **2 Watt** pull-up resistor.
-	- **USB-hack** ``-->`` Required to make USB operate at this time with current Serial Monitor firmware.
-	- **SM-UPhack** ``-->`` 10k&ohm; pull-up mod, required to make sure that the **SM** pin always has a known state (Held high until switched/jumpered low).
+- **D1**   ``-->`` wire jumper
+- **R2**   ``-->`` wire jumper to **U4**
+- **R7**   ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R9**   ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R11**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R13**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R40**  ``-->`` 0805 wire jumper *(bridged - component redundant with D24 diode removed)* (need to colour red in BOM)
+- **R42**  ``-->`` 0805 wire jumper *(bridged - component redundant with D26 diode removed)* (need to colour red in BOM)
+- **R47**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R48**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R50**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
+- **R52**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
+- **R159** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R163** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
+- **R165** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(missing component name)
+- **R160** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R164** ``-->`` *(bridged to present a suitably low impedance output to the ADC pins)*0805 wire jumper (need to colour red in BOM)
+- **R170** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R174** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
 
-### Components that will NOT be populated onto puma PCB.
-	- *Shutdown circuitry: This circuit design is flawed and useable the following components should be neglected. This circuit is bypassed with the **D1** jumper.*	
-		- **Q19**  ``-->`` do not use
-		- **Q18**  ``-->`` do not use				
-		- **R227** ``-->`` do not use				
-		- **R226** ``-->`` do not use				
+#### Components that require PCB modifications or are of significant change.
+
+- **R251** ``-->`` 1k&ohm; pull-up mod
+- **C105** ``-->`` mount over top mod, one cap will be mounted directly on top of the other. *(need to id components for best arrangement)*
+- **R176** ``-->`` possible 1M&ohm; or 10M&ohm; mod *to be confirmed*
+- **R158** ``-->`` 10nF 0805 package mod will fit on current resistor pads
+- **C108** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.	
+- **C110** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C112** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C114** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C116** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C118** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C120** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **C122** ``-->`` 100k&ohm; resistor is used in the capacitors place this will be modified to ground as a pull-down.
+- **RMODA** ``-->`` 100k&ohm; pull-down resistors MF12 package type, these resistors specifically will fit through the very small via's on puma and will make for easier and stronger soldering to via pads.
+- **RMODB**  ``-->`` 200&ohm; **2 Watt** pull-up resistor.
+- **USB-hack** ``-->`` Required to make USB operate at this time with current Serial Monitor firmware.
+- **SM-UPhack** ``-->`` 10k&ohm; pull-up mod, required to make sure that the **SM** pin always has a known state (Held high until switched/jumpered low).
+
+#### Components that will NOT be populated onto puma PCB.
+
+- *Shutdown circuitry: This circuit design is flawed and useable the following components should be neglected. This circuit is bypassed with the **D1** jumper.*	
+	- **Q19**  ``-->`` do not use
+	- **Q18**  ``-->`` do not use	
+	- **R227** ``-->`` do not use	
+	- **R226** ``-->`` do not use	
 	- **D3**   ``-->`` Not used no connection *(reason to be added)*
 	- **R133** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
-	- *These components are not used when operating an on board MAP (non-OEM):*	
-		- **D31**  ``-->`` Not used no connection *(reason to be added)*
-		- **D32**  ``-->`` Not used no connection *(reason to be added)*
-		- **C29**  ``-->`` Not used no connection *(reason to be added)*
+- *These components are not used when operating an on board MAP (non-OEM):*	
+	- **D31**  ``-->`` Not used no connection *(reason to be added)*
+	- **D32**  ``-->`` Not used no connection *(reason to be added)*
+	- **C29**  ``-->`` Not used no connection *(reason to be added)*
 	- **C19**  ``-->`` Not used no connection *(reason to be added)* 
-	- *These components are not used when operating an on board AAP (non-OEM):*	
-		- **D33**  ``-->`` Not used no connection *(reason to be added)*
-		- **D34**  ``-->`` Not used no connection *(reason to be added)*
-		- **C30**  ``-->`` Not used no connection *(reason to be added)*
+- *These components are not used when operating an on board AAP (non-OEM):*	
+	- **D33**  ``-->`` Not used no connection *(reason to be added)*
+	- **D34**  ``-->`` Not used no connection *(reason to be added)*
+	- **C30**  ``-->`` Not used no connection *(reason to be added)*
 	- **D24**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
 	- **D26**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
 	- **R68**  ``-->`` Not used no connection *(reason to be added)*
@@ -128,58 +131,59 @@ Some or all of these acronyms are used in the original schematic documentation.
 	- **C76**  ``-->`` Not used no connection *(reason to be added)*
 	- **R151** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
 	- **C85**  ``-->`` Not used no connection *(reason to be added)*
-	- *Injection circuitry diodes, not used to date (07 December 2011):*	
-		- **D84** ``-->`` do not use
-		- **D85** ``-->`` do not use
-		- **D86** ``-->`` do not use
-		- **D87** ``-->`` do not use
-		- **D88** ``-->`` do not use
-		- **D89** ``-->`` do not use
-		- **D90** ``-->`` do not use
-		- **D91** ``-->`` do not use
-		- **D92** ``-->`` do not use
-	- *Ignition circuitry: all components listed are unused:*
-		- **D79** ``-->`` not required internal to mosfet
-		- **R7**  ``-->`` do not use
-		- **D10** ``-->`` do not use
-		- **D78** ``-->`` not required internal to mosfet
-		- **R9**  ``-->`` do not use
-		- **D12** ``-->`` do not use
-		- **R11** ``-->`` not required internal to mosfet 
-		- **D14** ``-->`` do not use
-		- **D77** ``-->`` do not use
-		- **R13** ``-->`` not required internal to mosfet 
-		- **D16** ``-->`` do not use
-		- **D76** ``-->`` do not use
-	
-### Straight component value changes (only new correct value shown)
-	- **R177** ``-->`` 10K&ohm;
-	- **R178** ``-->`` 10K&ohm;
-	- **R179** ``-->`` 10K&ohm;
-	- **R181** ``-->`` 10K&ohm;
-	- **R180** ``-->`` 10K&ohm;
-	- **C95**  ``-->`` 0.22µF
-	- **C94**  ``-->`` 680pF
-	- **C93**  ``-->`` 6.8nF
-	- **R175** ``-->`` 3.3K&ohm;
-	- **C96**  ``-->`` 22pF *or* 15pF *or* 33pF
-	- **C97**  ``-->`` 22pF *or* 15pF *or* 33pF
-	- **C98**  ``-->`` 0.22µF
-	- **C99**  ``-->`` 0.22µF
-	- **C100** ``-->`` 0.22µF
-	- **C101** ``-->`` 0.22µF
-	- **C102** ``-->`` 0.22µF
-	- **C11**  ``-->`` 10µF
-	- **R105** ``-->`` 3.9K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*.
-	- **R106** ``-->`` 1K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*. 
-	- *Only changed to these following values when using off board MAP (OEM):*	
-		- **D31**  ``-->`` Schottky diode
-		- **D32**  ``-->`` Schottky diode
-		- **C29**  ``-->`` 0.1µF
-	- *Only changed to these following values when using off board AAP (OEM):*	
-		- **D33** ``-->`` Schottky diode
-		- **D34** ``-->`` Schottky diode
-		- **C30** ``-->`` 0.1µF
+- *Injection circuitry diodes, not used to date (07 December 2011):*	
+	- **D84** ``-->`` do not use
+	- **D85** ``-->`` do not use
+	- **D86** ``-->`` do not use
+	- **D87** ``-->`` do not use
+	- **D88** ``-->`` do not use
+	- **D89** ``-->`` do not use
+	- **D90** ``-->`` do not use
+	- **D91** ``-->`` do not use
+	- **D92** ``-->`` do not use
+- *Ignition circuitry: all components listed are unused:*
+	- **D79** ``-->`` not required internal to mosfet
+	- **R7**  ``-->`` do not use
+	- **D10** ``-->`` do not use
+	- **D78** ``-->`` not required internal to mosfet
+	- **R9**  ``-->`` do not use
+	- **D12** ``-->`` do not use
+	- **R11** ``-->`` not required internal to mosfet 
+	- **D14** ``-->`` do not use
+	- **D77** ``-->`` do not use
+	- **R13** ``-->`` not required internal to mosfet 
+	- **D16** ``-->`` do not use
+	- **D76** ``-->`` do not use
+
+#### Straight component value changes (only new correct value shown).
+
+- **R177** ``-->`` 10K&ohm;
+- **R178** ``-->`` 10K&ohm;
+- **R179** ``-->`` 10K&ohm;
+- **R181** ``-->`` 10K&ohm;
+- **R180** ``-->`` 10K&ohm;
+- **C95**  ``-->`` 0.22µF
+- **C94**  ``-->`` 680pF
+- **C93**  ``-->`` 6.8nF
+- **R175** ``-->`` 3.3K&ohm;
+- **C96**  ``-->`` 22pF *or* 15pF *or* 33pF
+- **C97**  ``-->`` 22pF *or* 15pF *or* 33pF
+- **C98**  ``-->`` 0.22µF
+- **C99**  ``-->`` 0.22µF
+- **C100** ``-->`` 0.22µF
+- **C101** ``-->`` 0.22µF
+- **C102** ``-->`` 0.22µF
+- **C11**  ``-->`` 10µF
+- **R105** ``-->`` 3.9K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*.
+- **R106** ``-->`` 1K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*. 
+- *Only changed to these following values when using off board MAP (OEM):*	
+	- **D31**  ``-->`` Schottky diode
+	- **D32**  ``-->`` Schottky diode
+	- **C29**  ``-->`` 0.1µF
+- *Only changed to these following values when using off board AAP (OEM):*	
+	- **D33** ``-->`` Schottky diode
+	- **D34** ``-->`` Schottky diode
+	- **C30** ``-->`` 0.1µF
 	- **R212** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
 	- **R213** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
 	- **R39**  ``-->`` 1K&ohm;
@@ -215,8 +219,8 @@ Some or all of these acronyms are used in the original schematic documentation.
 
 
 #### Note: 
-	- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
-	- No electrolytic caps should be installed. In their place 10µF TH tantalums can optionally be installed.
+- PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
+- No electrolytic caps should be installed. In their place 10µF TH tantalums can optionally be installed.
 
 ### BOM Configuration Overview
 

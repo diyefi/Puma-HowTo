@@ -26,6 +26,9 @@ Using solder paste place beads on all of the following component pads R29, D20, 
 - **D10** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
 - **D79** *(Not used internal in Mosfet)*
 --/
+/-- 337x260 img/placeholder_image.png "" *Installed ignition circuit.*--/
+
+Repeat the above process for each of the following Injection circuits.
 
 #### Ignition 2 ####
 Using solder paste place beads on all of the following component pads R25, D19, R9, R26, R23, D12.

@@ -17,4 +17,4 @@ Using solder paste place beads on all of the following component pads C78, R152,
 - **C85**	*(Not used no connection)*
 --/
 
-/-- 337x260 img/reflow/IMG_0336.JPG  "" Completed IAT circuit assembly. --/ 
+/-- 337x260 img/reflow/IMG_0336.JPG  "" *Installed IAT circuit.*--/ 
