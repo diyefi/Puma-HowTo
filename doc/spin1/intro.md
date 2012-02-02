@@ -1,8 +1,3 @@
-
-/-- 337x106 img/under_construction.jpg "" --/
-
-## (come back soon)
-
 # Introduction
 
 This guide shows you how to choose the components, how to order the components, how to build your Spin 1 board and how to properly connect it to a vehicle.

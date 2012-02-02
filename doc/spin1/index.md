@@ -9,6 +9,7 @@
   * [Assembling the PCB - Drivers](#assembly11_injection)
   * [Baking the Assembled PCB](#pcb_bake)
   * [Post Reflow Assembly](#assembly13_after_reflow)
+  * [Temp PORT B injection mod](#temp_portB_mod)
   * [Installing the Serial Monitor](#sm_install)
   * [Loading Firmware](#firmware_upload)
   * [Testing Inputs](#testing_inputs)
