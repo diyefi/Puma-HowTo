@@ -124,7 +124,7 @@ Note: Although it is recommended it is in no way compulsory to mount the FET's i
 
 #### INJECTION Mod ####
 
-#### *Important!  :  before this mod is made check for PORT.XXXX functionality within the FreeEMS firmware. If this is not yet supported please preform the [PORT B INJECTION MOD](#temp_portB_mod) before this injection mod.*
+#### *Important!  :  before this mod is made check for SeanK's Xgate functionality within the FreeEMS firmware. If Xgate is not yet supported please perform the [PORT B INJECTION MOD](#temp_portB_mod) before this injection mod.*
 
 Preform this 3 step process for each injector that will be used. The Mod should only be applied to the following part numbers Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17. These mods are made over the location (silk screen) of U28, U27, U21, U22, U23, U24, U25, U26.
 

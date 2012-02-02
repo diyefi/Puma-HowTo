@@ -2,7 +2,7 @@
 
 Using solder paste place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
 
-/-- 337x260 img/reflow/IMG_0246.JPG "" Install MAP circuitry
+/-- 337x260 img/reflow/IMG_0246.JPG "" Install AAP circuitry
 
 - **C21** *(0.1µF)* 
 - **C19** *(Not used no connection)*
@@ -13,7 +13,7 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 --/
 
 **OFF-Board (OEM) AAP**
-/-- 337x260 img/reflow/IMG_0250.JPG "" Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM MAP)
+/-- 337x260 img/reflow/IMG_0250.JPG "" Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM AAP)
 
 Using solder paste place beads on all of the following component pads D33, D34, C30.
 

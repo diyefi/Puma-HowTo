@@ -1,6 +1,6 @@
 # Spin1 Specific PCB Modifications
 
-You'll need to perform these modifications to the PCB board to prepare it for assembly.
+You'll need to perform these modifications to the PCB to prepare it for assembly.
 
 #### Sub MCU track cut 
 /-- 337x260 img/mods/MCU_VDD_traces.png "Close up view of cutting this trace"

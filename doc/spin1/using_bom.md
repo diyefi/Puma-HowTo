@@ -12,7 +12,7 @@ Open the BOM. The right hand side of each blue sub-circuit title is the page num
 - The stepper driver circuit is defunked, don't go there.
 - The shut-down circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.
 - The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12V signal at around 100mA.
-- The Injection driver circuits are incorrectly layout, and require a modification which is covered in this howto to function the bom only includes parts for High-Z injectors.
+- The Injection driver circuits are incorrectly laid out, and require a modification which is covered in this howto to function the bom only includes parts for High-Z injectors.
 - The USB circuit requires an additional component in the way of a TO92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available untill 30 Feburary 2012)
 - The USB connector is wrong (It's female A, which is reserved for host devices) however it is functional. Cables are hard to come by, the options are:
 	- Hack a mini-USB or type B female connector instead and use an appropriate cable.
@@ -34,7 +34,7 @@ Some or all of these acronyms are used in the original schematic documentation.
   	- For coil per plug operation (COP/CNP), you need one of circuit per cylinder.
   	- For wasted spark set-up, you need one of these per two cylinders.
   	- If you require operation of a distributor, you only need one.
-  	- For a fuel only system you do not require any of this circuits.
+  	- For a fuel only system you do not require any of these circuits.
 	- It does **NOT** drive coils directly, don't even try.
 	- For driving of external ignitors, modifications are required.
 
