@@ -1,4 +1,4 @@
-#### Step 8 : MAP circuit ####
+#### Step 7 : MAP circuit
 
 Using solder paste place beads on all of the following component pads C23, C24, C66, R134, R50, R47.
 

@@ -1,4 +1,4 @@
-#### Step 12 : Fuel circuit ####
+#### Step 11 : Fuel circuit
 
 Using solder paste place beads on all of the following component pads Q8, D46, R67, R66, R65.
 

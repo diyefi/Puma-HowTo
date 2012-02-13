@@ -1,4 +1,4 @@
-#### Step 9 : AAP circuit ####
+#### Step 8 : AAP circuit
 
 Using solder paste place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
 

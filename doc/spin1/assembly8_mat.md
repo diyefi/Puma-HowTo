@@ -1,4 +1,4 @@
-#### Step 14 : MAT circuit ####
+#### Step 13 : MAT circuit
 
 Using solder paste place beads on all of the following component pads C81, R155, C74, R170, R174, D72, D73, R153.
 
@@ -17,4 +17,7 @@ Using solder paste place beads on all of the following component pads C81, R155,
 - **C92**  *(Not used no connection)*
 --/
 
-/-- 337x260 img/reflow/DSCF9153.JPG "" *Installed MAT circuit.*--/
+/-- 337x260 img/reflow/DSCF9153.JPG "" *Installed MAT circuit.*
+
+Note: the 10k (104) resistor in the image is incorrect and should be 2.4k (2401).
+--/

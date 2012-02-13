@@ -1,4 +1,4 @@
-#### Step 16 : TPS circuit ####
+#### Step 15 : TPS circuit
 
 Using solder paste place beads on all of the following component pads R161, C87, D62, D63, R165.
 

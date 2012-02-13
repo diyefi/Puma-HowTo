@@ -1,5 +1,5 @@
-## Method ONE : Pre Reflow ##
-#### MCU circuitry ####
+## Method ONE : Pre Reflow
+#### MCU circuitry
 
 Follow the [BOM], select the corresponding tab with the sub circuit that you are assembling, in this case **Primary Parts** tab. Here you will find the correct component values. The topology of the circuit being assembled can be seen in the schematics.
 
@@ -84,11 +84,3 @@ Using solder paste place beads on all of the following component pads C9, C10, C
  2. **C10** *(22µF)* **Polarised Tantalum capacitor**; Make sure that it is oriented so that the positive lead is closest to word C10 on silkscreen.
  3. **C12** *(0.1µF)*
 --/
-
-**Step 6 :**
-/-- 337x260 img/placeholder_image.png "show USB mod assembly" 
-
-*to be competed*
-
---/
-

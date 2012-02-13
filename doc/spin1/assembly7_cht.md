@@ -1,4 +1,4 @@
-#### Step 13 : CHT circuit ####
+#### Step 12 : CHT circuit
 
 Using solder paste place beads on all of the following component pads C75, R149, C74, R160, R164, D60, D61, R147.
 
@@ -16,4 +16,7 @@ Using solder paste place beads on all of the following component pads C75, R149,
 - **C86**  *(Not used no connection)*
 - **R148** *(Not used no connection)*
 --/
-/-- 337x260 img/reflow/IMG_0305.JPG "" *Assembled CHT circuit.*--/
+/-- 337x260 img/reflow/IMG_0305.JPG "" *Assembled CHT circuit.*
+
+Note: the 10k (104) resistor in the image is incorrect and should be 2.4k (2401).
+--/

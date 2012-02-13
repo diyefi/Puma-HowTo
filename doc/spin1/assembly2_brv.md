@@ -1,4 +1,4 @@
-#### Step 7 : BRV Circuit
+#### Step 6 : BRV Circuit
 
 /-- 337x260 img/reflow/IMG_0209.JPG "" BRV circuit assembly.
 

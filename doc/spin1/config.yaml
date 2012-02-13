@@ -38,7 +38,11 @@ structure:
     - pcb_bake # instructions how to bake the board in an oven
   - assembly_through_hole:
     - assembly13_after_reflow
+    - ignition_th
+    - ign_pullup_mod
+    - injection_th
     - temp_portB_mod
+    - usb_pnp_mod
   - serial_monitor:
     - sm_install # how to load the serial monitor using BDM
   - firmware:

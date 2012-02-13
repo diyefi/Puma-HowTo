@@ -1,4 +1,4 @@
-#### Step 15 : IAT circuit ####
+#### Step 14 : IAT circuit
 
 Using solder paste place beads on all of the following component pads C78, R152, C77, R159, R163, D58, D59, R150. 
 
@@ -17,4 +17,7 @@ Using solder paste place beads on all of the following component pads C78, R152,
 - **C85**	*(Not used no connection)*
 --/
 
-/-- 337x260 img/reflow/IMG_0336.JPG  "" *Installed IAT circuit.*--/ 
+/-- 337x260 img/reflow/IMG_0336.JPG  "" *Installed IAT circuit.*
+
+Note: the 10k (104) resistor in the image is incorrect and should be 2.4k (2401).
+--/ 
