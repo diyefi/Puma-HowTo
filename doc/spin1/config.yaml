@@ -41,7 +41,7 @@ structure:
     - ignition_th
     - ign_pullup_mod
     - injection_th
-    - temp_portB_mod
+    - temp_portT_mod
     - usb_pnp_mod
   - serial_monitor:
     - sm_install # how to load the serial monitor using BDM

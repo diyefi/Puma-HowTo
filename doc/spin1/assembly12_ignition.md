@@ -8,7 +8,7 @@ Using solder paste place beads on all of the following component pads R230, R231
 - **R232** *(1K&ohm;)*
 - **R233** *(1K&ohm;)*
 - **R228** *(10K&ohm;)* --- install for Non-inverted output
-- **R229** *(10K&ohm;)* --- install for inverted output
+- **R229** *(1K&ohm;)* --- install for inverted output
 - **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
 
@@ -28,7 +28,7 @@ Using solder paste place beads on all of the following component pads R29, D20, 
 - **D10** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
 - **D79** *(Not used internal in Mosfet)*
 --/
-/-- 337x260 img/placeholder_image.png "" *Installed ignition circuit.*--/
+/-- 337x260 img/reflow/DSCF9773.JPG "" *Installed ignition circuit.*--/
 
 Repeat the above process for each of the following Injection circuits.
 

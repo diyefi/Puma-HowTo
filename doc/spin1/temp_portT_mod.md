@@ -1,4 +1,4 @@
-## Temporary Port B Injection mod
+## Temporary Port T Injection mod
 This mod is necessary for the PUMA board to work on current FreeEMS Vanilla code.
 It requires the following components
 
