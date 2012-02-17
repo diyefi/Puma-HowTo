@@ -1,6 +1,6 @@
 # Introduction
 
-#####First of all I would like to thank Fred Cooke for his contribution to this howto, and putting up with the many hours of skpye calls. You have been **"O for awesome"** kiwi styles.
+#####Puma Spin 1 owners should be extremely grateful to Preston Saunders who has spent hundreds of hours creating this meticulously crafted documentation. Preston would like to thank Fred Cooke for his contribution to this howto, and putting up with the many hours of skpye calls. You have been **"O for awesome"** kiwi styles. But not as awesome as Preston himself.
 
 This guide shows you how to choose the components, how to order the components, how to build your Spin 1 board and how to properly connect it to a vehicle.
 
