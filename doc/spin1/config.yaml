@@ -14,7 +14,6 @@ structure:
     - using_bom # BOM configuration chapter
     - sourcing_components # chapter guiding how to order components
   - general_info:  
-    - surface_mount_information # tips and tricks for first times
     - assembly_tools 
   - assembly_mod:
     - assembly_essential_mods # Spin1-specific modifications 

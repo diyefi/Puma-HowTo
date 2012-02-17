@@ -1,6 +1,6 @@
 #### Step 9 : RPM-1 circuit
 
-Using solder paste place beads on all of the following component pads U26, R214,C126, C125, R212, R213, R39, R40.
+Using solder paste, place beads on all of the following component pads U26, R214,C126, C125, R212, R213, R39, R40.
 
 This is the smallest foot print that Spin 1 has, it will be difficult in most case to get a constant solder pasted and non bridged pads, a stanley knife can be used to create the seperation between pads and any excess paste cleaned up with sharpened cotton buds.
 
@@ -21,7 +21,7 @@ This is the smallest foot print that Spin 1 has, it will be difficult in most ca
 --/
 
 #### Step 10 : RPM-2 circuit
-Using solder paste place beads on all of the following component pads U30, R217, C128, C127, R215, R216, R41, R42.
+Using solder paste, place beads on all of the following component pads U30, R217, C128, C127, R215, R216, R41, R42.
 
 /-- 337x260 img/reflow/IMG_0262.JPG "" Install RPM-2 circuit.
 

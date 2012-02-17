@@ -2,7 +2,7 @@
 
 /-- 337x260 img/operation/FreeEMS_loader_settings.png "FreeEMS Loader Application"
 
-1. Install [SeanK’s loader].
+1. Install [Seans loader].
 2. Connect a USB cable between your computer and Puma.
 3. Jumper the load/run header.
 4. Turn Puma **on**.
@@ -33,7 +33,5 @@
 	- Get interface version; (request.interface.version.bin)
 	- Get decoder version; (request.decoder.name.bin) 
 - Ensure that the strings returned match what you uploaded.
-
-*You are now ready to test your physical outputs using the Bench Test decoder.*
 
 --/

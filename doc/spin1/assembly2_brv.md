@@ -2,7 +2,7 @@
 
 /-- 337x260 img/reflow/IMG_0209.JPG "" BRV circuit assembly.
 
-Using solder paste place beads on all of the following component pads R105, R106, C31, D35, D36, R49, R52.
+Using solder paste, place beads on all of the following component pads R105, R106, C31, D35, D36, R49, R52.
 
 - R105	*(3.9K&ohm;)* 
 - R106	*(1K&ohm;)*	

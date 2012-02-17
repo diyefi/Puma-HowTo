@@ -1,6 +1,6 @@
 #### Step 8 : AAP circuit
 
-Using solder paste place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
+Using solder paste, place beads on all of the following component pads C21, C19, C20,C29, R51, R48.
 
 /-- 337x260 img/reflow/IMG_0246.JPG "" Install AAP circuitry
 
@@ -13,9 +13,9 @@ Using solder paste place beads on all of the following component pads C21, C19, 
 --/
 
 **OFF-Board (OEM) AAP**
-/-- 337x260 img/reflow/IMG_0250.JPG "" Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off board AAP sensor : i.e. OEM AAP)
+/-- 337x260 img/reflow/IMG_0250.JPG "" Off-Board Atmospheric Absolute Pressure sensor (Add these components if you plan on having off-board AAP sensor : i.e. OEM AAP)
 
-Using solder paste place beads on all of the following component pads D33, D34, C30.
+Using solder paste, place beads on all of the following component pads D33, D34, C30.
 
 - **D33** *(Schottky)* direction dependant, orient the **K** lead to the TOP of the PCB.
 - **D34** *(Schottky)* direction dependant, orient the **K** lead to the BOTTOM of the PCB.

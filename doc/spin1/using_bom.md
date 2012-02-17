@@ -1,25 +1,24 @@
 # Bill of Materials
 
 The BOM is broken down into sub-circuits so you, as the end user, can pick and choose which circuits are best suited to your project. For each sub-circuit there is a matching assembly section.
-The primary components are compulsory to achieve a functional 'FreeEMS brain'. All other sections are optional, however a combination of these will be necessary for an engine to run.
+The primary components are compulsory to achieve a functional 'FreeEMS brain'. All other sections are optional, however, a combination of these will be necessary for an engine to run.
 
 Open the BOM. The right hand side of each blue sub-circuit title is the page number, which corresponds to the [schematic and circuitry] that those components relate to.
 
 ### Overview with Important notes
 
 - A large number of parts will be unpopulated, replaced with a zero ohm jumper, or solder bridge.
-- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider. No instructions will be proved within this howto.
+- The EGT circuit won't work (it has a 500&deg;C limit) without changing it's supply to 12 Volt and adding a Voltage divider. No instructions will be proved within this how-to.
 - The stepper driver circuit is defunked, don't go there.
 - The shut-down circuit won't work, the parts for it are not in the BOM and there will just be unpopulated pads for it on the PCB.
 - The XOR based ignitor drive is too weak and should be further buffered with something that can put out a 12V signal at around 100mA.
-- The Injection driver circuits are incorrectly laid out, and require a modification which is covered in this howto to function the bom only includes parts for High-Z injectors.
-- The USB circuit requires an additional component in the way of a TO92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available untill 30 Feburary 2012)
+- The Injection driver circuits are incorrectly laid out, and require a modification, which is covered in this how-to, to function. The BOM only includes parts for High-Z injectors.
+- The USB circuit requires an additional component in the way of a TO92 packaged PNP transistor *UNLESS* a modified SM is used (currently not available until 30 February 2012)
 - The USB connector is wrong (It's female A, which is reserved for host devices) however it is functional. Cables are hard to come by, the options are:
 	- Hack a mini-USB or type B female connector instead and use an appropriate cable.
 	- Build a A-A cable from two common USB cables.
 	- buy male A-A cable.
 
-** = work in progress
 
 #### Legend of acronyms ####
 Some or all of these acronyms are used in the original schematic documentation.
@@ -28,7 +27,7 @@ Some or all of these acronyms are used in the original schematic documentation.
   	- If you have high impedance injectors (``>6``&ohm;), these can be driven directly from Puma with the correct mods.
   	
 - **INJ-L**: *(**Inj**ector **L**ow impedance)*
-  	- If you have low impedance injectors (``<6``&ohm;), there needs to be significant modifications made to use these. No covered in this howto documention, sorry you're on own!
+  	- If you have low impedance injectors (``<6``&ohm;), there needs to be significant modifications made to use these. Not covered in this how-to documentation, sorry you're on own!
   	
 - **IGN**: *(**Ign**ition)*
   	- For coil per plug operation (COP/CNP), you need one of circuit per cylinder.
@@ -42,10 +41,10 @@ Some or all of these acronyms are used in the original schematic documentation.
   	- Most applications require 2 inputs for 2 sensors, and installing only 1 will limit the use of the unit significantly 2 is the default and recommended.
  
 - **MAP**: *(**M**anifold **A**bsolute **P**ressure)* 
-	- In the BOM boosted is the default / preferred sensor and provides sufficient accuracy for all naturally aspirated vehicles, and sufficent range to cover boosted applications up to 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate.
+	- In the BOM boosted is the default / preferred sensor and provides sufficient accuracy for all naturally aspirated vehicles, and sufficient range to cover boosted applications up to 21psi. If you are planning boost levels in excess of or close to 21psi, from a relatively large turbo, there are other options that you need to investigate.
 
 - **AAP**: *(**A**tmospheric **A**bsloute **P**ressure)* 
-  	- Used for normalisation of the MAP vs atmospheric pressure, this is considered optional. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle, or if you live in New Zealand home of [**L``&``P**]. It's not needed for people who use their vehicles at one constant altitude (whatever that is).
+  	- Used for normalisation of the MAP vs atmospheric pressure, this is considered optional. Choose this if you live in a mountainous area, or intend to visit such areas using your vehicle, or if you live in New Zealand, home of [**L``&``P**]. It's not needed for people who use their vehicles at one constant altitude (whatever that is).
 - **MAF**: *(**M**ass **A**ir **F**low)* 
 	- This is an alternative to the MAP sensor that is unsupported at this time, however the circuit is cheap and can be used as a general purpose analogue input also.
 
@@ -63,22 +62,22 @@ Some or all of these acronyms are used in the original schematic documentation.
 
 - **D1**   ``-->`` wire jumper
 - **R2**   ``-->`` wire jumper to **U4**
-- **R7**   ``-->`` 0805 wire jumper (need to colour red in BOM)
-- **R9**   ``-->`` 0805 wire jumper (need to colour red in BOM)
-- **R11**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-- **R13**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R7**   ``-->`` 0805 wire jumper
+- **R9**   ``-->`` 0805 wire jumper
+- **R11**  ``-->`` 0805 wire jumper
+- **R13**  ``-->`` 0805 wire jumper
 - **R40**  ``-->`` 0805 wire jumper *(bridged - component redundant with D24 diode removed)* (need to colour red in BOM)
 - **R42**  ``-->`` 0805 wire jumper *(bridged - component redundant with D26 diode removed)* (need to colour red in BOM)
-- **R47**  ``-->`` 0805 wire jumper (need to colour red in BOM)
-- **R48**  ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R47**  ``-->`` 0805 wire jumper
+- **R48**  ``-->`` 0805 wire jumper
 - **R50**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
 - **R52**  ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
-- **R159** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R159** ``-->`` 0805 wire jumper
 - **R163** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
 - **R165** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(missing component name)
-- **R160** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R160** ``-->`` 0805 wire jumper
 - **R164** ``-->`` *(bridged to present a suitably low impedance output to the ADC pins)*0805 wire jumper (need to colour red in BOM)
-- **R170** ``-->`` 0805 wire jumper (need to colour red in BOM)
+- **R170** ``-->`` 0805 wire jumper
 - **R174** ``-->`` 0805 wire jumper *(bridged to present a suitably low impedance output to the ADC pins)*(need to colour red in BOM)
 
 #### Components that require PCB modifications or are of significant change.
@@ -107,30 +106,30 @@ Some or all of these acronyms are used in the original schematic documentation.
 	- **Q18**  ``-->`` do not use	
 	- **R227** ``-->`` do not use	
 	- **R226** ``-->`` do not use	
-	- **D3**   ``-->`` Not used no connection *(reason to be added)*
+	- **D3**   ``-->`` Not used no connection 
 	- **R133** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
 - *These components are not used when operating an on board MAP (non-OEM):*	
-	- **D31**  ``-->`` Not used no connection *(reason to be added)*
-	- **D32**  ``-->`` Not used no connection *(reason to be added)*
-	- **C29**  ``-->`` Not used no connection *(reason to be added)*
-	- **C19**  ``-->`` Not used no connection *(reason to be added)* 
+	- **D31**  ``-->`` Not used no connection 
+	- **D32**  ``-->`` Not used no connection 
+	- **C29**  ``-->`` Not used no connection 
+	- **C19**  ``-->`` Not used no connection 
 - *These components are not used when operating an on board AAP (non-OEM):*	
-	- **D33**  ``-->`` Not used no connection *(reason to be added)*
-	- **D34**  ``-->`` Not used no connection *(reason to be added)*
-	- **C30**  ``-->`` Not used no connection *(reason to be added)*
+	- **D33**  ``-->`` Not used no connection 
+	- **D34**  ``-->`` Not used no connection
+	- **C30**  ``-->`` Not used no connection 
 	- **D24**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
 	- **D26**  ``-->`` Not used no connection *(These diodes are protection on an internal circuit which is pointless, instead they compromise the signal quality)*
-	- **R68**  ``-->`` Not used no connection *(reason to be added)*
-	- **C37**  ``-->`` Not used no connection *(reason to be added)* 
-	- **C73**  ``-->`` Not used no connection *(reason to be added)* 
-	- **C86**  ``-->`` Not used no connection *(reason to be added)* 
+	- **R68**  ``-->`` Not used no connection
+	- **C37**  ``-->`` Not used no connection 
+	- **C73**  ``-->`` Not used no connection 
+	- **C86**  ``-->`` Not used no connection
 	- **R148** ``-->`` Not used no connection *(negatively impact the signal fidelity)* 
-	- **C79**  ``-->`` Not used no connection *(reason to be added)*
+	- **C79**  ``-->`` Not used no connection
 	- **R154** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
-	- **C92**  ``-->`` Not used no connection *(reason to be added)*
-	- **C76**  ``-->`` Not used no connection *(reason to be added)*
+	- **C92**  ``-->`` Not used no connection
+	- **C76**  ``-->`` Not used no connection
 	- **R151** ``-->`` Not used no connection *(negatively impact the signal fidelity)*
-	- **C85**  ``-->`` Not used no connection *(reason to be added)*
+	- **C85**  ``-->`` Not used no connection
 - *Injection circuitry diodes, not used to date (07 December 2011):*	
 	- **D84** ``-->`` do not use
 	- **D85** ``-->`` do not use
@@ -174,8 +173,8 @@ Some or all of these acronyms are used in the original schematic documentation.
 - **C101** ``-->`` 0.22µF
 - **C102** ``-->`` 0.22µF
 - **C11**  ``-->`` 10µF
-- **R105** ``-->`` 3.9K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*.
-- **R106** ``-->`` 1K&ohm; this value has been adjusted to obtain maximum ADC accuracy *(though the original values that are 10x higher do seem to be work OK)*. 
+- **R105** ``-->`` 3.9K&ohm; this value has been adjusted to obtain maximum ADC accuracy 
+- **R106** ``-->`` 1K&ohm; this value has been adjusted to obtain maximum ADC accuracy 
 - *Only changed to these following values when using off board MAP (OEM):*	
 	- **D31**  ``-->`` Schottky diode
 	- **D32**  ``-->`` Schottky diode
@@ -184,8 +183,8 @@ Some or all of these acronyms are used in the original schematic documentation.
 	- **D33** ``-->`` Schottky diode
 	- **D34** ``-->`` Schottky diode
 	- **C30** ``-->`` 0.1µF
-	- **R212** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
-	- **R213** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R212** ``-->`` 10K&ohm; *(must be at least 1/4 Watt, preferably 1/2 Watt. As such it could be a better idea to put them in the loom and bridge this location)*
+	- **R213** ``-->`` 10K&ohm; *(must be at least 1/4 Watt, preferably 1/2 Watt. As such it could be a better idea to put them in the loom and bridge this location)*
 	- **R39**  ``-->`` 1K&ohm;
 	- **R215** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
 	- **R216** ``-->`` 10K&ohm; *(must be 1/4 Watt, As such it could be a better idea to put them in the loom and bridge this location)*
@@ -220,11 +219,11 @@ Some or all of these acronyms are used in the original schematic documentation.
 
 #### Note: 
 - PIP-3104 are listed for protected logic level FETs - DO NOT USE THEM, they are NOT robust. VNP10N07 (or 5, 20, etc Amp variants) are suitable replacements, there are many others.
-- No electrolytic caps should be installed. In their place 10µF TH tantalums can optionally be installed.
+- No electrolytic caps should be installed. In their place 10µF TH tantalum’s can optionally be installed.
 
 ### BOM Configuration Overview
 
-Configuring the BOM has been the tricky part. A spread sheet has been created that is tabbed with the various different sub circuits contained on the Puma PCB. The spread sheet can also be viewed as a [web  BOM]. Alternatively the BOM can be [downloaded](http://puma.freeems.org/preston.bom/PumaBom-WithMods-Element14.xlsx) as an Excel spreadsheet that can be opened also in OpenOffice.
+Configuring the BOM has been the tricky part. A spread sheet has been created that is tabbed with the various different sub circuits contained on the Puma PCB. The spread sheet can also be viewed as a [web BOM] . Alternatively the BOM can be [downloaded](http://puma.freeems.org/preston.bom/PumaBom-WithMods-Element14.xlsx) as an Excel spreadsheet that can be opened also in OpenOffice.
 
 *Git users download the [BOM here].*
 
