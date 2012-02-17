@@ -15,7 +15,7 @@ Install the MCU, this will be one of the most difficult components for you to pl
 
  1. Take the syringe of solder paste and apply a bead to each of the copper pads for the MCU pins this will be 112 pads in total. Make sure that you **do not** bridge between pads, care here will save you hours further down the track.
  2. Place a small drop of glue at the underside of the MCU centre, this will lightly 'tack it' to ensure it doesn’t move during the assembly and reflow process.
- 3. It is recommended that non conductive thermal paste be placed around the glue in the centre of the MCU as this will help to dissipate heat to the copper heat pad below. Make sure that thermal paste is not placed all the way out to the MCU edge as it will ooze out when placed, no thermal paste should contact any pins.
+ 3. It is recommended that non-conductive thermal paste be placed around the glue in the centre of the MCU as this will help to dissipate heat to the copper heat pad below. Make sure that thermal paste is not placed all the way out to the MCU edge as it will ooze out when placed, no thermal paste should contact any pins.
  4. Now place the MCU in location noting that the orientation is marked by ...... 
  5. Allow to set for a few minutes with out moving the PCB.
 
@@ -48,9 +48,9 @@ Using solder paste place beads on the following component pads C99, R251, C100, 
 
 /-- 337x260 img/reflow/IMG_0204.JPG "" 
 
- 1. **C96**  *15pF* *(22pF* or *33pF)* the bracketed values have been provided for tuning options. value.
- 2. **C97**  *15pF* *(22pF* or *33pF)* the bracketed values have been provided for tuning options.
- 3. **R176** Dont install
+ 1. **C96**  *15pF*
+ 2. **C97**  *15pF*
+ 3. **R176** Don't install
  4. **X3**   *(16MHz)* the crystal can be mounted in either direction. 
  5. **C98**  *(0.22µF)*
  6. **C99**  *(0.22µF)*

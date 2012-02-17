@@ -31,7 +31,7 @@ The reflow assembly process is rated 6/10 for difficulty of assembly :
 
 - **Method 1 tool requirements** :
 	- Reflow oven
-	- Optical magnifier (4x optical power reading glasses work well from the $2 shop)
+	- Optical magnifier (4x optical power reading glasses from the $2 shop work well)
 	- Syringe of solder paste
 	- Syringe of heat activated component glue
 	- Cotton buds

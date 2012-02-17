@@ -1,5 +1,7 @@
 # Introduction
 
+#####First of all I would like to thank Fred Cooke for his contribution to this howto, and putting up with the many hours of skpye calls. You have been **"O for awesome"** kiwi styles.
+
 This guide shows you how to choose the components, how to order the components, how to build your Spin 1 board and how to properly connect it to a vehicle.
 
 It is assumed that you came to this guide from one of the main sites, if not, see the main [FreeEMS.org] site for general information, and the [Puma] site for more specific information.
