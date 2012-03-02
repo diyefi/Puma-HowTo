@@ -7,7 +7,7 @@ Using solder paste, place beads on all of the following component pads R203, C11
 
 Please note image shown is for injector 8 circuit, it is recommended you start at injector 1.
 
-- **R203** *(1K&ohm;)* located between/below U22 ``&`` U23.
+- **R203** *(1K&ohm;)* located between/below U23 ``&`` U24.
 - **R257** *(Not used no connection)*
 - **D110** *(Not used no connection)*
 - **D89**  *(Not used no connection)*
