@@ -3,6 +3,8 @@
 Using solder paste, place beads on all of the following component pads R230, R231, R232, R233, C124, U33, R228 or R229.
 /-- 337x260 img/reflow/IMG_0366.JPG "" Install ignition XOR circuitry. 
 
+Note: Only install one, either R228 or R229 but not both! 
+
 - **R230** *(1K&ohm;)*
 - **R231** *(1K&ohm;)*
 - **R232** *(1K&ohm;)*
@@ -12,7 +14,6 @@ Using solder paste, place beads on all of the following component pads R230, R23
 - **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
 
-Note: Only install one, either R228 or R229 but not both! 
 --/
  
 #### Ignition 1
