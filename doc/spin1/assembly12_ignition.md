@@ -10,10 +10,11 @@ Note: Only install one, either R228 or R229 but not both!
 - **R232** *(1K&ohm;)*
 - **R233** *(1K&ohm;)*
 - **R228** *(10K&ohm;)* ``<---`` install for non-inverted output
-- **R229** *(1K&ohm;)* ``<---`` install for inverted output
+- **R229** *(1K&ohm;)* ``<---`` install for inverted output, as used in this guide
 - **C124** *(0.1µF)* 
 - **U33**  *(XOR Gate)*
 
+Warning: If you install both R228 and R229 and you use the same value you WILL have issues and they will be VERY hard to diagnose.
 --/
  
 #### Ignition 1
